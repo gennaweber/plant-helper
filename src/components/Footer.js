@@ -16,17 +16,6 @@ const Footer = () => {
             <Grid container direction="row" alignItems="center">
               <Grid item container spacing="1vh" direction="column">
                 <Grid item>
-                  <a
-                    target="_blank"
-                    rel="noreferrer"
-                    href="https://youthfulcities.com/"
-                  >
-                    <img
-                      src={"./assets/images/yc-logo.png"}
-                      height="60vh"
-                      alt="Youthful Cities logo"
-                    />
-                  </a>
                   <Grid item className="attributionLink" mx="1vh">
                     <a
                       target="_blank"
@@ -53,19 +42,6 @@ const Footer = () => {
                 </Typography>
               </Grid> */}
             </Grid>
-          </Grid>
-          <Grid item mt="1vh">
-            <a
-              target="_blank"
-              rel="noreferrer"
-              href="https://www.therefugeecentre.org/"
-            >
-              <img
-                src={"./assets/images/trc-logo.png"}
-                height="60vh"
-                alt="The Refugee Centre / Le Centre de Réfugiés logo"
-              />
-            </a>
           </Grid>
         </Grid>
       </Container>

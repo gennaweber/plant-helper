@@ -1,13 +1,9 @@
 :root {
-  /*YOUTHFUL CITIES COLOURS*/
-  --yellow: rgb(251, 209, 102);
-  --pink: rgb(247, 188, 183);
-  --green: rgb(184, 217, 141);
-  --indigo: rgb(79, 102, 175);
-  --red: rgb(238, 96, 91);
-  --chestnuts: #884c41;
-
-  --font_heading: font(normal normal normal 45px/1.4em arial + black);
+  --darkGreen: #146356;
+  --lightGreen: #a3da8d;
+  --yellow: #fff1bd;
+  --orange: #f3c892;
+  --dark: #1e2229;
 }
 
 /* Fonts
@@ -45,11 +41,12 @@ body {
 }
 
 body {
-  background-color: #f5f5f5;
+  background-color: var(--orange);
+  color: var(--dark);
 }
 
 footer {
-  background-color: #000000;
+  background-color: var(--darkGreen);
   min-width: 100%;
 }
 
@@ -259,13 +256,13 @@ footer {
 }
 
 .photoOverlay:hover {
-  background-color: var(--indigo);
+  background-color: var(--lightGreen);
   opacity: 100%;
   cursor: pointer;
 }
 
 .photoButtonText:hover + .photoOverlay {
-  background-color: var(--indigo);
+  background-color: var(--lightGreen);
   opacity: 100%;
   cursor: pointer;
 }
@@ -331,7 +328,7 @@ footer {
 }
 
 .langMenuItemWrapper:hover {
-  background-color: #f5f5f5;
+  background-color: var(--yellow);
   cursor: pointer;
 }
 

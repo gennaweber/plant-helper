@@ -1,18 +1,7 @@
 import React from "react";
 import { Container, Grid } from "@mui/material";
-import Back from "./Back";
-import Socials from "./Socials";
-import ChangeLang from "./ChangeLang";
 
-const BasicContainer = ({
-  children,
-  width,
-  languages,
-  setCurrentLangCode,
-  currentLangCode,
-  textSize,
-  setTextSize,
-}) => {
+const BasicContainer = ({ children, width }) => {
   return (
     <>
       <Container maxWidth={width === undefined ? "xs" : width}>
@@ -38,18 +27,7 @@ const BasicContainer = ({
           >
             {children}
           </Grid>
-          <Grid item>
-            <Socials />
-          </Grid>
         </Grid>
-        {document.location.pathname !== "/" && <Back />}
-        <ChangeLang
-          languages={languages}
-          setCurrentLangCode={setCurrentLangCode}
-          currentLangCode={currentLangCode}
-          textSize={textSize}
-          setTextSize={setTextSize}
-        />
       </Container>
     </>
   );

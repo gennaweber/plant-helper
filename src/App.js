@@ -14,36 +14,63 @@ import Footer from "./components/Footer";
 
 const theme = createTheme({
   palette: {
+    common: {
+      black: "#1e2229",
+    },
     primary: {
-      dark: "#1e316d",
-      main: "#253D88",
-      light: "#5164a0",
+      dark: "#0e453c",
+      main: "#146356",
+      light: "#438277",
     },
     secondary: {
-      light: "#fcdf94",
-      main: "#FBD166",
-      dark: "#c9a752",
-    },
-    error: {
-      dark: "#c2544a",
-      main: "#F2695D",
-      light: "#f5877d",
+      dark: "#729862",
+      main: "#A3DA8D",
+      light: "#b5e1a3",
     },
     warning: {
-      light: "#fae8e7",
-      main: "#F6D9D7",
-      dark: "#ddc3c2",
+      light: "#f5d3a7",
+      main: "#F3C892",
+      dark: "#aa8c66",
     },
     success: {
-      light: "#cde4af",
-      main: "#B8D98D",
-      dark: "#93ae71",
+      light: "#fff3ca",
+      main: "#FFF1BD",
+      dark: "#b2a884",
     },
     info: {
       main: "#FFFFFF",
     },
+    text: {
+      primary: "#1e2229",
+    },
+    background: {
+      paper: "#FFF1BD",
+    },
   },
-  typography: {},
+  typography: {
+    fontFamily: "Lora",
+    htmlFontSize: 24,
+    h1: {
+      fontFamily: "Montserrat Alternates",
+      fontWeight: 800,
+    },
+    h2: {
+      fontFamily: "Montserrat Alternates",
+      fontWeight: 500,
+    },
+    h3: {
+      fontFamily: "Lora",
+      fontWeight: 700,
+    },
+    h4: {
+      fontFamily: "Montserrat Alternates",
+      fontWeight: 200,
+    },
+    h5: {
+      fontFamily: "Montserrat Alternates",
+      fontWeight: 400,
+    },
+  },
   components: {
     MuiButton: {
       styleOverrides: {
