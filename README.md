@@ -1,39 +1,5 @@
 ## Changing resource queries
 
-- Change database slug as per opendatasoft on parent page
-  File: CityTemplate.js
-  44: const getCategories = useCallback(() => {
-  45: const retrievedInfo = getData("resource-data-test", resourceQuery).then(
-  46: (res) => res.records
-  47: );
-
-- Change resource query if you want to group entries by something other than measurement. Keep the alias as measurement
-  File: CityTemplate.js
-  31: const resourceQuery = `/records?refine=city:${cityname}&limit=20&select=sheet_title as measurement&group_by=sheet_title`;
-
-- Change database slug as per opendatasoft on resource page
-  File: Resources.js
-  116: const retrievedInfo = Promise.all(
-  117: sub.map((query) =>
-  118: getData("resource-data-test", query).then((res) => res.records)
-  119: )
-  120: );
-
-- Change all references to category on resource page & change query to add more columns if needed. Keep category name under alias "measurements" to avoid messing other things up
-  File: Resources.js
-  104: const getResources = useCallback(() => {
-  105: const createSubResourceQuery = (measurement) => {
-  106: return `/records?refine=city:${cityname}&limit=10&select=address as address,name as name,url as url,email,phone,description&where=sheet_title="${measurement}"${ 107: searchStringQuery.length > 0 ? "AND '" + searchStringQuery + "'" : "" 108: }`;
-  109: };
-
-- Change database slug on SuggestedCities pages
-  File: SuggestedCities.js
-  71: const retrievedInfo = Promise.all(
-  72: queries.map((query) =>
-  73: getData("resource-data-test", query).then((res) => res.records)
-  74: )
-  75: );
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
