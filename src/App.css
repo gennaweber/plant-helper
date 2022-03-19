@@ -1,0 +1,467 @@
+:root {
+  /*YOUTHFUL CITIES COLOURS*/
+  --yellow: rgb(251, 209, 102);
+  --pink: rgb(247, 188, 183);
+  --green: rgb(184, 217, 141);
+  --indigo: rgb(79, 102, 175);
+  --red: rgb(238, 96, 91);
+  --chestnuts: #884c41;
+
+  --font_heading: font(normal normal normal 45px/1.4em arial + black);
+}
+
+/* Fonts
+   ========================================================================== */
+@font-face {
+  font-family: "Gotham Narrow Black";
+  src: url("../public/assets/theme_font/GothamNarrow-Black.eot");
+  src: url("../public/assets/theme_font/GothamNarrow-Black.eot?#iefix")
+      format("embedded-opentype"),
+    url("../public/assets/theme_font/GothamNarrow-Black.woff2") format("woff2"),
+    url("../public/assets/theme_font/GothamNarrow-Black.woff") format("woff"),
+    url("../public/assets/theme_font/GothamNarrow-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gotham Narrow Medium";
+  src: url("../public/assets/theme_font/GothamNarrow-Medium.eot");
+  src: url("../public/assets/theme_font/GothamNarrow-Medium.eot?#iefix")
+      format("embedded-opentype"),
+    url("../public/assets/theme_font/GothamNarrow-Medium.woff2") format("woff2"),
+    url("../public/assets/theme_font/GothamNarrow-Medium.woff") format("woff"),
+    url("../public/assets/theme_font/GothamNarrow-Medium.ttf")
+      format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gotham Narrow Light";
+  src: url("../public/assets/theme_font/GothamNarrow-Light.eot");
+  src: url("../public/assets/theme_font/GothamNarrow-Light.eot?#iefix")
+      format("embedded-opentype"),
+    url("../public/assets/theme_font/GothamNarrow-Light.woff2") format("woff2"),
+    url("../public/assets/theme_font/GothamNarrow-Light.woff") format("woff"),
+    url("../public/assets/theme_font/GothamNarrow-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gotham Narrow Book";
+  src: url("../public/assets/theme_font/GothamNarrow-Book.eot");
+  src: url("../public/assets/theme_font/GothamNarrow-Book.eot?#iefix")
+      format("embedded-opentype"),
+    url("../public/assets/theme_font/GothamNarrow-Book.woff2") format("woff2"),
+    url("../public/assets/theme_font/GothamNarrow-Book.woff") format("woff"),
+    url("../public/assets/theme_font/GothamNarrow-Book.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Global Styles
+   ========================================================================== */
+
+h1 {
+  font-family: "Gotham Narrow Black", sans-serif;
+}
+h2 {
+  font-family: "Gotham Narrow Medium", sans-serif;
+}
+h3 {
+  font-family: "Gotham Narrow Medium", sans-serif;
+}
+p {
+  font-family: "Gotham Narrow Book", sans-serif;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+html,
+body {
+  height: 100%;
+  /* width: 100%; */
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: "Gotham Narrow Book", sans-serif;
+  z-index: -100;
+}
+
+body {
+  background-color: #f5f5f5;
+}
+
+footer {
+  background-color: #000000;
+  min-width: 100%;
+}
+
+#root {
+  min-height: 100%;
+}
+
+.centered {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.smallText {
+  font-size: 1rem;
+  font-family: "Gotham Narrow Book", sans-serif;
+  line-height: 0;
+}
+
+.flexWrapper {
+  min-height: 100vh;
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.flexGrow {
+  flex-grow: 10;
+}
+
+/* Backgrounds & containers
+   ========================================================================== */
+
+.background {
+  background-image: url("/public/assets/images/grid.png");
+  background-size: cover;
+  background-position: center bottom;
+  width: 100%;
+  height: 12vh;
+  position: relative;
+  top: 0;
+  z-index: 10;
+}
+
+.backgroundAbsolute {
+  background-image: url("/public/assets/images/grid.png");
+  background-size: cover;
+  background-position: center bottom;
+  width: 100%;
+  height: 12vh;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+}
+
+.photoBackgroundOverlay {
+  background-color: #000000;
+  opacity: 70%;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: -15;
+}
+
+.photoBackground {
+  background-image: url("/public/assets/images/canada.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -20;
+}
+
+.photoBackgroundContainer {
+  height: 100%;
+}
+
+.photoHeaderContainer {
+  height: 40vh;
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: -10;
+}
+
+.photoHeaderImg {
+  position: absolute;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  z-index: -5;
+}
+
+.photoHeaderOverlay {
+  background-color: #000000;
+  opacity: 60%;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 5;
+}
+
+.photoHeaderText {
+  position: relative;
+  z-index: 10;
+}
+
+.accordianContainer {
+  margin: 27px;
+}
+
+.textUnderlay {
+  border-radius: 35px;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 5px 10px;
+}
+
+/* Buttons
+   ========================================================================== */
+
+.backButton {
+  bottom: 4vh;
+  left: 24px;
+  z-index: 100;
+}
+
+.forwardButton {
+  bottom: 4vh;
+  right: 24px;
+  z-index: 100;
+}
+
+.roundButton {
+  width: 58px;
+  height: 58px;
+}
+
+.textRoundButton {
+  height: 58px;
+}
+
+.textSizeButtonDecrease {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  bottom: -204px;
+  left: -102px;
+}
+
+.textSizeButtonIncrease {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  bottom: -204px;
+  left: -48px;
+}
+
+.photoButtonContainer {
+  height: 100px;
+  width: 100%;
+  position: relative;
+  border-radius: 80px;
+}
+
+.photoButtonImg {
+  position: absolute;
+  object-fit: cover;
+  border-radius: 80px;
+  height: 100px;
+  width: 100%;
+}
+
+.photoOverlay {
+  background-color: #000000;
+  opacity: 60%;
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  border-radius: 80px;
+  top: 0;
+  z-index: 5;
+}
+
+.photoButtonText {
+  position: relative;
+  z-index: 10;
+}
+
+.smallPhotoButtonText {
+  position: relative;
+  z-index: 10;
+}
+
+@media only screen and (max-width: 500px) {
+  .smallPhotoButtonText {
+    display: none;
+  }
+}
+
+.photoOverlay:hover {
+  background-color: var(--indigo);
+  opacity: 100%;
+  cursor: pointer;
+}
+
+.photoButtonText:hover + .photoOverlay {
+  background-color: var(--indigo);
+  opacity: 100%;
+  cursor: pointer;
+}
+
+.photoButtonText:hover {
+  cursor: pointer;
+}
+
+.changeLang {
+  position: fixed;
+  right: 40px;
+  top: 5vh;
+  z-index: 100;
+}
+
+.attributionLink {
+  font-size: 1rem;
+  color: #fff;
+}
+
+.attributionLink > a {
+  color: #fff;
+  text-decoration: underline;
+  margin: 0 3px;
+}
+
+/* Menus
+   ========================================================================== */
+
+.socials {
+  height: 10vh;
+  bottom: 0;
+  position: relative;
+}
+
+.langMenu {
+  position: absolute;
+  bottom: -150px;
+  left: -100px;
+}
+
+.langMenuItem {
+  width: 100%;
+  height: 100%;
+}
+
+.langMenuItemDisabled {
+  width: 100%;
+  height: 100%;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.langMenuItemWrapper:first-child {
+  border-radius: inherit;
+  padding: 24px;
+  margin: 0;
+}
+
+.langMenuItemWrapper {
+  border-radius: inherit;
+  padding: 24px;
+  margin-top: -12px;
+}
+
+.langMenuItemWrapper:hover {
+  background-color: #f5f5f5;
+  cursor: pointer;
+}
+
+.langMenuItemWrapper:hover .langMenuItem {
+  color: var(--indigo);
+  cursor: pointer;
+}
+
+.langMenuItemWrapperDisabled:first-child {
+  border-radius: inherit;
+  padding: 24px;
+  margin: 0;
+}
+
+.langMenuItemWrapperDisabled {
+  border-radius: inherit;
+  padding: 24px;
+  margin-top: -12px;
+}
+
+.langMenuItemWrapperDisabled:hover {
+  background-color: #fff;
+}
+
+.langMenuItemWrapperDisabled:hover .langMenuItem {
+  cursor: default;
+}
+
+/* Loading
+   ========================================================================== */
+
+.loadingText {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.dots-bars-5 {
+  text-align: center;
+  width: 40px;
+  height: 30px;
+  --c: linear-gradient(currentColor 0 0);
+  background: var(--c) 0 100%/8px 30px, var(--c) 50% 100%/8px 20px,
+    var(--c) 100% 100%/8px 10px;
+  background-repeat: no-repeat;
+  position: relative;
+  clip-path: inset(-100% 0);
+}
+.dots-bars-5:before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+  left: -16px;
+  top: 0;
+  animation: db5-1 2s linear infinite,
+    db5-2 0.5s cubic-bezier(0, 200, 0.8, 200) infinite;
+}
+
+@keyframes db5-1 {
+  0% {
+    left: -16px;
+    transform: translateY(-8px);
+  }
+  100% {
+    left: calc(100% + 8px);
+    transform: translateY(22px);
+  }
+}
+
+@keyframes db5-2 {
+  100% {
+    top: -0.1px;
+  }
+}
+
+/* Material UI overrides where I couldn't figure out a better way to do it
+   ========================================================================== */
+
+/* for overriding when label is blank*/
+.notranslate {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}

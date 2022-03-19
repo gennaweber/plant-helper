@@ -1,0 +1,5053 @@
+[
+    {
+        "City": "Lethbridge",
+        "JSONNames": "ParentingPrograms",
+        "Value": 0.0,
+        "Demographic": [
+            "0 - 12"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Lethbridge",
+        "JSONNames": "Libraries",
+        "Value": 1.0,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Lethbridge",
+        "JSONNames": "TaxServices",
+        "Value": 2.0,
+        "Demographic": [
+            "18 - 35",
+            "36 - 65"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Lethbridge",
+        "JSONNames": "SeniorTransit",
+        "Value": 28.0,
+        "Demographic": [
+            "65+"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Lethbridge",
+        "JSONNames": "EslClasses",
+        "Value": 4.0,
+        "Demographic": [
+            "18 - 35",
+            "35 - 65"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Lethbridge",
+        "JSONNames": "SeniorLiteracyPrograms",
+        "Value": 4.0,
+        "Demographic": [
+            "65+"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Lethbridge",
+        "JSONNames": "ComputerClasses",
+        "Value": 3.0,
+        "Demographic": [
+            "36 - 65"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Lethbridge",
+        "JSONNames": "FoodBanks",
+        "Value": 6.0,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Lethbridge",
+        "JSONNames": "ClothingBanks",
+        "Value": 4.0,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Lethbridge",
+        "JSONNames": "BridgingPrograms",
+        "Value": 4.0,
+        "Demographic": [
+            "18 - 35",
+            "36 - 65"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Lethbridge",
+        "JSONNames": "SkilledTraining",
+        "Value": 5.0,
+        "Demographic": [
+            "18 - 35"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Lethbridge",
+        "JSONNames": "FinancialLit",
+        "Value": 1.0,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Lethbridge",
+        "JSONNames": "PolytechCollege",
+        "Value": 0.0,
+        "Demographic": [
+            "19-35"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Lethbridge",
+        "JSONNames": "PrivateCollege",
+        "Value": 1.0,
+        "Demographic": [
+            "19-35"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Lethbridge",
+        "JSONNames": "PrivateUni",
+        "Value": 0.0,
+        "Demographic": [
+            "19-35"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Lethbridge",
+        "JSONNames": "PublicCollege",
+        "Value": 1.0,
+        "Demographic": [
+            "19-35"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Lethbridge",
+        "JSONNames": "PublicUni",
+        "Value": 1.0,
+        "Demographic": [
+            "19-35"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Lethbridge",
+        "JSONNames": "EmploymentServices",
+        "Value": 1.0,
+        "Demographic": [
+            "18 - 35",
+            "36 - 65"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Lethbridge",
+        "JSONNames": "TempSummer",
+        "Value": 26.0,
+        "Demographic": [
+            "65+"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Lethbridge",
+        "JSONNames": "SnowDays",
+        "Value": 51.0,
+        "Demographic": [
+            "65+"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Lethbridge",
+        "JSONNames": "Daycare",
+        "Value": 10.0,
+        "Demographic": [
+            "0 - 12"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Lethbridge",
+        "JSONNames": "FamilyShelter",
+        "Value": 4.0,
+        "Demographic": [
+            "3+ people"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Lethbridge",
+        "JSONNames": "TeenRecPrograms",
+        "Value": 2.0,
+        "Demographic": [
+            "0 - 12",
+            "13 - 18"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Lethbridge",
+        "JSONNames": "SeniorRecPrograms",
+        "Value": 1.0,
+        "Demographic": [
+            "65+"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Lethbridge",
+        "JSONNames": "AdultRecPrograms",
+        "Value": 1.0,
+        "Demographic": [
+            "18 - 35",
+            "35 - 65"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Lethbridge",
+        "JSONNames": "AdultTransit",
+        "Value": 77.0,
+        "Demographic": [
+            "18-35",
+            "36-65"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Lethbridge",
+        "JSONNames": "YouthTransit",
+        "Value": 62.0,
+        "Demographic": [
+            "0-12",
+            "13-18"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Lethbridge",
+        "JSONNames": "FurnitureBank",
+        "Value": 1.0,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Lethbridge",
+        "JSONNames": "Startup",
+        "Value": 8.0,
+        "Demographic": [
+            "18 - 35",
+            "36 - 65"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Calgary",
+        "JSONNames": "Libraries",
+        "Value": 21.0,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Calgary",
+        "JSONNames": "TaxServices",
+        "Value": 3.0,
+        "Demographic": [
+            "18 - 35",
+            "36 - 65"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Calgary",
+        "JSONNames": "FoodBanks",
+        "Value": 12.0,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Calgary",
+        "JSONNames": "EslClasses",
+        "Value": 7.0,
+        "Demographic": [
+            "18 - 35",
+            "35 - 65"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Calgary",
+        "JSONNames": "SeniorTransit",
+        "Value": 12.5,
+        "Demographic": [
+            "65+"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Calgary",
+        "JSONNames": "SeniorLiteracyPrograms",
+        "Value": 4.0,
+        "Demographic": [
+            "65+"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Calgary",
+        "JSONNames": "FinancialLit",
+        "Value": 3.0,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Calgary",
+        "JSONNames": "ComputerClasses",
+        "Value": 4.0,
+        "Demographic": [
+            "36 - 65"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Calgary",
+        "JSONNames": "BridgingPrograms",
+        "Value": 5.0,
+        "Demographic": [
+            "18 - 35",
+            "36 - 65"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Calgary",
+        "JSONNames": "SkilledTraining",
+        "Value": 6.0,
+        "Demographic": [
+            "18 - 35"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Calgary",
+        "JSONNames": "EmploymentServices",
+        "Value": 3.0,
+        "Demographic": [
+            "18 - 35",
+            "36 - 65"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Calgary",
+        "JSONNames": "TempSummer",
+        "Value": 23.0,
+        "Demographic": [
+            "65+"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Calgary",
+        "JSONNames": "SnowDays",
+        "Value": 75.0,
+        "Demographic": [
+            "65+"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Calgary",
+        "JSONNames": "ClothingBanks",
+        "Value": 5.0,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Calgary",
+        "JSONNames": "FamilyShelter",
+        "Value": 12.0,
+        "Demographic": [
+            "3+ people"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Calgary",
+        "JSONNames": "PolytechCollege",
+        "Value": 2.0,
+        "Demographic": [
+            "19-35"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Calgary",
+        "JSONNames": "PrivateCollege",
+        "Value": 6.0,
+        "Demographic": [
+            "19-35"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Calgary",
+        "JSONNames": "PrivateUni",
+        "Value": 3.0,
+        "Demographic": [
+            "19-35"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Calgary",
+        "JSONNames": "PublicCollege",
+        "Value": 2.0,
+        "Demographic": [
+            "19-35"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Calgary",
+        "JSONNames": "PublicUni",
+        "Value": 3.0,
+        "Demographic": [
+            "19-35"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Calgary",
+        "JSONNames": "Daycare",
+        "Value": 10.0,
+        "Demographic": [
+            "0 - 12"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Calgary",
+        "JSONNames": "FurnitureBank",
+        "Value": 5.0,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Calgary",
+        "JSONNames": "YouthTransit",
+        "Value": 79.0,
+        "Demographic": [
+            "0-12",
+            "13-18"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Calgary",
+        "JSONNames": "AdultTransit",
+        "Value": 112.0,
+        "Demographic": [
+            "18-35",
+            "36-65"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Calgary",
+        "JSONNames": "AdultRecPrograms",
+        "Value": 1.0,
+        "Demographic": [
+            "18 - 35",
+            "35 - 65"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Calgary",
+        "JSONNames": "TeenRecPrograms",
+        "Value": 6.0,
+        "Demographic": [
+            "0 - 12",
+            "13 - 18"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Calgary",
+        "JSONNames": "SeniorRecPrograms",
+        "Value": 3.0,
+        "Demographic": [
+            "65+"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Calgary",
+        "JSONNames": "Startup",
+        "Value": 6.0,
+        "Demographic": [
+            "18 - 35",
+            "36 - 65"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Kelowna",
+        "JSONNames": "Libraries",
+        "Value": 9.0,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Kelowna",
+        "JSONNames": "TaxServices",
+        "Value": 2.0,
+        "Demographic": [
+            "18 - 35",
+            "36 - 65"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Kelowna",
+        "JSONNames": "FinancialLit",
+        "Value": 1.0,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Kelowna",
+        "JSONNames": "SeniorTransit",
+        "Value": 45.0,
+        "Demographic": [
+            "65+"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Kelowna",
+        "JSONNames": "EmploymentServices",
+        "Value": 2.0,
+        "Demographic": [
+            "18 - 35",
+            "36 - 65"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Kelowna",
+        "JSONNames": "TempSummer",
+        "Value": 24.0,
+        "Demographic": [
+            "65+"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Kelowna",
+        "JSONNames": "SnowDays",
+        "Value": 53.0,
+        "Demographic": [
+            "65+"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Kelowna",
+        "JSONNames": "Daycare",
+        "Value": 10.0,
+        "Demographic": [
+            "0 - 12"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Kelowna",
+        "JSONNames": "FamilyShelter",
+        "Value": 8.0,
+        "Demographic": [
+            "3+ people"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Kelowna",
+        "JSONNames": "ClothingBanks",
+        "Value": 3.0,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Kelowna",
+        "JSONNames": "FurnitureBank",
+        "Value": 4.0,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Kelowna",
+        "JSONNames": "BridgingPrograms",
+        "Value": 4.0,
+        "Demographic": [
+            "18 - 35",
+            "36 - 65"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Kelowna",
+        "JSONNames": "SkilledTraining",
+        "Value": 3.0,
+        "Demographic": [
+            "18 - 35"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Kelowna",
+        "JSONNames": "PolytechCollege",
+        "Value": 0.0,
+        "Demographic": [
+            "19-35"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Kelowna",
+        "JSONNames": "PrivateCollege",
+        "Value": 5.0,
+        "Demographic": [
+            "19-35"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Kelowna",
+        "JSONNames": "PrivateUni",
+        "Value": 0.0,
+        "Demographic": [
+            "19-35"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Kelowna",
+        "JSONNames": "PublicCollege",
+        "Value": 1.0,
+        "Demographic": [
+            "19-35"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Kelowna",
+        "JSONNames": "PublicUni",
+        "Value": 1.0,
+        "Demographic": [
+            "19-35"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Kelowna",
+        "JSONNames": "FoodBanks",
+        "Value": 6.0,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Kelowna",
+        "JSONNames": "AdultTransit",
+        "Value": 70.0,
+        "Demographic": [
+            "18-35",
+            "36-65"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Kelowna",
+        "JSONNames": "EslClasses",
+        "Value": 1.0,
+        "Demographic": [
+            "18 - 35",
+            "35 - 65"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Kelowna",
+        "JSONNames": "SeniorLiteracyPrograms",
+        "Value": 0.0,
+        "Demographic": [
+            "65+"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Kelowna",
+        "JSONNames": "Startup",
+        "Value": 6.0,
+        "Demographic": [
+            "18 - 35",
+            "36 - 65"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Kelowna",
+        "JSONNames": "ParentingPrograms",
+        "Value": 0.0,
+        "Demographic": [
+            "0 - 12"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Kelowna",
+        "JSONNames": "SeniorRecPrograms",
+        "Value": 0.0,
+        "Demographic": [
+            "65+"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Kelowna",
+        "JSONNames": "AdultRecPrograms",
+        "Value": 0.0,
+        "Demographic": [
+            "18 - 35",
+            "35 - 65"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Kelowna",
+        "JSONNames": "TeenRecPrograms",
+        "Value": 0.0,
+        "Demographic": [
+            "0 - 12",
+            "13 - 18"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Saskatoon",
+        "JSONNames": "Libraries",
+        "Value": 9.0,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Saskatoon",
+        "JSONNames": "TaxServices",
+        "Value": 2.0,
+        "Demographic": [
+            "18 - 35",
+            "36 - 65"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Saskatoon",
+        "JSONNames": "FinancialLit",
+        "Value": 1.0,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Saskatoon",
+        "JSONNames": "EslClasses",
+        "Value": 5.0,
+        "Demographic": [
+            "18 - 35",
+            "35 - 65"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Saskatoon",
+        "JSONNames": "SeniorLiteracyPrograms",
+        "Value": 2.0,
+        "Demographic": [
+            "65+"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Saskatoon",
+        "JSONNames": "EmploymentServices",
+        "Value": 2.0,
+        "Demographic": [
+            "18 - 35",
+            "36 - 65"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Saskatoon",
+        "JSONNames": "PolytechCollege",
+        "Value": 1.0,
+        "Demographic": [
+            "19-35"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Saskatoon",
+        "JSONNames": "PrivateCollege",
+        "Value": 5.0,
+        "Demographic": [
+            "19-35"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Saskatoon",
+        "JSONNames": "FurnitureBank",
+        "Value": 1.0,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Saskatoon",
+        "JSONNames": "PrivateUni",
+        "Value": 0.0,
+        "Demographic": [
+            "19-35"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Saskatoon",
+        "JSONNames": "ClothingBanks",
+        "Value": 3.0,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Saskatoon",
+        "JSONNames": "PublicUni",
+        "Value": 2.0,
+        "Demographic": [
+            "19-35"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Saskatoon",
+        "JSONNames": "PublicCollege",
+        "Value": 1.0,
+        "Demographic": [
+            "19-35"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Saskatoon",
+        "JSONNames": "BridgingPrograms",
+        "Value": 1.0,
+        "Demographic": [
+            "18 - 35",
+            "36 - 65"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Saskatoon",
+        "JSONNames": "SkilledTraining",
+        "Value": 1.0,
+        "Demographic": [
+            "18 - 35"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Saskatoon",
+        "JSONNames": "FoodBanks",
+        "Value": 6.0,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Saskatoon",
+        "JSONNames": "FamilyShelter",
+        "Value": 6.0,
+        "Demographic": [
+            "3+ people"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Saskatoon",
+        "JSONNames": "TeenRecPrograms",
+        "Value": 12.0,
+        "Demographic": [
+            "0 - 12",
+            "13 - 18"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Saskatoon",
+        "JSONNames": "SeniorRecPrograms",
+        "Value": 1.0,
+        "Demographic": [
+            "65+"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Saskatoon",
+        "JSONNames": "AdultRecPrograms",
+        "Value": 4.0,
+        "Demographic": [
+            "18 - 35",
+            "35 - 65"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Saskatoon",
+        "JSONNames": "AdultTransit",
+        "Value": 83.0,
+        "Demographic": [
+            "18-35",
+            "36-65"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Saskatoon",
+        "JSONNames": "YouthTransit",
+        "Value": 50.0,
+        "Demographic": [
+            "0-12",
+            "13-18"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Saskatoon",
+        "JSONNames": "SeniorTransit",
+        "Value": 29.0,
+        "Demographic": [
+            "65+"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Saskatoon",
+        "JSONNames": "Daycare",
+        "Value": 10.0,
+        "Demographic": [
+            "0 - 12"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Saskatoon",
+        "JSONNames": "ParentingPrograms",
+        "Value": 5.0,
+        "Demographic": [
+            "0 - 12"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Saskatoon",
+        "JSONNames": "TempSummer",
+        "Value": 25.0,
+        "Demographic": [
+            "65+"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Saskatoon",
+        "JSONNames": "SnowDays",
+        "Value": 72.0,
+        "Demographic": [
+            "65+"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Saskatoon",
+        "JSONNames": "Startup",
+        "Value": 6.0,
+        "Demographic": [
+            "18 - 35",
+            "36 - 65"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Winnipeg",
+        "JSONNames": "Libraries",
+        "Value": 37.0,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Winnipeg",
+        "JSONNames": "TaxServices",
+        "Value": 3.0,
+        "Demographic": [
+            "18 - 35",
+            "36 - 65"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Winnipeg",
+        "JSONNames": "FinancialLit",
+        "Value": 2.0,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Winnipeg",
+        "JSONNames": "EslClasses",
+        "Value": 6.0,
+        "Demographic": [
+            "18 - 35",
+            "35 - 65"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Winnipeg",
+        "JSONNames": "SeniorLiteracyPrograms",
+        "Value": 2.0,
+        "Demographic": [
+            "65+"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Winnipeg",
+        "JSONNames": "EmploymentServices",
+        "Value": 3.0,
+        "Demographic": [
+            "18 - 35",
+            "36 - 65"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Winnipeg",
+        "JSONNames": "Daycare",
+        "Value": 14.0,
+        "Demographic": [
+            "0 - 12"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Winnipeg",
+        "JSONNames": "ClothingBanks",
+        "Value": 5.0,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Winnipeg",
+        "JSONNames": "FurnitureBank",
+        "Value": 4.0,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Winnipeg",
+        "JSONNames": "SeniorRecPrograms",
+        "Value": 1.0,
+        "Demographic": [
+            "65+"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Winnipeg",
+        "JSONNames": "ParentingPrograms",
+        "Value": 6.0,
+        "Demographic": [
+            "0 - 12"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Winnipeg",
+        "JSONNames": "FamilyShelter",
+        "Value": 8.0,
+        "Demographic": [
+            "3+ people"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Winnipeg",
+        "JSONNames": "FoodBanks",
+        "Value": 6.0,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Winnipeg",
+        "JSONNames": "AdultRecPrograms",
+        "Value": 2.0,
+        "Demographic": [
+            "18 - 35",
+            "35 - 65"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Winnipeg",
+        "JSONNames": "TeenRecPrograms",
+        "Value": 2.0,
+        "Demographic": [
+            "0 - 12",
+            "13 - 18"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Winnipeg",
+        "JSONNames": "YouthTransit",
+        "Value": 75.0,
+        "Demographic": [
+            "0-12",
+            "13-18"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Winnipeg",
+        "JSONNames": "SeniorTransit",
+        "Value": 53.0,
+        "Demographic": [
+            "65+"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Winnipeg",
+        "JSONNames": "TempSummer",
+        "Value": 25.0,
+        "Demographic": [
+            "65+"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Winnipeg",
+        "JSONNames": "SnowDays",
+        "Value": 73.0,
+        "Demographic": [
+            "65+"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Winnipeg",
+        "JSONNames": "PolytechCollege",
+        "Value": 1.0,
+        "Demographic": [
+            "19-35"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Winnipeg",
+        "JSONNames": "PrivateCollege",
+        "Value": 5.0,
+        "Demographic": [
+            "19-35"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Winnipeg",
+        "JSONNames": "PrivateUni",
+        "Value": 1.0,
+        "Demographic": [
+            "19-35"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Winnipeg",
+        "JSONNames": "PublicCollege",
+        "Value": 1.0,
+        "Demographic": [
+            "19-35"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Winnipeg",
+        "JSONNames": "PublicUni",
+        "Value": 2.0,
+        "Demographic": [
+            "19-35"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Winnipeg",
+        "JSONNames": "Startup",
+        "Value": 6.0,
+        "Demographic": [
+            "18 - 35",
+            "36 - 65"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Winnipeg",
+        "JSONNames": "BridgingPrograms",
+        "Value": 3.0,
+        "Demographic": [
+            "18 - 35",
+            "36 - 65"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Winnipeg",
+        "JSONNames": "SkilledTraining",
+        "Value": 2.0,
+        "Demographic": [
+            "18 - 35"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "London",
+        "JSONNames": "Libraries",
+        "Value": 16.0,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "London",
+        "JSONNames": "TaxServices",
+        "Value": 4.0,
+        "Demographic": [
+            "18 - 35",
+            "36 - 65"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "London",
+        "JSONNames": "SeniorTransit",
+        "Value": 95.0,
+        "Demographic": [
+            "65+"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "London",
+        "JSONNames": "EslClasses",
+        "Value": 4.0,
+        "Demographic": [
+            "18 - 35",
+            "35 - 65"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "London",
+        "JSONNames": "FinancialLit",
+        "Value": 0.0,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "London",
+        "JSONNames": "SeniorLiteracyPrograms",
+        "Value": 1.0,
+        "Demographic": [
+            "65+"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "London",
+        "JSONNames": "EmploymentServices",
+        "Value": 2.0,
+        "Demographic": [
+            "18 - 35",
+            "36 - 65"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "London",
+        "JSONNames": "SnowDays",
+        "Value": 68.0,
+        "Demographic": [
+            "65+"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "London",
+        "JSONNames": "TempSummer",
+        "Value": 25.0,
+        "Demographic": [
+            "65+"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "London",
+        "JSONNames": "FoodBanks",
+        "Value": 10.0,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "London",
+        "JSONNames": "FamilyShelter",
+        "Value": 6.0,
+        "Demographic": [
+            "3+ people"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "London",
+        "JSONNames": "Daycare",
+        "Value": 15.0,
+        "Demographic": [
+            "0 - 12"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "London",
+        "JSONNames": "FurnitureBank",
+        "Value": 5.0,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "London",
+        "JSONNames": "YouthTransit",
+        "Value": 61.0,
+        "Demographic": [
+            "0-12",
+            "13-18"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "London",
+        "JSONNames": "ClothingBanks",
+        "Value": 3.0,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "London",
+        "JSONNames": "TeenRecPrograms",
+        "Value": 6.0,
+        "Demographic": [
+            "0 - 12",
+            "13 - 18"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "London",
+        "JSONNames": "AdultRecPrograms",
+        "Value": 2.0,
+        "Demographic": [
+            "18 - 35",
+            "35 - 65"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "London",
+        "JSONNames": "ParentingPrograms",
+        "Value": 2.0,
+        "Demographic": [
+            "0 - 12"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "London",
+        "JSONNames": "SeniorRecPrograms",
+        "Value": 2.0,
+        "Demographic": [
+            "65+"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "London",
+        "JSONNames": "PolytechCollege",
+        "Value": 1.0,
+        "Demographic": [
+            "19-35"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "London",
+        "JSONNames": "PrivateCollege",
+        "Value": 7.0,
+        "Demographic": [
+            "19-35"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "London",
+        "JSONNames": "PrivateUni",
+        "Value": 0.0,
+        "Demographic": [
+            "19-35"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "London",
+        "JSONNames": "PublicCollege",
+        "Value": 1.0,
+        "Demographic": [
+            "19-35"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "London",
+        "JSONNames": "PublicUni",
+        "Value": 1.0,
+        "Demographic": [
+            "19-35"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "London",
+        "JSONNames": "Startup",
+        "Value": 5.0,
+        "Demographic": [
+            "18 - 35",
+            "36 - 65"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "London",
+        "JSONNames": "BridgingPrograms",
+        "Value": 2.0,
+        "Demographic": [
+            "18 - 35",
+            "36 - 65"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "London",
+        "JSONNames": "SkilledTraining",
+        "Value": 3.0,
+        "Demographic": [
+            "18 - 35"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Moncton",
+        "JSONNames": "Libraries",
+        "Value": 3.0,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Moncton",
+        "JSONNames": "TaxServices",
+        "Value": 2.0,
+        "Demographic": [
+            "18 - 35",
+            "36 - 65"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Moncton",
+        "JSONNames": "FinancialLit",
+        "Value": 1.0,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Moncton",
+        "JSONNames": "SeniorTransit",
+        "Value": 53.0,
+        "Demographic": [
+            "65+"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Moncton",
+        "JSONNames": "EmploymentServices",
+        "Value": 1.0,
+        "Demographic": [
+            "18 - 35",
+            "36 - 65"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Moncton",
+        "JSONNames": "TempSummer",
+        "Value": 24.0,
+        "Demographic": [
+            "65+"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Moncton",
+        "JSONNames": "SnowDays",
+        "Value": 78.0,
+        "Demographic": [
+            "65+"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Moncton",
+        "JSONNames": "TeenRecPrograms",
+        "Value": 2.0,
+        "Demographic": [
+            "0 - 12",
+            "13 - 18"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Moncton",
+        "JSONNames": "FamilyShelter",
+        "Value": 6.0,
+        "Demographic": [
+            "3+ people"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Moncton",
+        "JSONNames": "FoodBanks",
+        "Value": 6.0,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Moncton",
+        "JSONNames": "YouthTransit",
+        "Value": 53.0,
+        "Demographic": [
+            "0-12",
+            "13-18"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Moncton",
+        "JSONNames": "AdultTransit",
+        "Value": 68.0,
+        "Demographic": [
+            "18-35",
+            "36-65"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Moncton",
+        "JSONNames": "Daycare",
+        "Value": 10.0,
+        "Demographic": [
+            "0 - 12"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Moncton",
+        "JSONNames": "ClothingBanks",
+        "Value": 4.0,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Moncton",
+        "JSONNames": "FurnitureBank",
+        "Value": 3.0,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Moncton",
+        "JSONNames": "EslClasses",
+        "Value": 1.0,
+        "Demographic": [
+            "18 - 35",
+            "35 - 65"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Moncton",
+        "JSONNames": "PolytechCollege",
+        "Value": 1.0,
+        "Demographic": [
+            "19-35"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Moncton",
+        "JSONNames": "PrivateCollege",
+        "Value": 6.0,
+        "Demographic": [
+            "19-35"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Moncton",
+        "JSONNames": "PrivateUni",
+        "Value": 2.0,
+        "Demographic": [
+            "19-35"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Moncton",
+        "JSONNames": "PublicCollege",
+        "Value": 1.0,
+        "Demographic": [
+            "19-35"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Moncton",
+        "JSONNames": "PublicUni",
+        "Value": 0.0,
+        "Demographic": [
+            "19-35"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Moncton",
+        "JSONNames": "Startup",
+        "Value": 5.0,
+        "Demographic": [
+            "18 - 35",
+            "36 - 65"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Moncton",
+        "JSONNames": "SeniorLiteracyPrograms",
+        "Value": 0.0,
+        "Demographic": [
+            "65+"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Moncton",
+        "JSONNames": "ParentingPrograms",
+        "Value": 0.0,
+        "Demographic": [
+            "0 - 12"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Moncton",
+        "JSONNames": "SeniorRecPrograms",
+        "Value": 0.0,
+        "Demographic": [
+            "65+"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Moncton",
+        "JSONNames": "AdultRecPrograms",
+        "Value": 0.0,
+        "Demographic": [
+            "18 - 35",
+            "35 - 65"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Moncton",
+        "JSONNames": "SkilledTraining",
+        "Value": 0.0,
+        "Demographic": [
+            "18 - 35"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Moncton",
+        "JSONNames": "BridgingPrograms",
+        "Value": 0.0,
+        "Demographic": [
+            "18 - 35",
+            "36 - 65"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Halifax",
+        "JSONNames": "Libraries",
+        "Value": 11.0,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Halifax",
+        "JSONNames": "TaxServices",
+        "Value": 3.0,
+        "Demographic": [
+            "18 - 35",
+            "36 - 65"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Halifax",
+        "JSONNames": "FinancialLit",
+        "Value": 1.0,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Halifax",
+        "JSONNames": "EslClasses",
+        "Value": 2.0,
+        "Demographic": [
+            "18 - 35",
+            "35 - 65"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Halifax",
+        "JSONNames": "EmploymentServices",
+        "Value": 1.0,
+        "Demographic": [
+            "18 - 35",
+            "36 - 65"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Halifax",
+        "JSONNames": "FoodBanks",
+        "Value": 7.0,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Halifax",
+        "JSONNames": "FamilyShelter",
+        "Value": 10.0,
+        "Demographic": [
+            "3+ people"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Halifax",
+        "JSONNames": "AdultTransit",
+        "Value": 82.5,
+        "Demographic": [
+            "18-35",
+            "36-65"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Halifax",
+        "JSONNames": "YouthTransit",
+        "Value": 60.0,
+        "Demographic": [
+            "0-12",
+            "13-18"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Halifax",
+        "JSONNames": "SeniorTransit",
+        "Value": 60.0,
+        "Demographic": [
+            "65+"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Halifax",
+        "JSONNames": "Daycare",
+        "Value": 10.0,
+        "Demographic": [
+            "0 - 12"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Halifax",
+        "JSONNames": "FurnitureBank",
+        "Value": 3.0,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Halifax",
+        "JSONNames": "ClothingBanks",
+        "Value": 4.0,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Halifax",
+        "JSONNames": "TempSummer",
+        "Value": 22.0,
+        "Demographic": [
+            "65+"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Halifax",
+        "JSONNames": "SnowDays",
+        "Value": 43.0,
+        "Demographic": [
+            "65+"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Halifax",
+        "JSONNames": "SeniorLiteracyPrograms",
+        "Value": 1.0,
+        "Demographic": [
+            "65+"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Halifax",
+        "JSONNames": "PolytechCollege",
+        "Value": 0.0,
+        "Demographic": [
+            "19-35"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Halifax",
+        "JSONNames": "PrivateCollege",
+        "Value": 6.0,
+        "Demographic": [
+            "19-35"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Halifax",
+        "JSONNames": "PrivateUni",
+        "Value": 0.0,
+        "Demographic": [
+            "19-35"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Halifax",
+        "JSONNames": "PublicCollege",
+        "Value": 1.0,
+        "Demographic": [
+            "19-35"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Halifax",
+        "JSONNames": "PublicUni",
+        "Value": 5.0,
+        "Demographic": [
+            "19-35"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Halifax",
+        "JSONNames": "TeenRecPrograms",
+        "Value": 1.0,
+        "Demographic": [
+            "0 - 12",
+            "13 - 18"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Halifax",
+        "JSONNames": "SeniorRecPrograms",
+        "Value": 1.0,
+        "Demographic": [
+            "65+"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Halifax",
+        "JSONNames": "AdultRecPrograms",
+        "Value": 1.0,
+        "Demographic": [
+            "18 - 35",
+            "35 - 65"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Halifax",
+        "JSONNames": "ParentingPrograms",
+        "Value": 0.0,
+        "Demographic": [
+            "0 - 12"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Halifax",
+        "JSONNames": "Startup",
+        "Value": 5.0,
+        "Demographic": [
+            "18 - 35",
+            "36 - 65"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Halifax",
+        "JSONNames": "SkilledTraining",
+        "Value": 4.0,
+        "Demographic": [
+            "18 - 35"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Halifax",
+        "JSONNames": "BridgingPrograms",
+        "Value": 1.0,
+        "Demographic": [
+            "18 - 35",
+            "36 - 65"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Victoria",
+        "JSONNames": "Libraries",
+        "Value": 3.0,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Victoria",
+        "JSONNames": "TaxServices",
+        "Value": 3.0,
+        "Demographic": [
+            "18 - 35",
+            "36 - 65"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Victoria",
+        "JSONNames": "FinancialLit",
+        "Value": 0.0,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Victoria",
+        "JSONNames": "EmploymentServices",
+        "Value": 2.0,
+        "Demographic": [
+            "18 - 35",
+            "36 - 65"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Victoria",
+        "JSONNames": "EslClasses",
+        "Value": 2.0,
+        "Demographic": [
+            "18 - 35",
+            "35 - 65"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Victoria",
+        "JSONNames": "SeniorLiteracyPrograms",
+        "Value": 1.0,
+        "Demographic": [
+            "65+"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Victoria",
+        "JSONNames": "Daycare",
+        "Value": 10.0,
+        "Demographic": [
+            "0 - 12"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Victoria",
+        "JSONNames": "ClothingBanks",
+        "Value": 4.0,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Victoria",
+        "JSONNames": "FurnitureBank",
+        "Value": 3.0,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Victoria",
+        "JSONNames": "TeenRecPrograms",
+        "Value": 3.0,
+        "Demographic": [
+            "0 - 12",
+            "13 - 18"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Victoria",
+        "JSONNames": "AdultRecPrograms",
+        "Value": 1.0,
+        "Demographic": [
+            "18 - 35",
+            "35 - 65"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Victoria",
+        "JSONNames": "SeniorRecPrograms",
+        "Value": 1.0,
+        "Demographic": [
+            "65+"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Victoria",
+        "JSONNames": "FoodBanks",
+        "Value": 10.0,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Victoria",
+        "JSONNames": "FamilyShelter",
+        "Value": 10.0,
+        "Demographic": [
+            "3+ people"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Victoria",
+        "JSONNames": "AdultTransit",
+        "Value": 85.0,
+        "Demographic": [
+            "18-35",
+            "36-65"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Victoria",
+        "JSONNames": "SeniorTransit",
+        "Value": 45.0,
+        "Demographic": [
+            "65+"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Victoria",
+        "JSONNames": "YouthTransit",
+        "Value": 45.0,
+        "Demographic": [
+            "0-12",
+            "13-18"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Victoria",
+        "JSONNames": "PolytechCollege",
+        "Value": 0.0,
+        "Demographic": [
+            "19-35"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Victoria",
+        "JSONNames": "PrivateCollege",
+        "Value": 4.0,
+        "Demographic": [
+            "19-35"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Victoria",
+        "JSONNames": "PrivateUni",
+        "Value": 0.0,
+        "Demographic": [
+            "19-35"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Victoria",
+        "JSONNames": "PublicCollege",
+        "Value": 1.0,
+        "Demographic": [
+            "19-35"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Victoria",
+        "JSONNames": "PublicUni",
+        "Value": 2.0,
+        "Demographic": [
+            "19-35"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Victoria",
+        "JSONNames": "SnowDays",
+        "Value": 7.0,
+        "Demographic": [
+            "65+"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Victoria",
+        "JSONNames": "TempSummer",
+        "Value": 20.0,
+        "Demographic": [
+            "65+"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Victoria",
+        "JSONNames": "Startup",
+        "Value": 5.0,
+        "Demographic": [
+            "18 - 35",
+            "36 - 65"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Victoria",
+        "JSONNames": "SkilledTraining",
+        "Value": 0.0,
+        "Demographic": [
+            "18 - 35"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Victoria",
+        "JSONNames": "BridgingPrograms",
+        "Value": 0.0,
+        "Demographic": [
+            "18 - 35",
+            "36 - 65"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Regina",
+        "JSONNames": "Libraries",
+        "Value": 15.0,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Regina",
+        "JSONNames": "TaxServices",
+        "Value": 2.0,
+        "Demographic": [
+            "18 - 35",
+            "36 - 65"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Regina",
+        "JSONNames": "FinancialLit",
+        "Value": 1.0,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Regina",
+        "JSONNames": "EslClasses",
+        "Value": 2.0,
+        "Demographic": [
+            "18 - 35",
+            "35 - 65"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Regina",
+        "JSONNames": "SeniorLiteracyPrograms",
+        "Value": 2.0,
+        "Demographic": [
+            "65+"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Regina",
+        "JSONNames": "EmploymentServices",
+        "Value": 2.0,
+        "Demographic": [
+            "18 - 35",
+            "36 - 65"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Regina",
+        "JSONNames": "Daycare",
+        "Value": 10.0,
+        "Demographic": [
+            "0 - 12"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Regina",
+        "JSONNames": "FurnitureBank",
+        "Value": 3.0,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Regina",
+        "JSONNames": "ClothingBanks",
+        "Value": 5.0,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Regina",
+        "JSONNames": "FamilyShelter",
+        "Value": 6.0,
+        "Demographic": [
+            "3+ people"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Regina",
+        "JSONNames": "FoodBanks",
+        "Value": 4.0,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Regina",
+        "JSONNames": "AdultRecPrograms",
+        "Value": 2.0,
+        "Demographic": [
+            "18 - 35",
+            "35 - 65"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Regina",
+        "JSONNames": "SeniorRecPrograms",
+        "Value": 1.0,
+        "Demographic": [
+            "65+"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Regina",
+        "JSONNames": "AdultTransit",
+        "Value": 88.0,
+        "Demographic": [
+            "18-35",
+            "36-65"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Regina",
+        "JSONNames": "YouthTransit",
+        "Value": 64.0,
+        "Demographic": [
+            "0-12",
+            "13-18"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Regina",
+        "JSONNames": "SeniorTransit",
+        "Value": 30.0,
+        "Demographic": [
+            "65+"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Regina",
+        "JSONNames": "TempSummer",
+        "Value": 26.0,
+        "Demographic": [
+            "65+"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Regina",
+        "JSONNames": "SnowDays",
+        "Value": 39.0,
+        "Demographic": [
+            "65+"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Regina",
+        "JSONNames": "Startup",
+        "Value": 6.0,
+        "Demographic": [
+            "18 - 35",
+            "36 - 65"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Regina",
+        "JSONNames": "ParentingPrograms",
+        "Value": 1.0,
+        "Demographic": [
+            "0 - 12"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Regina",
+        "JSONNames": "TeenRecPrograms",
+        "Value": 1.0,
+        "Demographic": [
+            "0 - 12",
+            "13 - 18"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Regina",
+        "JSONNames": "PolytechCollege",
+        "Value": 1.0,
+        "Demographic": [
+            "19-35"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Regina",
+        "JSONNames": "PrivateCollege",
+        "Value": 4.0,
+        "Demographic": [
+            "19-35"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Regina",
+        "JSONNames": "SkilledTraining",
+        "Value": 3.0,
+        "Demographic": [
+            "18 - 35"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Regina",
+        "JSONNames": "BridgingPrograms",
+        "Value": 2.0,
+        "Demographic": [
+            "18 - 35",
+            "36 - 65"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Calgary",
+        "JSONNames": "RatesdotcaInsuranceAuto",
+        "Value": 1316.0,
+        "Demographic": [
+            "18 - 35",
+            "36 - 65",
+            "65+"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Halifax",
+        "JSONNames": "RatesdotcaInsuranceAuto",
+        "Value": 891.0,
+        "Demographic": [
+            "18 - 35",
+            "36 - 65",
+            "65+"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Kelowna",
+        "JSONNames": "RatesdotcaInsuranceAuto",
+        "Value": 1832.0,
+        "Demographic": [
+            "18 - 35",
+            "36 - 65",
+            "65+"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Lethbridge",
+        "JSONNames": "RatesdotcaInsuranceAuto",
+        "Value": 1316.0,
+        "Demographic": [
+            "18 - 35",
+            "36 - 65",
+            "65+"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "London",
+        "JSONNames": "RatesdotcaInsuranceAuto",
+        "Value": 1505.0,
+        "Demographic": [
+            "18 - 35",
+            "36 - 65",
+            "65+"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Moncton",
+        "JSONNames": "RatesdotcaInsuranceAuto",
+        "Value": 867.0,
+        "Demographic": [
+            "18 - 35",
+            "36 - 65",
+            "65+"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Regina",
+        "JSONNames": "RatesdotcaInsuranceAuto",
+        "Value": 1235.0,
+        "Demographic": [
+            "18 - 35",
+            "36 - 65",
+            "65+"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Saskatoon",
+        "JSONNames": "RatesdotcaInsuranceAuto",
+        "Value": 1235.0,
+        "Demographic": [
+            "18 - 35",
+            "36 - 65",
+            "65+"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Victoria",
+        "JSONNames": "RatesdotcaInsuranceAuto",
+        "Value": 1832.0,
+        "Demographic": [
+            "18 - 35",
+            "36 - 65",
+            "65+"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Winnipeg",
+        "JSONNames": "RatesdotcaInsuranceAuto",
+        "Value": 1080.0,
+        "Demographic": [
+            "18 - 35",
+            "36 - 65",
+            "65+"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Calgary",
+        "JSONNames": "PlanhubInternet",
+        "Value": 58.95,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Halifax",
+        "JSONNames": "PlanhubInternet",
+        "Value": 52.95,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Kelowna",
+        "JSONNames": "PlanhubInternet",
+        "Value": 58.95,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Lethbridge",
+        "JSONNames": "PlanhubInternet",
+        "Value": 58.95,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "London",
+        "JSONNames": "PlanhubInternet",
+        "Value": 39.99,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Moncton",
+        "JSONNames": "PlanhubInternet",
+        "Value": 74.95,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Regina",
+        "JSONNames": "PlanhubInternet",
+        "Value": 58.95,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Saskatoon",
+        "JSONNames": "PlanhubInternet",
+        "Value": 58.95,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Victoria",
+        "JSONNames": "PlanhubInternet",
+        "Value": 58.95,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Winnipeg",
+        "JSONNames": "PlanhubInternet",
+        "Value": 58.95,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Calgary",
+        "JSONNames": "MinWage",
+        "Value": 15.0,
+        "Demographic": [
+            "18 - 35",
+            "36 - 65"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Halifax",
+        "JSONNames": "MinWage",
+        "Value": 12.95,
+        "Demographic": [
+            "18 - 35",
+            "36 - 65"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Kelowna",
+        "JSONNames": "MinWage",
+        "Value": 15.2,
+        "Demographic": [
+            "18 - 35",
+            "36 - 65"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Lethbridge",
+        "JSONNames": "MinWage",
+        "Value": 15.0,
+        "Demographic": [
+            "18 - 35",
+            "36 - 65"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "London",
+        "JSONNames": "MinWage",
+        "Value": 15.0,
+        "Demographic": [
+            "18 - 35",
+            "36 - 65"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Moncton",
+        "JSONNames": "MinWage",
+        "Value": 11.75,
+        "Demographic": [
+            "18 - 35",
+            "36 - 65"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Regina",
+        "JSONNames": "MinWage",
+        "Value": 11.81,
+        "Demographic": [
+            "18 - 35",
+            "36 - 65"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Saskatoon",
+        "JSONNames": "MinWage",
+        "Value": 11.81,
+        "Demographic": [
+            "18 - 35",
+            "36 - 65"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Victoria",
+        "JSONNames": "MinWage",
+        "Value": 15.2,
+        "Demographic": [
+            "18 - 35",
+            "36 - 65"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Winnipeg",
+        "JSONNames": "MinWage",
+        "Value": 11.95,
+        "Demographic": [
+            "18 - 35",
+            "36 - 65"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Calgary",
+        "JSONNames": "PlanhubPhoneBasicPlan",
+        "Value": 15.0,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Halifax",
+        "JSONNames": "PlanhubPhoneBasicPlan",
+        "Value": 15.0,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Kelowna",
+        "JSONNames": "PlanhubPhoneBasicPlan",
+        "Value": 15.0,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Lethbridge",
+        "JSONNames": "PlanhubPhoneBasicPlan",
+        "Value": 15.0,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "London",
+        "JSONNames": "PlanhubPhoneBasicPlan",
+        "Value": 12.0,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Moncton",
+        "JSONNames": "PlanhubPhoneBasicPlan",
+        "Value": 15.0,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Regina",
+        "JSONNames": "PlanhubPhoneBasicPlan",
+        "Value": 15.0,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Saskatoon",
+        "JSONNames": "PlanhubPhoneBasicPlan",
+        "Value": 15.0,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Victoria",
+        "JSONNames": "PlanhubPhoneBasicPlan",
+        "Value": 15.0,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Winnipeg",
+        "JSONNames": "PlanhubPhoneBasicPlan",
+        "Value": 15.0,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Calgary",
+        "JSONNames": "StatscanTuition",
+        "Value": 6686.0,
+        "Demographic": [
+            "13 - 18",
+            "19 - 35"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Halifax",
+        "JSONNames": "StatscanTuition",
+        "Value": 9260.0,
+        "Demographic": [
+            "13 - 18",
+            "19 - 35"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Kelowna",
+        "JSONNames": "StatscanTuition",
+        "Value": 4279.0,
+        "Demographic": [
+            "13 - 18",
+            "19 - 35"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Lethbridge",
+        "JSONNames": "StatscanTuition",
+        "Value": 5689.0,
+        "Demographic": [
+            "13 - 18",
+            "19 - 35"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "London",
+        "JSONNames": "StatscanTuition",
+        "Value": 10158.0,
+        "Demographic": [
+            "13 - 18",
+            "19 - 35"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Moncton",
+        "JSONNames": "StatscanTuition",
+        "Value": 7002.0,
+        "Demographic": [
+            "13 - 18",
+            "19 - 35"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Regina",
+        "JSONNames": "StatscanTuition",
+        "Value": 7433.0,
+        "Demographic": [
+            "13 - 18",
+            "19 - 35"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Saskatoon",
+        "JSONNames": "StatscanTuition",
+        "Value": 9385.0,
+        "Demographic": [
+            "13 - 18",
+            "19 - 35"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Victoria",
+        "JSONNames": "StatscanTuition",
+        "Value": 6287.0,
+        "Demographic": [
+            "13 - 18",
+            "19 - 35"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Winnipeg",
+        "JSONNames": "StatscanTuition",
+        "Value": 5171.0,
+        "Demographic": [
+            "13 - 18",
+            "19 - 35"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Calgary",
+        "JSONNames": "RentOneBr",
+        "Value": 1113.67,
+        "Demographic": [
+            "1 - 2 people"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": 1.0,
+        "maxNumberOfPeople": 2.0
+    },
+    {
+        "City": "Halifax",
+        "JSONNames": "RentOneBr",
+        "Value": 1387.83,
+        "Demographic": [
+            "1 - 2 people"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": 1.0,
+        "maxNumberOfPeople": 2.0
+    },
+    {
+        "City": "Kelowna",
+        "JSONNames": "RentOneBr",
+        "Value": 1546.12,
+        "Demographic": [
+            "1 - 2 people"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": 1.0,
+        "maxNumberOfPeople": 2.0
+    },
+    {
+        "City": "Lethbridge",
+        "JSONNames": "RentOneBr",
+        "Value": 899.68,
+        "Demographic": [
+            "1 - 2 people"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": 1.0,
+        "maxNumberOfPeople": 2.0
+    },
+    {
+        "City": "London",
+        "JSONNames": "RentOneBr",
+        "Value": 1288.58,
+        "Demographic": [
+            "1 - 2 people"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": 1.0,
+        "maxNumberOfPeople": 2.0
+    },
+    {
+        "City": "Moncton",
+        "JSONNames": "RentOneBr",
+        "Value": 1049.44,
+        "Demographic": [
+            "1 - 2 people"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": 1.0,
+        "maxNumberOfPeople": 2.0
+    },
+    {
+        "City": "Regina",
+        "JSONNames": "RentOneBr",
+        "Value": 887.41,
+        "Demographic": [
+            "1 - 2 people"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": 1.0,
+        "maxNumberOfPeople": 2.0
+    },
+    {
+        "City": "Saskatoon",
+        "JSONNames": "RentOneBr",
+        "Value": 921.91,
+        "Demographic": [
+            "1 - 2 people"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": 1.0,
+        "maxNumberOfPeople": 2.0
+    },
+    {
+        "City": "Victoria",
+        "JSONNames": "RentOneBr",
+        "Value": 1621.72,
+        "Demographic": [
+            "1 - 2 people"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": 1.0,
+        "maxNumberOfPeople": 2.0
+    },
+    {
+        "City": "Winnipeg",
+        "JSONNames": "RentOneBr",
+        "Value": 1020.03,
+        "Demographic": [
+            "1 - 2 people"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": 1.0,
+        "maxNumberOfPeople": 2.0
+    },
+    {
+        "City": "Calgary",
+        "JSONNames": "RentTwoBr",
+        "Value": 1349.38,
+        "Demographic": [
+            "3 - 4 people"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": 3.0,
+        "maxNumberOfPeople": 4.0
+    },
+    {
+        "City": "Halifax",
+        "JSONNames": "RentTwoBr",
+        "Value": 1826.26,
+        "Demographic": [
+            "3 - 4 people"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": 3.0,
+        "maxNumberOfPeople": 4.0
+    },
+    {
+        "City": "Kelowna",
+        "JSONNames": "RentTwoBr",
+        "Value": 2009.1,
+        "Demographic": [
+            "3 - 4 people"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": 3.0,
+        "maxNumberOfPeople": 4.0
+    },
+    {
+        "City": "Lethbridge",
+        "JSONNames": "RentTwoBr",
+        "Value": 1171.74,
+        "Demographic": [
+            "3 - 4 people"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": 3.0,
+        "maxNumberOfPeople": 4.0
+    },
+    {
+        "City": "London",
+        "JSONNames": "RentTwoBr",
+        "Value": 1678.87,
+        "Demographic": [
+            "3 - 4 people"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": 3.0,
+        "maxNumberOfPeople": 4.0
+    },
+    {
+        "City": "Moncton",
+        "JSONNames": "RentTwoBr",
+        "Value": 1350.92,
+        "Demographic": [
+            "3 - 4 people"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": 3.0,
+        "maxNumberOfPeople": 4.0
+    },
+    {
+        "City": "Regina",
+        "JSONNames": "RentTwoBr",
+        "Value": 1149.24,
+        "Demographic": [
+            "3 - 4 people"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": 3.0,
+        "maxNumberOfPeople": 4.0
+    },
+    {
+        "City": "Saskatoon",
+        "JSONNames": "RentTwoBr",
+        "Value": 1183.27,
+        "Demographic": [
+            "3 - 4 people"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": 3.0,
+        "maxNumberOfPeople": 4.0
+    },
+    {
+        "City": "Victoria",
+        "JSONNames": "RentTwoBr",
+        "Value": 2150.18,
+        "Demographic": [
+            "3 - 4 people"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": 3.0,
+        "maxNumberOfPeople": 4.0
+    },
+    {
+        "City": "Winnipeg",
+        "JSONNames": "RentTwoBr",
+        "Value": 1308.72,
+        "Demographic": [
+            "3 - 4 people"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": 3.0,
+        "maxNumberOfPeople": 4.0
+    },
+    {
+        "City": "Calgary",
+        "JSONNames": "RentThreeBr",
+        "Value": 1682.95,
+        "Demographic": [
+            "5 people"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": 5.0,
+        "maxNumberOfPeople": 5.0
+    },
+    {
+        "City": "Halifax",
+        "JSONNames": "RentThreeBr",
+        "Value": 2176.66,
+        "Demographic": [
+            "5 people"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": 5.0,
+        "maxNumberOfPeople": 5.0
+    },
+    {
+        "City": "Kelowna",
+        "JSONNames": "RentThreeBr",
+        "Value": 2936.4,
+        "Demographic": [
+            "5 people"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": 5.0,
+        "maxNumberOfPeople": 5.0
+    },
+    {
+        "City": "Lethbridge",
+        "JSONNames": "RentThreeBr",
+        "Value": 1395.42,
+        "Demographic": [
+            "5 people"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": 5.0,
+        "maxNumberOfPeople": 5.0
+    },
+    {
+        "City": "London",
+        "JSONNames": "RentThreeBr",
+        "Value": 2288.87,
+        "Demographic": [
+            "5 people"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": 5.0,
+        "maxNumberOfPeople": 5.0
+    },
+    {
+        "City": "Moncton",
+        "JSONNames": "RentThreeBr",
+        "Value": 1693.97,
+        "Demographic": [
+            "5 people"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": 5.0,
+        "maxNumberOfPeople": 5.0
+    },
+    {
+        "City": "Regina",
+        "JSONNames": "RentThreeBr",
+        "Value": 1390.06,
+        "Demographic": [
+            "5 people"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": 5.0,
+        "maxNumberOfPeople": 5.0
+    },
+    {
+        "City": "Saskatoon",
+        "JSONNames": "RentThreeBr",
+        "Value": 1495.62,
+        "Demographic": [
+            "5 people"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": 5.0,
+        "maxNumberOfPeople": 5.0
+    },
+    {
+        "City": "Victoria",
+        "JSONNames": "RentThreeBr",
+        "Value": 3170.0,
+        "Demographic": [
+            "5 people"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": 5.0,
+        "maxNumberOfPeople": 5.0
+    },
+    {
+        "City": "Winnipeg",
+        "JSONNames": "RentThreeBr",
+        "Value": 1657.33,
+        "Demographic": [
+            "5 people"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": 5.0,
+        "maxNumberOfPeople": 5.0
+    },
+    {
+        "City": "Calgary",
+        "JSONNames": "RentFourBr",
+        "Value": 2010.07,
+        "Demographic": [
+            "6+ people"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": 6.0,
+        "maxNumberOfPeople": 100.0
+    },
+    {
+        "City": "Halifax",
+        "JSONNames": "RentFourBr",
+        "Value": 2690.54,
+        "Demographic": [
+            "6+ people"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": 6.0,
+        "maxNumberOfPeople": 100.0
+    },
+    {
+        "City": "Kelowna",
+        "JSONNames": "RentFourBr",
+        "Value": 3687.5,
+        "Demographic": [
+            "6+ people"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": 6.0,
+        "maxNumberOfPeople": 100.0
+    },
+    {
+        "City": "Lethbridge",
+        "JSONNames": "RentFourBr",
+        "Value": 1770.5,
+        "Demographic": [
+            "6+ people"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": 6.0,
+        "maxNumberOfPeople": 100.0
+    },
+    {
+        "City": "London",
+        "JSONNames": "RentFourBr",
+        "Value": 2383.0,
+        "Demographic": [
+            "6+ people"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": 6.0,
+        "maxNumberOfPeople": 100.0
+    },
+    {
+        "City": "Moncton",
+        "JSONNames": "RentFourBr",
+        "Value": 2381.67,
+        "Demographic": [
+            "6+ people"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": 6.0,
+        "maxNumberOfPeople": 100.0
+    },
+    {
+        "City": "Regina",
+        "JSONNames": "RentFourBr",
+        "Value": 2166.67,
+        "Demographic": [
+            "6+ people"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": 6.0,
+        "maxNumberOfPeople": 100.0
+    },
+    {
+        "City": "Saskatoon",
+        "JSONNames": "RentFourBr",
+        "Value": 2170.83,
+        "Demographic": [
+            "6+ people"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": 6.0,
+        "maxNumberOfPeople": 100.0
+    },
+    {
+        "City": "Victoria",
+        "JSONNames": "RentFourBr",
+        "Value": 3400.0,
+        "Demographic": [
+            "6+ people"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": 6.0,
+        "maxNumberOfPeople": 100.0
+    },
+    {
+        "City": "Winnipeg",
+        "JSONNames": "RentFourBr",
+        "Value": 1794.76,
+        "Demographic": [
+            "6+ people"
+        ],
+        "lowerIsBetter": true,
+        "minNumberOfPeople": 6.0,
+        "maxNumberOfPeople": 100.0
+    },
+    {
+        "City": "Calgary",
+        "JSONNames": null,
+        "Value": 2112.86,
+        "Demographic": [
+            "nan"
+        ],
+        "lowerIsBetter": null,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Halifax",
+        "JSONNames": null,
+        "Value": 2278.22,
+        "Demographic": [
+            "nan"
+        ],
+        "lowerIsBetter": null,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Kelowna",
+        "JSONNames": null,
+        "Value": 4050.0,
+        "Demographic": [
+            "nan"
+        ],
+        "lowerIsBetter": null,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Lethbridge",
+        "JSONNames": null,
+        "Value": 2175.0,
+        "Demographic": [
+            "nan"
+        ],
+        "lowerIsBetter": null,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "London",
+        "JSONNames": null,
+        "Value": 1667.8,
+        "Demographic": [
+            "nan"
+        ],
+        "lowerIsBetter": null,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Moncton",
+        "JSONNames": null,
+        "Value": 2250.0,
+        "Demographic": [
+            "nan"
+        ],
+        "lowerIsBetter": null,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Regina",
+        "JSONNames": null,
+        "Value": 1525.0,
+        "Demographic": [
+            "nan"
+        ],
+        "lowerIsBetter": null,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Saskatoon",
+        "JSONNames": null,
+        "Value": 2377.78,
+        "Demographic": [
+            "nan"
+        ],
+        "lowerIsBetter": null,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Victoria",
+        "JSONNames": null,
+        "Value": 3400.0,
+        "Demographic": [
+            "nan"
+        ],
+        "lowerIsBetter": null,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Winnipeg",
+        "JSONNames": null,
+        "Value": 1931.82,
+        "Demographic": [
+            "nan"
+        ],
+        "lowerIsBetter": null,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Calgary",
+        "JSONNames": "AfghanDemo",
+        "Value": 2.0,
+        "Demographic": [
+            "65+"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Halifax",
+        "JSONNames": "AfghanDemo",
+        "Value": 1.0,
+        "Demographic": [
+            "65+"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "London",
+        "JSONNames": "AfghanDemo",
+        "Value": 2.0,
+        "Demographic": [
+            "65+"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Regina",
+        "JSONNames": "AfghanDemo",
+        "Value": 1.0,
+        "Demographic": [
+            "65+"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Winnipeg",
+        "JSONNames": "AfghanDemo",
+        "Value": 1.0,
+        "Demographic": [
+            "65+"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Kelowna",
+        "JSONNames": "AfghanDemo",
+        "Value": 0.0,
+        "Demographic": [
+            "65+"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Lethbridge",
+        "JSONNames": "AfghanDemo",
+        "Value": 0.0,
+        "Demographic": [
+            "65+"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Moncton",
+        "JSONNames": "AfghanDemo",
+        "Value": 0.0,
+        "Demographic": [
+            "65+"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Saskatoon",
+        "JSONNames": "AfghanDemo",
+        "Value": 0.0,
+        "Demographic": [
+            "65+"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Victoria",
+        "JSONNames": "AfghanDemo",
+        "Value": 0.0,
+        "Demographic": [
+            "65+"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Calgary",
+        "JSONNames": "AfghanRestuarant",
+        "Value": 3.0,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Halifax",
+        "JSONNames": "AfghanRestuarant",
+        "Value": 1.0,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Kelowna",
+        "JSONNames": "AfghanRestuarant",
+        "Value": 4.0,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Lethbridge",
+        "JSONNames": "AfghanRestuarant",
+        "Value": 5.0,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "London",
+        "JSONNames": "AfghanRestuarant",
+        "Value": 6.0,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Regina",
+        "JSONNames": "AfghanRestuarant",
+        "Value": 1.0,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Saskatoon",
+        "JSONNames": "AfghanRestuarant",
+        "Value": 5.0,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Victoria",
+        "JSONNames": "AfghanRestuarant",
+        "Value": 1.0,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Moncton",
+        "JSONNames": "AfghanRestuarant",
+        "Value": 0.0,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Winnipeg",
+        "JSONNames": "AfghanRestuarant",
+        "Value": 0.0,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Calgary",
+        "JSONNames": "EthnicMarkets",
+        "Value": 4.0,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Halifax",
+        "JSONNames": "EthnicMarkets",
+        "Value": 5.0,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Kelowna",
+        "JSONNames": "EthnicMarkets",
+        "Value": 1.0,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Lethbridge",
+        "JSONNames": "EthnicMarkets",
+        "Value": 2.0,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "London",
+        "JSONNames": "EthnicMarkets",
+        "Value": 7.0,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Moncton",
+        "JSONNames": "EthnicMarkets",
+        "Value": 3.0,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Regina",
+        "JSONNames": "EthnicMarkets",
+        "Value": 5.0,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Saskatoon",
+        "JSONNames": "EthnicMarkets",
+        "Value": 2.0,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Victoria",
+        "JSONNames": "EthnicMarkets",
+        "Value": 3.0,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Winnipeg",
+        "JSONNames": "EthnicMarkets",
+        "Value": 7.0,
+        "Demographic": [
+            "All"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Calgary",
+        "JSONNames": "ImmigLawyers",
+        "Value": 5.0,
+        "Demographic": [
+            "18 - 35",
+            "36 - 65",
+            "65+"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Halifax",
+        "JSONNames": "ImmigLawyers",
+        "Value": 4.0,
+        "Demographic": [
+            "18 - 35",
+            "36 - 65",
+            "65+"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Kelowna",
+        "JSONNames": "ImmigLawyers",
+        "Value": 3.0,
+        "Demographic": [
+            "18 - 35",
+            "36 - 65",
+            "65+"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Lethbridge",
+        "JSONNames": "ImmigLawyers",
+        "Value": 4.0,
+        "Demographic": [
+            "18 - 35",
+            "36 - 65",
+            "65+"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "London",
+        "JSONNames": "ImmigLawyers",
+        "Value": 11.0,
+        "Demographic": [
+            "18 - 35",
+            "36 - 65",
+            "65+"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Moncton",
+        "JSONNames": "ImmigLawyers",
+        "Value": 3.0,
+        "Demographic": [
+            "18 - 35",
+            "36 - 65",
+            "65+"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Regina",
+        "JSONNames": "ImmigLawyers",
+        "Value": 5.0,
+        "Demographic": [
+            "18 - 35",
+            "36 - 65",
+            "65+"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Saskatoon",
+        "JSONNames": "ImmigLawyers",
+        "Value": 4.0,
+        "Demographic": [
+            "18 - 35",
+            "36 - 65",
+            "65+"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Victoria",
+        "JSONNames": "ImmigLawyers",
+        "Value": 3.0,
+        "Demographic": [
+            "18 - 35",
+            "36 - 65",
+            "65+"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Winnipeg",
+        "JSONNames": "ImmigLawyers",
+        "Value": 5.0,
+        "Demographic": [
+            "18 - 35",
+            "36 - 65",
+            "65+"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Calgary",
+        "JSONNames": "LegalAid",
+        "Value": 1.0,
+        "Demographic": [
+            "18 - 35",
+            "36 - 65",
+            "65+"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Halifax",
+        "JSONNames": "LegalAid",
+        "Value": 1.0,
+        "Demographic": [
+            "18 - 35",
+            "36 - 65",
+            "65+"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Kelowna",
+        "JSONNames": "LegalAid",
+        "Value": 1.0,
+        "Demographic": [
+            "18 - 35",
+            "36 - 65",
+            "65+"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Lethbridge",
+        "JSONNames": "LegalAid",
+        "Value": 1.0,
+        "Demographic": [
+            "18 - 35",
+            "36 - 65",
+            "65+"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "London",
+        "JSONNames": "LegalAid",
+        "Value": 1.0,
+        "Demographic": [
+            "18 - 35",
+            "36 - 65",
+            "65+"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Moncton",
+        "JSONNames": "LegalAid",
+        "Value": 1.0,
+        "Demographic": [
+            "18 - 35",
+            "36 - 65",
+            "65+"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Regina",
+        "JSONNames": "LegalAid",
+        "Value": 1.0,
+        "Demographic": [
+            "18 - 35",
+            "36 - 65",
+            "65+"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Saskatoon",
+        "JSONNames": "LegalAid",
+        "Value": 1.0,
+        "Demographic": [
+            "18 - 35",
+            "36 - 65",
+            "65+"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Victoria",
+        "JSONNames": "LegalAid",
+        "Value": 1.0,
+        "Demographic": [
+            "18 - 35",
+            "36 - 65",
+            "65+"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Winnipeg",
+        "JSONNames": "LegalAid",
+        "Value": 1.0,
+        "Demographic": [
+            "18 - 35",
+            "36 - 65",
+            "65+"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Calgary",
+        "JSONNames": "Mosque",
+        "Value": 5.0,
+        "Demographic": [
+            "65+"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Halifax",
+        "JSONNames": "Mosque",
+        "Value": 5.0,
+        "Demographic": [
+            "65+"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Kelowna",
+        "JSONNames": "Mosque",
+        "Value": 1.0,
+        "Demographic": [
+            "65+"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Lethbridge",
+        "JSONNames": "Mosque",
+        "Value": 2.0,
+        "Demographic": [
+            "65+"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "London",
+        "JSONNames": "Mosque",
+        "Value": 5.0,
+        "Demographic": [
+            "65+"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Moncton",
+        "JSONNames": "Mosque",
+        "Value": 1.0,
+        "Demographic": [
+            "65+"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Regina",
+        "JSONNames": "Mosque",
+        "Value": 1.0,
+        "Demographic": [
+            "65+"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Saskatoon",
+        "JSONNames": "Mosque",
+        "Value": 4.0,
+        "Demographic": [
+            "65+"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Victoria",
+        "JSONNames": "Mosque",
+        "Value": 5.0,
+        "Demographic": [
+            "65+"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Winnipeg",
+        "JSONNames": "Mosque",
+        "Value": 8.0,
+        "Demographic": [
+            "65+"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Calgary",
+        "JSONNames": "YouthEmploymentCentre",
+        "Value": 1.0,
+        "Demographic": [
+            "18 - 35"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Halifax",
+        "JSONNames": "YouthEmploymentCentre",
+        "Value": 7.0,
+        "Demographic": [
+            "18 - 35"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Kelowna",
+        "JSONNames": "YouthEmploymentCentre",
+        "Value": 5.0,
+        "Demographic": [
+            "18 - 35"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Lethbridge",
+        "JSONNames": "YouthEmploymentCentre",
+        "Value": 4.0,
+        "Demographic": [
+            "18 - 35"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "London",
+        "JSONNames": "YouthEmploymentCentre",
+        "Value": 8.0,
+        "Demographic": [
+            "18 - 35"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Moncton",
+        "JSONNames": "YouthEmploymentCentre",
+        "Value": 3.0,
+        "Demographic": [
+            "18 - 35"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Regina",
+        "JSONNames": "YouthEmploymentCentre",
+        "Value": 4.0,
+        "Demographic": [
+            "18 - 35"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Saskatoon",
+        "JSONNames": "YouthEmploymentCentre",
+        "Value": 2.0,
+        "Demographic": [
+            "18 - 35"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Victoria",
+        "JSONNames": "YouthEmploymentCentre",
+        "Value": 5.0,
+        "Demographic": [
+            "18 - 35"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    },
+    {
+        "City": "Winnipeg",
+        "JSONNames": "YouthEmploymentCentre",
+        "Value": 1.0,
+        "Demographic": [
+            "18 - 35"
+        ],
+        "lowerIsBetter": false,
+        "minNumberOfPeople": null,
+        "maxNumberOfPeople": null
+    }
+]
