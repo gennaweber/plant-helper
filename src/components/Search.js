@@ -1,42 +1,24 @@
 import React, { useState } from "react";
-import { useTranslation } from "react-i18next";
 
 import { Button, Grid, TextField } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import CloseIcon from "@mui/icons-material/Close";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
-const cleanSearch = (s) => {
-  var words = ["of", "the", "in", "on", "at", "to", "a", "is", "for"];
-  var re = new RegExp("\\b(" + words.join("|") + ")\\b", "g");
-  return (s || "").replace(re, "").replace(/[ ]{2,}/, " ");
-};
+// const cleanSearch = (s) => {
+//   var words = ["of", "the", "in", "on", "at", "to", "a", "is", "for"];
+//   var re = new RegExp("\\b(" + words.join("|") + ")\\b", "g");
+//   return (s || "").replace(re, "").replace(/[ ]{2,}/, " ");
+// };
 
-const Search = ({ setSearchStringQuery }) => {
-  const { t } = useTranslation();
-  const [searchString, setSearchString] = useState("");
+const Search = ({ searchString, setSearchString }) => {
   const [searched, setSearched] = useState(false);
 
-  const handleKeyPress = (e) => {
-    if (e.key === "Enter") {
-      createStringQuery();
-    }
-  };
-
-  const createStringQuery = () => {
-    if (searchString === "") {
-      setSearchStringQuery("");
-    } else {
-      let words = cleanSearch(searchString)
-        .replace(/\s+/g, " ") //remove extra spaces
-        .trim()
-        .split(" ") //split at spaces
-        .join("*' AND '") //add wildcard to each query word
-        .concat("*");
-
-      setSearchStringQuery(words);
-    }
-  };
+  // const handleKeyPress = (e) => {
+  //   if (e.key === "Enter") {
+  //     createStringQuery();
+  //   }
+  // };
 
   return (
     <div className="accordianContainer">
@@ -58,9 +40,9 @@ const Search = ({ setSearchStringQuery }) => {
               setSearchString(e.target.value);
               setSearched(true);
             }}
-            onKeyDown={(e) => handleKeyPress(e)}
+            // onKeyDown={(e) => handleKeyPress(e)}
             fullWidth={true}
-            label={t("search")}
+            label="Search"
           ></TextField>
         </Grid>
         {(searchString.length > 0 || searched) && (
@@ -73,7 +55,6 @@ const Search = ({ setSearchStringQuery }) => {
                 color="error"
                 onClick={() => {
                   setSearchString("");
-                  setSearchStringQuery("");
                   setSearched(false);
                 }}
               >
@@ -86,7 +67,7 @@ const Search = ({ setSearchStringQuery }) => {
                 className="roundButton"
                 variant="contained"
                 color="primary"
-                onClick={() => createStringQuery()}
+                // onClick={() => createStringQuery()}
               >
                 <ArrowForwardIcon fontSize="large" />
               </Button>

@@ -7,6 +7,7 @@ import {
   Navigate,
 } from "react-router-dom";
 import { createTheme, ThemeProvider } from "@mui/material";
+import GoogleSheetsProvider from "react-db-google-sheets";
 
 import Home from "./pages/Home";
 import Login from "./pages/Login";
@@ -16,6 +17,7 @@ const theme = createTheme({
   palette: {
     common: {
       black: "#1e2229",
+      white: "#fffde7",
     },
     primary: {
       dark: "#0e453c",
@@ -44,12 +46,16 @@ const theme = createTheme({
       primary: "#1e2229",
     },
     background: {
-      paper: "#FFF1BD",
+      paper: "#fffde7",
     },
+  },
+  shape: {
+    borderRadius: 30,
   },
   typography: {
     fontFamily: "Lora",
     htmlFontSize: 24,
+    fontWeightRegular: 500,
     h1: {
       fontFamily: "Montserrat Alternates",
       fontWeight: 800,
@@ -70,6 +76,13 @@ const theme = createTheme({
       fontFamily: "Montserrat Alternates",
       fontWeight: 400,
     },
+    body1: {
+      fontFamily: "Montserrat Alternates",
+      fontSize: 12,
+    },
+    body2: {
+      fontFamily: "Montserrat Alternates",
+    },
   },
   components: {
     MuiButton: {
@@ -86,6 +99,19 @@ const theme = createTheme({
         },
       },
     },
+    MuiOutlinedInput: {
+      styleOverrides: {
+        input: {
+          fontFamily: "Montserrat Alternates",
+        },
+        root: {
+          background: "#fffde7",
+        },
+        "&MuiOutlinedInput-input": {
+          fontFamily: "Montserrat Alternates",
+        },
+      },
+    },
   },
 });
 
@@ -93,22 +119,26 @@ function App() {
   const [password, setPassword] = useState(true);
 
   return (
-    <ThemeProvider theme={theme}>
-      <Router>
-        <div className="flexWrapper">
-          <div className="flexGrow">
-            <Routes>
-              <Route
-                path="/"
-                element={password ? <Home /> : <Navigate replace to="/login" />}
-              />
-              <Route path="/login" element={<Login />} />
-            </Routes>
+    <GoogleSheetsProvider>
+      <ThemeProvider theme={theme}>
+        <Router>
+          <div className="flexWrapper">
+            <div className="flexGrow">
+              <Routes>
+                <Route
+                  path="/"
+                  element={
+                    password ? <Home /> : <Navigate replace to="/login" />
+                  }
+                />
+                <Route path="/login" element={<Login />} />
+              </Routes>
+            </div>
+            <Footer />
           </div>
-          <Footer />
-        </div>
-      </Router>
-    </ThemeProvider>
+        </Router>
+      </ThemeProvider>
+    </GoogleSheetsProvider>
   );
 }
 
