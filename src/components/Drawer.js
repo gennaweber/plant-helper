@@ -4,7 +4,7 @@ import Search from "./Search";
 import { RefinementList } from "react-instantsearch-dom";
 import { ClearRefinements } from "react-instantsearch-dom";
 import ManageSearchIcon from "@mui/icons-material/ManageSearch";
-import { NumericMenu } from "react-instantsearch-dom";
+import { NumericMenu, SortBy } from "react-instantsearch-dom";
 
 const Draw = ({ state, toggleDrawer }) => {
   return (
@@ -29,6 +29,16 @@ const Draw = ({ state, toggleDrawer }) => {
         <Grid p={2} container direction="column" spacing={2}>
           <Grid item>
             <Search />
+          </Grid>
+          <Grid item>
+            <Typography variant="h5">Sort by:</Typography>
+            <SortBy
+              defaultRefinement="plants"
+              items={[
+                { value: "plants", label: "Alphabetical" },
+                { value: "plants_newest", label: "Newest first" },
+              ]}
+            />
           </Grid>
           <Grid item>
             <ClearRefinements />

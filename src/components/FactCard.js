@@ -110,7 +110,7 @@ const FactCard = ({
                   "Common names should be in brackets (like so)",
                 ]}
               >
-                <Typography variant="h2" align="center">
+                <Typography variant="h3" align="center">
                   {genus} {species}
                 </Typography>
               </Tooltip>
