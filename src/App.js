@@ -140,7 +140,9 @@ const theme = createTheme({
 });
 
 function App() {
-  const [auth, setAuth] = useState(false);
+  const [auth, setAuth] = useState(
+    window.localStorage.getItem("auth") || false
+  );
   const [password, setPassword] = useState(
     window.localStorage.getItem("pass") || ""
   );

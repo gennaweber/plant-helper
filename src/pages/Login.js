@@ -11,6 +11,7 @@ const Login = ({ password, setPassword, setAuth }) => {
   const checkAuth = () => {
     if (password === process.env.REACT_APP_PASSWORD) {
       window.localStorage.setItem("pass", password);
+      window.localStorage.setItem("auth", true);
       setError("");
       setAuth(true);
       navigate("/", { replace: true });

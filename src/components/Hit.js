@@ -20,7 +20,7 @@ const Hits = ({ hits }) => {
 
   return (
     <>
-      <Container width="lg">
+      <Container width="lg" sx={{ paddingRight: 0 }}>
         <Box sx={{ width: "100%", minHeight: 829 }}>
           <Masonry columns={getColumns()} spacing={2}>
             {hits.map((hit, i) => (

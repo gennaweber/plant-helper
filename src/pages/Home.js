@@ -37,8 +37,8 @@ const Home = (props) => {
               <Typography variant="h5" align="center">
                 <br />
                 <br />
-                Hover or tap on the card text for clarification. You may also
-                find my{" "}
+                Hover or <strong>tap and hold</strong> on the card text for
+                clarification. You may also find my{" "}
                 <a
                   href="https://docs.google.com/spreadsheets/d/1E7Q3t-68ce0p2j2vHIlGbk03pDwSmTg1Si4or2DFWpc/edit#gid=0"
                   target="_blank"
@@ -47,8 +47,13 @@ const Home = (props) => {
                   Plant Dictionary
                 </a>{" "}
                 helpful. Rarity and price information is based on where I live
-                in Ontario, Canada but may fluctuate over time and be completely
-                different where you live.
+                in Ontario, Canada, but may fluctuate over time and be
+                completely different where you live.
+                <br />
+                <br />
+                This reference doesn't claim to be perfect but it is being
+                constantly updated as new things are learned. Feel free to reach
+                out with suggestions!
               </Typography>
             </Grid>
           </Grid>
