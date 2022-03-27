@@ -12,16 +12,15 @@ const BasicContainer = ({ children, width }) => {
           justifyContent="space-between"
           alignItems="center"
           spacing={0}
-          pb="5vh"
         >
           <Grid
-            sx={{ minHeight: "59vh", minWidth: "100%" }}
+            sx={{ minWidth: "100%" }}
             container
             item
             direction="column"
             justifyContent="center"
             alignItems="center"
-            pt="5vh"
+            pt="10vh"
             pb="5vh"
             spacing={0}
           >

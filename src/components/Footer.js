@@ -7,7 +7,7 @@ let year = d.getFullYear();
 const Footer = () => {
   return (
     <footer>
-      <Container maxWidth="md">
+      <Container maxWidth="lg">
         <Grid
           sx={{ height: "100%" }}
           container
@@ -20,10 +20,10 @@ const Footer = () => {
               <Grid item container spacing="1vh" direction="column">
                 <Grid item>
                   <Grid item mt={3}>
-                    <Typography variant="body1" color="#fffde7">
+                    <Typography variant="body1">
                       Copyright Genna Weber {year} /{" "}
                       <a
-                        className="attributionLink"
+                        className="attributionLinkDark"
                         target="_blank"
                         rel="noreferrer"
                         href="https://www.instagram.com/gennasplants/"
@@ -33,7 +33,7 @@ const Footer = () => {
                       </a>{" "}
                       /{" "}
                       <a
-                        className="attributionLink"
+                        className="attributionLinkDark"
                         target="_blank"
                         rel="noreferrer"
                         href="https://www.patreon.com/gennasplants?fan_landing=true"
@@ -43,7 +43,7 @@ const Footer = () => {
                       </a>
                     </Typography>
                   </Grid>
-                  <Grid item className="attributionLink">
+                  <Grid item className="attributionLinkDark">
                     <a
                       target="_blank"
                       rel="noreferrer"

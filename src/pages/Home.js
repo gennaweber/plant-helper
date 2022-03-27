@@ -1,18 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Typography, Grid } from "@mui/material";
 import BasicContainer from "../components/BasicContainer";
-import FactCard from "../components/FactCard";
-import Search from "../components/Search";
-import { withGoogleSheets } from "react-db-google-sheets";
+import Drawer from "../components/Drawer";
+import { Pagination } from "react-instantsearch-dom";
+
+import CustomHits from "../components/Hit";
 
 const Home = (props) => {
-  const sheet = props.db.Ratings;
-
-  const [searchString, setSearchString] = useState("");
-
   return (
     <>
       <div>
+        <Drawer state={props.state} toggleDrawer={props.toggleDrawer} />
         <BasicContainer width="lg">
           <Grid container direction="column">
             <Grid
@@ -28,55 +26,43 @@ const Home = (props) => {
               </Typography>
             </Grid>
             <Grid item mt="2vh" mb="5vh">
-              <Typography variant="h5" align="center">
+              <Typography variant="h3" align="center">
                 Ratings for 300+ species of houseplants based on observations
                 and experience from{" "}
-                <a
-                  href="https://www.instagram.com/gennasplants/"
-                  className="attributionLinkDark"
-                >
+                <a href="https://www.instagram.com/gennasplants/">
                   {" "}
                   @gennasplants
                 </a>
               </Typography>
-            </Grid>
-            <Grid item>
-              <Search
-                searchString={searchString}
-                setSearchString={setSearchString}
-              />
-            </Grid>
-            <Grid container direction="row" spacing={2} item>
-              {sheet.map((row, i) => (
-                <FactCard
-                  key={i}
-                  genus={row.Genus}
-                  species={row.Species}
-                  rarity={row.Rarity}
-                  price={row.Price_Point}
-                  minLight={row.Light_min}
-                  prefLight={row.Light_prefers}
-                  maxLight={row.Light_max}
-                  tolHumid={row.Humidity_tolerates}
-                  prefHumid={row.Humidity_prefers}
-                  water={row.Water}
-                  fuss={row.Fussiness}
-                  fert={row.Fertilizer}
-                  pattern={row.Growth_Pattern}
-                  prop={row.Propagation}
-                  note={row.Notes}
-                  speed={row.Rate_of_Growth}
-                  hashtag={row.hashtag}
-                  src={row.Image}
-                  alt={`${row.Genus} ${row.Species}`}
-                />
-              ))}
+              <Typography variant="h5" align="center">
+                <br />
+                <br />
+                Hover or tap on the card text for clarification. You may also
+                find my{" "}
+                <a
+                  href="https://docs.google.com/spreadsheets/d/1E7Q3t-68ce0p2j2vHIlGbk03pDwSmTg1Si4or2DFWpc/edit#gid=0"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Plant Dictionary
+                </a>{" "}
+                helpful. Rarity and price information is based on where I live
+                in Ontario, Canada but may fluctuate over time and be completely
+                different where you live.
+              </Typography>
             </Grid>
           </Grid>
         </BasicContainer>
+        <CustomHits />
+        <Grid container py={5} justifyContent="center">
+          <Grid item>
+            <Pagination />
+          </Grid>
+        </Grid>
       </div>
     </>
   );
 };
 
-export default withGoogleSheets("Ratings")(Home);
+export default Home;
+// export default withGoogleSheets("Ratings")(Home);

@@ -6,18 +6,25 @@ import {
   Route,
   Navigate,
 } from "react-router-dom";
-import { createTheme, ThemeProvider } from "@mui/material";
-import GoogleSheetsProvider from "react-db-google-sheets";
+import { createTheme, ThemeProvider, Fab } from "@mui/material";
 
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Footer from "./components/Footer";
 
+import algoliasearch from "algoliasearch";
+import { InstantSearch, SearchBox, Hits } from "react-instantsearch-dom";
+
+const searchClient = algoliasearch(
+  "FHN6MLHV4X",
+  "656a1e7385fbe0581afb2148b5da5d94"
+);
+
 const theme = createTheme({
   palette: {
     common: {
       black: "#1e2229",
-      white: "#fffde7",
+      white: "#fff",
     },
     primary: {
       dark: "#0e453c",
@@ -26,7 +33,7 @@ const theme = createTheme({
     },
     secondary: {
       dark: "#729862",
-      main: "#A3DA8D",
+      main: "#dbec8e",
       light: "#b5e1a3",
     },
     warning: {
@@ -46,14 +53,14 @@ const theme = createTheme({
       primary: "#1e2229",
     },
     background: {
-      paper: "#fffde7",
+      paper: "#fff",
     },
   },
   shape: {
-    borderRadius: 30,
+    borderRadius: 15,
   },
   typography: {
-    fontFamily: "Lora",
+    fontFamily: "Montserrat Alternates",
     htmlFontSize: 24,
     fontWeightRegular: 500,
     h1: {
@@ -65,8 +72,7 @@ const theme = createTheme({
       fontWeight: 500,
     },
     h3: {
-      fontFamily: "Lora",
-      fontWeight: 700,
+      fontFamily: "Montserrat Alternates",
     },
     h4: {
       fontFamily: "Montserrat Alternates",
@@ -85,6 +91,17 @@ const theme = createTheme({
     },
   },
   components: {
+    MuiTooltip: {
+      styleOverrides: {
+        tooltip: {
+          fontSize: "0.75rem",
+          fontFamily: "Montserrat Alternates",
+          color: "#fff",
+          background: "#1e2229",
+          padding: 15,
+        },
+      },
+    },
     MuiButton: {
       styleOverrides: {
         root: {
@@ -105,10 +122,17 @@ const theme = createTheme({
           fontFamily: "Montserrat Alternates",
         },
         root: {
-          background: "#fffde7",
+          background: "#fff",
         },
         "&MuiOutlinedInput-input": {
           fontFamily: "Montserrat Alternates",
+        },
+      },
+    },
+    MuiFab: {
+      styleOverrides: {
+        root: {
+          position: "fixed",
         },
       },
     },
@@ -118,8 +142,14 @@ const theme = createTheme({
 function App() {
   const [password, setPassword] = useState(true);
 
+  const [state, setState] = useState(false);
+
+  const toggleDrawer = (open) => {
+    setState(open);
+  };
+
   return (
-    <GoogleSheetsProvider>
+    <InstantSearch searchClient={searchClient} indexName="plants">
       <ThemeProvider theme={theme}>
         <Router>
           <div className="flexWrapper">
@@ -128,7 +158,11 @@ function App() {
                 <Route
                   path="/"
                   element={
-                    password ? <Home /> : <Navigate replace to="/login" />
+                    password ? (
+                      <Home state={state} toggleDrawer={toggleDrawer} />
+                    ) : (
+                      <Navigate replace to="/login" />
+                    )
                   }
                 />
                 <Route path="/login" element={<Login />} />
@@ -138,7 +172,7 @@ function App() {
           </div>
         </Router>
       </ThemeProvider>
-    </GoogleSheetsProvider>
+    </InstantSearch>
   );
 }
 

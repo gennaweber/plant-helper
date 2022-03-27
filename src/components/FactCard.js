@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Typography, Grid, Divider } from "@mui/material";
+import { Card, Typography, Grid, Divider, Tooltip } from "@mui/material";
 
 const FactCard = ({
   genus,
@@ -55,6 +55,41 @@ const FactCard = ({
     "When totally dry": "water-7",
   };
 
+  const sunTip = {
+    "As much as possible":
+      "3000 foot candles or more for the majority of the day",
+    "Direct sun": "1000+ foot candles",
+    "High, some direct sun": "500 - 1000 foot candles",
+    "Bright indirect": "400 - 600 foot candles",
+    "Medium, no direct sun": "300 - 400 foot candles",
+    "Low to medium": "200 - 300 foot candles",
+    Low: "100 - 200 foot candles",
+  };
+
+  const waterTip = {
+    "Keep wet":
+      "Substrate should be near saturation and never allowed to dry out.",
+    "Keep moist":
+      "Water as soon as substrate becomes dry to the touch on the surface but never allow it to dry out completely.",
+    "When partially dry":
+      "Water when soil is 25% to 50% dry (first couple inches/cm of soil are dry).",
+    "When mostly dry": "Water when soil is 50% to 75% dry.",
+    "When dry":
+      "Water when the soil is 75% to 95% dry but don't allow it to get bone dry. Most hoyas fall into this category and don't like to stay dry for extended periods.",
+    "When totally dry":
+      "Water when the soil is 100% dry, aka bone dry. Can be left a long time between waterings.",
+  };
+
+  const priceTip = {
+    $: "Under $10 CAD",
+    "$ - $$": "$10 - $30 CAD",
+    $$: "$40 - $70 CAD",
+    "$$ - $$$": "$70 - $100 CAD",
+    $$$: "$100 - $500 CAD",
+    "$$$ - $$$$": "$500 - $1000 CAD",
+    $$$$: "$1000+ CAD",
+  };
+
   return (
     <Grid item xs={12} md={6} lg={4}>
       <Card sx={{ minHeight: 100 }}>
@@ -67,9 +102,18 @@ const FactCard = ({
         >
           <Grid container direction="column" item p={3} spacing={2}>
             <Grid item>
-              <Typography variant="h2" align="center">
-                {genus} {species}
-              </Typography>
+              <Tooltip
+                title={[
+                  "Cultivar names should be in single quotes 'like so'",
+                  <br />,
+                  <br />,
+                  "Common names should be in brackets (like so)",
+                ]}
+              >
+                <Typography variant="h2" align="center">
+                  {genus} {species}
+                </Typography>
+              </Tooltip>
             </Grid>
             {note && (
               <Grid item>
@@ -90,10 +134,19 @@ const FactCard = ({
                   />
                 </Grid>
                 <Grid item>
-                  <Typography variant="body1">
-                    <strong>Fussiness: </strong>
-                    {fuss}
-                  </Typography>
+                  <Tooltip
+                    title={[
+                      "(out of 10, lower is better)",
+                      <br />,
+                      <br />,
+                      "Fussiness is completely subjective but usually indicates how far you can deviate from the ideal conditions and still be okay. A large factor is how much 'neglect' it can tolerate, i.e. how long the plant can go without water.",
+                    ]}
+                  >
+                    <Typography variant="body1">
+                      <strong>Fussiness: </strong>
+                      {fuss}
+                    </Typography>
+                  </Tooltip>
                 </Grid>
               </Grid>
             </Grid>
@@ -111,18 +164,24 @@ const FactCard = ({
                   />
                 </Grid>
                 <Grid item>
-                  <Typography variant="body1">
-                    <strong>Minimum light: </strong>
-                    {minLight}
-                  </Typography>
-                  <Typography variant="body1">
-                    <strong>Preferred light: </strong>
-                    {prefLight}
-                  </Typography>
-                  <Typography variant="body1">
-                    <strong>Maximum light: </strong>
-                    {maxLight}
-                  </Typography>
+                  <Tooltip title={`${minLight} = ${sunTip[minLight]}`}>
+                    <Typography variant="body1">
+                      <strong>Minimum light: </strong>
+                      {`${minLight}`}
+                    </Typography>
+                  </Tooltip>
+                  <Tooltip title={`${prefLight} = ${sunTip[prefLight]}`}>
+                    <Typography variant="body1">
+                      <strong>Preferred light: </strong>
+                      {`${prefLight}`}
+                    </Typography>
+                  </Tooltip>
+                  <Tooltip title={`${maxLight} = ${sunTip[maxLight]}`}>
+                    <Typography variant="body1">
+                      <strong>Maximum light: </strong>
+                      {`${maxLight}`}
+                    </Typography>
+                  </Tooltip>
                 </Grid>
               </Grid>
             </Grid>
@@ -140,10 +199,12 @@ const FactCard = ({
                   />
                 </Grid>
                 <Grid item>
-                  <Typography variant="body1">
-                    <strong>Water: </strong>
-                    {water}
-                  </Typography>
+                  <Tooltip title={waterTip[water]}>
+                    <Typography variant="body1">
+                      <strong>Water: </strong>
+                      {`${water}`}
+                    </Typography>
+                  </Tooltip>
                 </Grid>
               </Grid>
             </Grid>
@@ -177,14 +238,18 @@ const FactCard = ({
               <Divider />
             </Grid>
             <Grid item>
-              <Typography variant="body1">
-                <strong>Rarity: </strong>
-                {rarity}
-              </Typography>
-              <Typography variant="body1">
-                <strong>Price: </strong>
-                {price}
-              </Typography>
+              <Tooltip title="Rarity is based on commercial availability where I am in Ontario, Canada and may vary depending on where you are.">
+                <Typography variant="body1">
+                  <strong>Rarity: </strong>
+                  {rarity}
+                </Typography>
+              </Tooltip>
+              <Tooltip title={priceTip[price]}>
+                <Typography variant="body1">
+                  <strong>Price: </strong>
+                  {price}
+                </Typography>
+              </Tooltip>
             </Grid>
             <Grid item>
               <Divider />
@@ -204,16 +269,26 @@ const FactCard = ({
                 {prop}
               </Typography>
             </Grid>
-            <Grid item>
-              <Divider />
-            </Grid>
             {hashtag && (
-              <Grid item>
-                <Typography variant="body1">
-                  <strong>Hashtag: </strong>
-                  {hashtag}
-                </Typography>
-              </Grid>
+              <>
+                <Grid item>
+                  <Divider />
+                </Grid>
+                <Grid item>
+                  <Typography variant="body1">
+                    <strong>Hashtag: </strong>
+                    <a
+                      target="_blank"
+                      rel="noreferrer"
+                      href={`https://www.instagram.com/explore/tags/${hashtag.substring(
+                        1
+                      )}`}
+                    >
+                      {hashtag}
+                    </a>
+                  </Typography>
+                </Grid>
+              </>
             )}
           </Grid>
         </Grid>
