@@ -11,7 +11,7 @@ const Home = (props) => {
     <>
       <div>
         <Drawer state={props.state} toggleDrawer={props.toggleDrawer} />
-        <BasicContainer width="lg">
+        <BasicContainer width="sm">
           <Grid container direction="column">
             <Grid
               item
@@ -26,7 +26,7 @@ const Home = (props) => {
               </Typography>
             </Grid>
             <Grid item mt="2vh" mb="5vh">
-              <Typography variant="h3" align="center">
+              <Typography variant="h5" align="center">
                 Ratings for 300+ species of houseplants based on observations
                 and experience from{" "}
                 <a href="https://www.instagram.com/gennasplants/">

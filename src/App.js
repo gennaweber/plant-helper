@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./App.css";
 import {
   BrowserRouter as Router,
@@ -6,14 +6,14 @@ import {
   Route,
   Navigate,
 } from "react-router-dom";
-import { createTheme, ThemeProvider, Fab } from "@mui/material";
+import { createTheme, ThemeProvider } from "@mui/material";
 
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Footer from "./components/Footer";
 
 import algoliasearch from "algoliasearch";
-import { InstantSearch, SearchBox, Hits } from "react-instantsearch-dom";
+import { InstantSearch } from "react-instantsearch-dom";
 
 const searchClient = algoliasearch(
   "FHN6MLHV4X",
@@ -140,8 +140,10 @@ const theme = createTheme({
 });
 
 function App() {
-  const [password, setPassword] = useState(true);
-
+  const [auth, setAuth] = useState(false);
+  const [password, setPassword] = useState(
+    window.localStorage.getItem("pass") || ""
+  );
   const [state, setState] = useState(false);
 
   const toggleDrawer = (open) => {
@@ -158,14 +160,23 @@ function App() {
                 <Route
                   path="/"
                   element={
-                    password ? (
+                    auth ? (
                       <Home state={state} toggleDrawer={toggleDrawer} />
                     ) : (
                       <Navigate replace to="/login" />
                     )
                   }
                 />
-                <Route path="/login" element={<Login />} />
+                <Route
+                  path="/login"
+                  element={
+                    <Login
+                      password={password}
+                      setPassword={setPassword}
+                      setAuth={setAuth}
+                    />
+                  }
+                />
               </Routes>
             </div>
             <Footer />

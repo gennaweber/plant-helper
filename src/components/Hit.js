@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Grid, Box, Container } from "@mui/material";
+import React from "react";
+import { Box, Container } from "@mui/material";
 import useWindowDimensions from "../helpers/useWindowDimensions";
 import Masonry from "@mui/lab/Masonry";
 import FactCard from "./FactCard";

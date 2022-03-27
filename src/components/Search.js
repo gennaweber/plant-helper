@@ -1,15 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { SearchBox, PoweredBy } from "react-instantsearch-dom";
 
-const Search = ({ searchString, setSearchString }) => {
-  const [searched, setSearched] = useState(false);
-
-  // const handleKeyPress = (e) => {
-  //   if (e.key === "Enter") {
-  //     createStringQuery();
-  //   }
-  // };
-
+const Search = () => {
   return (
     <div>
       <SearchBox />
