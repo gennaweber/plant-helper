@@ -93,7 +93,9 @@ const FactCard = ({
   return (
     <Grid item xs={12} md={6} lg={4}>
       <Card sx={{ minHeight: 100 }}>
-        {src && <img width="100%" src={src} alt={alt} />}
+        {src && (
+          <img referrerpolicy="no-referrer" width="100%" src={src} alt={alt} />
+        )}
         <Grid
           container
           sx={{ minHeight: 100 }}
