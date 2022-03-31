@@ -90,6 +90,17 @@ const FactCard = ({
     $$$$: "$1000+ CAD",
   };
 
+  const rareTip = {
+    Common: "Easy to find at most garden centres.",
+    Uncommon:
+      "Some garden centres may carry it but probably won't have it in stock all the time.",
+    "Very uncommon":
+      "Very unlikely to be found in a garden centre but not impossible to find in specialty shops or from private sellers.",
+    Rare: "Hard to find even in specialty shops. Generally these plants have to be imported from tropical countries.",
+    "Very rare":
+      "Usually passed around amongst private collectors and not sold publically. Your best chance of finding these plants is usually in auctions.",
+  };
+
   return (
     <Grid item xs={12} md={6} lg={4}>
       <Card sx={{ minHeight: 100 }}>
@@ -106,10 +117,10 @@ const FactCard = ({
             <Grid item>
               <Tooltip
                 title={[
-                  "Cultivar names should be in single quotes 'like so'",
+                  "Cultivar/trade names should be in single quotes 'like so'.",
                   <br />,
                   <br />,
-                  "Common names should be in brackets (like so)",
+                  "Common names should be in brackets (like so). May be a name it was formerly known by before being reclassified.",
                 ]}
               >
                 <Typography variant="h3" align="center">
@@ -240,7 +251,7 @@ const FactCard = ({
               <Divider />
             </Grid>
             <Grid item>
-              <Tooltip title="Rarity is based on commercial availability where I am in Ontario, Canada and may vary depending on where you are.">
+              <Tooltip title={`${rarity} = ${rareTip[rarity]}`}>
                 <Typography variant="body1">
                   <strong>Rarity: </strong>
                   {rarity}
