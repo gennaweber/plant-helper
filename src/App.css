@@ -27,6 +27,10 @@ p {
   font-family: sans-serif;
 }
 
+iframe {
+  width: 100% !important;
+}
+
 a:hover {
   text-decoration: none;
   color: var(--lightGreen);

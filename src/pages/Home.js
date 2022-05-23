@@ -1,16 +1,17 @@
+import { Grid, Typography } from "@mui/material";
 import React from "react";
-import { Typography, Grid } from "@mui/material";
+import { Pagination } from "react-instantsearch-dom";
 import BasicContainer from "../components/BasicContainer";
 import Drawer from "../components/Drawer";
-import { Pagination } from "react-instantsearch-dom";
-
 import CustomHits from "../components/Hit";
+import TabsRouter from "../components/TabsRouter";
 
 const Home = (props) => {
   return (
     <>
       <div>
         <Drawer state={props.state} toggleDrawer={props.toggleDrawer} />
+        <TabsRouter />
         <BasicContainer width="sm">
           <Grid container direction="column">
             <Grid
@@ -21,7 +22,7 @@ const Home = (props) => {
               justifyContent="center"
               sx={{ width: "100%" }}
             >
-              <Typography variant="h1" align="center" mx="2vh">
+              <Typography variant="h1" align="center" mt="2vh" mx="2vh">
                 Plant Helper
               </Typography>
             </Grid>

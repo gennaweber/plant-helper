@@ -1,19 +1,19 @@
+import { createTheme, ThemeProvider } from "@mui/material";
+import algoliasearch from "algoliasearch";
 import React, { useState } from "react";
-import "./App.css";
+import { Index, InstantSearch } from "react-instantsearch-dom";
 import {
   BrowserRouter as Router,
-  Routes,
-  Route,
   Navigate,
+  Route,
+  Routes,
 } from "react-router-dom";
-import { createTheme, ThemeProvider } from "@mui/material";
-
+import "./App.css";
+import Footer from "./components/Footer";
+import Dictionary from "./pages/Dictionary";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
-import Footer from "./components/Footer";
-
-import algoliasearch from "algoliasearch";
-import { InstantSearch } from "react-instantsearch-dom";
+import Refs from "./pages/Refs";
 
 const searchClient = algoliasearch(
   "FHN6MLHV4X",
@@ -163,7 +163,33 @@ function App() {
                   path="/"
                   element={
                     auth ? (
-                      <Home state={state} toggleDrawer={toggleDrawer} />
+                      <Index indexName="plants">
+                        <Home state={state} toggleDrawer={toggleDrawer} />
+                      </Index>
+                    ) : (
+                      <Navigate replace to="/login" />
+                    )
+                  }
+                />
+                <Route
+                  path="/dictionary"
+                  element={
+                    auth ? (
+                      <Index indexName="dictionary">
+                        <Dictionary state={state} toggleDrawer={toggleDrawer} />
+                      </Index>
+                    ) : (
+                      <Navigate replace to="/login" />
+                    )
+                  }
+                />
+                <Route
+                  path="/refs"
+                  element={
+                    auth ? (
+                      <Index indexName="refs">
+                        <Refs state={state} toggleDrawer={toggleDrawer} />
+                      </Index>
                     ) : (
                       <Navigate replace to="/login" />
                     )

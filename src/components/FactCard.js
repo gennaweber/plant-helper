@@ -105,7 +105,7 @@ const FactCard = ({
     <Grid item xs={12} md={6} lg={4}>
       <Card sx={{ minHeight: 100 }}>
         {src && (
-          <img referrerpolicy="no-referrer" width="100%" src={src} alt={alt} />
+          <img referrerPolicy="no-referrer" width="100%" src={src} alt={alt} />
         )}
         <Grid
           container
