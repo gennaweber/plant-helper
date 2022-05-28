@@ -20,6 +20,8 @@
     "react": "^17.0.2",
     "react-db-google-sheets": "^2.1.1",
     "react-dom": "^17.0.2",
+    "react-infinite-scroll-component": "^6.1.0",
+    "react-infinite-scroll-hook": "^4.0.3",
     "react-instantsearch-dom": "^6.23.0",
     "react-instantsearch-hooks": "^6.23.0",
     "react-router-dom": "^6.2.1",

@@ -1,11 +1,24 @@
 import Masonry from "@mui/lab/Masonry";
 import { Box, Container } from "@mui/material";
-import React from "react";
-import { connectInfiniteHits } from "react-instantsearch-dom";
+import React, { useState } from "react";
+import useInfiniteScroll from "react-infinite-scroll-hook";
+import {
+  connectInfiniteHits,
+  connectStateResults,
+} from "react-instantsearch-dom";
 import useWindowDimensions from "../helpers/useWindowDimensions";
 import WordCard from "./WordCard";
 
-const Hits = ({ hits, hasMore, refineNext }) => {
+const Hits = ({ hits, hasMore, refineNext, refine, error, searching }) => {
+  const [loading, setLoading] = useState(false);
+
+  const [infiniteRef] = useInfiniteScroll({
+    loading,
+    hasMore,
+    onLoadMore: refineNext,
+    rootMargin: "0px 0px 400px 0px",
+  });
+
   let { width } = useWindowDimensions();
 
   const getColumns = () => {
@@ -19,7 +32,7 @@ const Hits = ({ hits, hasMore, refineNext }) => {
   };
 
   return (
-    <>
+    <div>
       <Container width="lg" sx={{ paddingRight: 0 }}>
         <Box sx={{ width: "100%", minHeight: 829 }}>
           <Masonry columns={getColumns()} spacing={2}>
@@ -36,6 +49,7 @@ const Hits = ({ hits, hasMore, refineNext }) => {
             ))}
           </Masonry>
         </Box>
+        {hasMore && <li ref={infiniteRef}></li>}
         <button
           className="ais-InfiniteHits-loadMore"
           disabled={!hasMore}
@@ -44,9 +58,10 @@ const Hits = ({ hits, hasMore, refineNext }) => {
           Show more
         </button>
       </Container>
-    </>
+    </div>
   );
 };
 
-const DictionaryHits = connectInfiniteHits(Hits);
+const DictionaryHits = connectInfiniteHits(connectStateResults(Hits));
+
 export default DictionaryHits;
