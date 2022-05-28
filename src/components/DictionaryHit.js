@@ -1,7 +1,6 @@
 import Masonry from "@mui/lab/Masonry";
 import { Box, Container } from "@mui/material";
-import React, { useState } from "react";
-import useInfiniteScroll from "react-infinite-scroll-hook";
+import React, { useEffect } from "react";
 import {
   connectInfiniteHits,
   connectStateResults,
@@ -10,14 +9,22 @@ import useWindowDimensions from "../helpers/useWindowDimensions";
 import WordCard from "./WordCard";
 
 const Hits = ({ hits, hasMore, refineNext, refine, error, searching }) => {
-  const [loading, setLoading] = useState(false);
+  useEffect(() => {
+    window.addEventListener("scroll", isScrolling);
+    return () => window.removeEventListener("scroll", isScrolling);
+  }, []);
 
-  const [infiniteRef] = useInfiniteScroll({
-    loading,
-    hasMore,
-    onLoadMore: refineNext,
-    rootMargin: "0px 0px 400px 0px",
-  });
+  function isScrolling() {
+    if (
+      window.innerHeight + document.documentElement.scrollTop !==
+      document.documentElement.offsetHeight
+    ) {
+      console.log("no change");
+      return;
+    } else {
+      console.log("scrolling down");
+    }
+  }
 
   let { width } = useWindowDimensions();
 
@@ -47,9 +54,9 @@ const Hits = ({ hits, hasMore, refineNext, refine, error, searching }) => {
                 link={hit.Reference}
               />
             ))}
+            {(searching || hasMore) && <p>Loading...</p>}
           </Masonry>
         </Box>
-        {hasMore && <li ref={infiniteRef}></li>}
         <button
           className="ais-InfiniteHits-loadMore"
           disabled={!hasMore}
