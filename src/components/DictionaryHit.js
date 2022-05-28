@@ -1,11 +1,11 @@
 import Masonry from "@mui/lab/Masonry";
 import { Box, Container } from "@mui/material";
 import React from "react";
-import { connectHits } from "react-instantsearch-dom";
+import { connectInfiniteHits } from "react-instantsearch-dom";
 import useWindowDimensions from "../helpers/useWindowDimensions";
 import WordCard from "./WordCard";
 
-const Hits = ({ hits }) => {
+const Hits = ({ hits, hasMore, refineNext }) => {
   let { width } = useWindowDimensions();
 
   const getColumns = () => {
@@ -36,10 +36,17 @@ const Hits = ({ hits }) => {
             ))}
           </Masonry>
         </Box>
+        <button
+          className="ais-InfiniteHits-loadMore"
+          disabled={!hasMore}
+          onClick={refineNext}
+        >
+          Show more
+        </button>
       </Container>
     </>
   );
 };
 
-const DictionaryHits = connectHits(Hits);
+const DictionaryHits = connectInfiniteHits(Hits);
 export default DictionaryHits;

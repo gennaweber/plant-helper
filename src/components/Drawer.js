@@ -1,10 +1,13 @@
-import React from "react";
-import { Fab, Drawer, Grid, Typography } from "@mui/material";
-import Search from "./Search";
-import { RefinementList } from "react-instantsearch-dom";
-import { ClearRefinements } from "react-instantsearch-dom";
 import ManageSearchIcon from "@mui/icons-material/ManageSearch";
-import { NumericMenu, SortBy } from "react-instantsearch-dom";
+import { Drawer, Fab, Grid, Typography } from "@mui/material";
+import React from "react";
+import {
+  ClearRefinements,
+  NumericMenu,
+  RefinementList,
+  SortBy,
+} from "react-instantsearch-dom";
+import Search from "./Search";
 
 const Draw = ({ state, toggleDrawer }) => {
   return (
@@ -33,7 +36,7 @@ const Draw = ({ state, toggleDrawer }) => {
           <Grid item>
             <Typography variant="h5">Sort by:</Typography>
             <SortBy
-              defaultRefinement="plants"
+              defaultRefinement="plants_newest"
               items={[
                 { value: "plants", label: "Alphabetical" },
                 { value: "plants_newest", label: "Newest first" },
