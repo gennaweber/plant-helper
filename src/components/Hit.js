@@ -1,11 +1,11 @@
-import React from "react";
-import { Box, Container } from "@mui/material";
-import useWindowDimensions from "../helpers/useWindowDimensions";
 import Masonry from "@mui/lab/Masonry";
+import { Box, Container } from "@mui/material";
+import React from "react";
+import { connectInfiniteHits } from "react-instantsearch-dom";
+import useWindowDimensions from "../helpers/useWindowDimensions";
 import FactCard from "./FactCard";
-import { connectHits } from "react-instantsearch-dom";
 
-const Hits = ({ hits }) => {
+const Hits = ({ hits, hasMore, refineNext }) => {
   let { width } = useWindowDimensions();
 
   const getColumns = () => {
@@ -49,10 +49,17 @@ const Hits = ({ hits }) => {
             ))}
           </Masonry>
         </Box>
+        <button
+          className="ais-InfiniteHits-loadMore"
+          disabled={!hasMore}
+          onClick={refineNext}
+        >
+          Show more
+        </button>
       </Container>
     </>
   );
 };
 
-const CustomHits = connectHits(Hits);
+const CustomHits = connectInfiniteHits(Hits);
 export default CustomHits;
