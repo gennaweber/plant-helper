@@ -36,9 +36,6 @@ const Refs = (props) => {
           </Grid>
         </BasicContainer>
         <RefHit />
-        <Grid container py={5} justifyContent="center">
-          <Grid item>{/* <Pagination /> */}</Grid>
-        </Grid>
       </div>
     </>
   );

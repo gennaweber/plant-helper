@@ -59,9 +59,6 @@ const Home = (props) => {
           </Grid>
         </BasicContainer>
         <CustomHits />
-        <Grid container py={5} justifyContent="center">
-          <Grid item>{/* <Pagination /> */}</Grid>
-        </Grid>
       </div>
     </>
   );

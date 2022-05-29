@@ -1,11 +1,33 @@
 import Masonry from "@mui/lab/Masonry";
 import { Box, Container } from "@mui/material";
-import React from "react";
-import { connectInfiniteHits } from "react-instantsearch-dom";
+import React, { useEffect } from "react";
+import {
+  Configure,
+  connectInfiniteHits,
+  connectStateResults,
+} from "react-instantsearch-dom";
+import { useIntersectionObserver } from "react-intersection-observer-hook";
 import useWindowDimensions from "../helpers/useWindowDimensions";
 import FactCard from "./FactCard";
 
-const Hits = ({ hits, hasMore, refineNext }) => {
+const Hits = ({ hits, refineNext, searching, hasMore }) => {
+  const [ref, { entry }] = useIntersectionObserver();
+  const isVisible = entry && entry.isIntersecting;
+
+  useEffect(() => {
+    console.log(`The component is ${isVisible ? "visible" : "not visible"}.`);
+    const timeout = () =>
+      setTimeout(() => {
+        refineNext();
+      }, 500);
+
+    if (!searching && isVisible) {
+      timeout();
+    }
+
+    return () => clearTimeout(timeout);
+  }, [isVisible]); // eslint-disable-line
+
   let { width } = useWindowDimensions();
 
   const getColumns = () => {
@@ -21,8 +43,9 @@ const Hits = ({ hits, hasMore, refineNext }) => {
   return (
     <>
       <Container width="lg" sx={{ paddingRight: 0 }}>
-        <Box sx={{ width: "100%", minHeight: 829 }}>
+        <Box sx={{ width: "100%", minHeight: 829 }} mb={2}>
           <Masonry columns={getColumns()} spacing={2}>
+            <Configure hitsPerPage={5} />
             {hits.map((hit, i) => (
               <FactCard
                 key={i}
@@ -47,6 +70,8 @@ const Hits = ({ hits, hasMore, refineNext }) => {
                 alt={`${hit.Genus} ${hit.Species}`}
               />
             ))}
+            {!searching && hasMore && <p ref={ref}>Loading...</p>}
+            {!hasMore && <p>You've reached the end of the results</p>}
           </Masonry>
         </Box>
         <button
@@ -61,5 +86,5 @@ const Hits = ({ hits, hasMore, refineNext }) => {
   );
 };
 
-const CustomHits = connectInfiniteHits(Hits);
+const CustomHits = connectInfiniteHits(connectStateResults(Hits));
 export default CustomHits;
