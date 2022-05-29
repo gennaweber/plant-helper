@@ -5,26 +5,20 @@ import {
   connectInfiniteHits,
   connectStateResults,
 } from "react-instantsearch-dom";
+import { useIntersectionObserver } from "react-intersection-observer-hook";
 import useWindowDimensions from "../helpers/useWindowDimensions";
 import WordCard from "./WordCard";
 
-const Hits = ({ hits, hasMore, refineNext, refine, error, searching }) => {
-  useEffect(() => {
-    window.addEventListener("scroll", isScrolling);
-    return () => window.removeEventListener("scroll", isScrolling);
-  }, []);
+const Hits = ({ hits, hasMore, refineNext, error, searching }) => {
+  const [ref, { entry }] = useIntersectionObserver();
+  const isVisible = entry && entry.isIntersecting;
 
-  function isScrolling() {
-    if (
-      window.innerHeight + document.documentElement.scrollTop !==
-      document.documentElement.offsetHeight
-    ) {
-      console.log("no change");
-      return;
-    } else {
-      console.log("scrolling down");
+  useEffect(() => {
+    console.log(`The component is ${isVisible ? "visible" : "not visible"}.`);
+    if (!searching) {
+      refineNext();
     }
-  }
+  }, [isVisible]); // eslint-disable-line
 
   let { width } = useWindowDimensions();
 
@@ -54,7 +48,7 @@ const Hits = ({ hits, hasMore, refineNext, refine, error, searching }) => {
                 link={hit.Reference}
               />
             ))}
-            {(searching || hasMore) && <p>Loading...</p>}
+            {!searching && hasMore && <p ref={ref}>Loading...</p>}
           </Masonry>
         </Box>
         <button

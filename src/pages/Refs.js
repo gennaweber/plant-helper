@@ -1,6 +1,5 @@
 import { Grid, Typography } from "@mui/material";
 import React from "react";
-import { Pagination } from "react-instantsearch-dom";
 import BasicContainer from "../components/BasicContainer";
 import DictionaryDrawer from "../components/DictionaryDrawer";
 import RefHit from "../components/RefHit";
@@ -37,11 +36,6 @@ const Refs = (props) => {
           </Grid>
         </BasicContainer>
         <RefHit />
-        <Grid container py={5} justifyContent="center">
-          <Grid item>
-            <Pagination />
-          </Grid>
-        </Grid>
       </div>
     </>
   );

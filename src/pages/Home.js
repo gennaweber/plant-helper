@@ -1,6 +1,5 @@
 import { Grid, Typography } from "@mui/material";
 import React from "react";
-import { Pagination } from "react-instantsearch-dom";
 import BasicContainer from "../components/BasicContainer";
 import Drawer from "../components/Drawer";
 import CustomHits from "../components/Hit";
@@ -60,11 +59,6 @@ const Home = (props) => {
           </Grid>
         </BasicContainer>
         <CustomHits />
-        <Grid container py={5} justifyContent="center">
-          <Grid item>
-            <Pagination />
-          </Grid>
-        </Grid>
       </div>
     </>
   );
