@@ -2,6 +2,7 @@ import Masonry from "@mui/lab/Masonry";
 import { Box, Container } from "@mui/material";
 import React, { useEffect } from "react";
 import {
+  Configure,
   connectInfiniteHits,
   connectStateResults,
 } from "react-instantsearch-dom";
@@ -15,9 +16,16 @@ const Hits = ({ hits, hasMore, refineNext, error, searching }) => {
 
   useEffect(() => {
     console.log(`The component is ${isVisible ? "visible" : "not visible"}.`);
-    if (!searching) {
-      refineNext();
+    const timeout = () =>
+      setTimeout(() => {
+        refineNext();
+      }, 500);
+
+    if (!searching && isVisible) {
+      timeout();
     }
+
+    return () => clearTimeout(timeout);
   }, [isVisible]); // eslint-disable-line
 
   let { width } = useWindowDimensions();
@@ -35,7 +43,8 @@ const Hits = ({ hits, hasMore, refineNext, error, searching }) => {
   return (
     <div>
       <Container width="lg" sx={{ paddingRight: 0 }}>
-        <Box sx={{ width: "100%", minHeight: 829 }}>
+        <Box sx={{ width: "100%", minHeight: 829 }} mb={2}>
+          <Configure hitsPerPage={10} />
           <Masonry columns={getColumns()} spacing={2}>
             {hits.map((hit, i) => (
               <WordCard
@@ -49,15 +58,9 @@ const Hits = ({ hits, hasMore, refineNext, error, searching }) => {
               />
             ))}
             {!searching && hasMore && <p ref={ref}>Loading...</p>}
+            {!hasMore && <p>You've reached the end of the results</p>}
           </Masonry>
         </Box>
-        <button
-          className="ais-InfiniteHits-loadMore"
-          disabled={!hasMore}
-          onClick={refineNext}
-        >
-          Show more
-        </button>
       </Container>
     </div>
   );

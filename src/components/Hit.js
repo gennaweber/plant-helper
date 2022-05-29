@@ -40,12 +40,10 @@ const Hits = ({ hits, refineNext, searching, hasMore }) => {
     }
   };
 
-  console.log(hits.length);
-
   return (
     <>
       <Container width="lg" sx={{ paddingRight: 0 }}>
-        <Box sx={{ width: "100%", minHeight: 829 }}>
+        <Box sx={{ width: "100%", minHeight: 829 }} mb={2}>
           <Masonry columns={getColumns()} spacing={2}>
             <Configure hitsPerPage={5} />
             {hits.map((hit, i) => (
@@ -73,6 +71,7 @@ const Hits = ({ hits, refineNext, searching, hasMore }) => {
               />
             ))}
             {!searching && hasMore && <p ref={ref}>Loading...</p>}
+            {!hasMore && <p>You've reached the end of the results</p>}
           </Masonry>
         </Box>
       </Container>
