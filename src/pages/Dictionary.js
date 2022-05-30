@@ -2,7 +2,7 @@ import { Grid, Typography } from "@mui/material";
 import React from "react";
 import BasicContainer from "../components/BasicContainer";
 import DictionaryDrawer from "../components/DictionaryDrawer";
-import DictionaryHits from "../components/DictionaryHit";
+import { DictionaryHits } from "../components/DictionaryHit";
 import TabsRouter from "../components/TabsRouter";
 
 const Dictionary = (props) => {

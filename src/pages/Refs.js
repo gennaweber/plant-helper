@@ -2,7 +2,7 @@ import { Grid, Typography } from "@mui/material";
 import React from "react";
 import BasicContainer from "../components/BasicContainer";
 import DictionaryDrawer from "../components/DictionaryDrawer";
-import RefHit from "../components/RefHit";
+import { RefHits } from "../components/RefHit";
 import TabsRouter from "../components/TabsRouter";
 
 const Refs = (props) => {
@@ -35,7 +35,7 @@ const Refs = (props) => {
             </Grid>
           </Grid>
         </BasicContainer>
-        <RefHit />
+        <RefHits />
       </div>
     </>
   );

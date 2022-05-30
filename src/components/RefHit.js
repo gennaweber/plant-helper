@@ -65,5 +65,5 @@ const Hits = ({ hits, searching, refineNext, hasMore }) => {
   );
 };
 
-const DictionaryHits = connectInfiniteHits(connectStateResults(Hits));
-export default DictionaryHits;
+const AlgoliaRefHits = connectInfiniteHits(connectStateResults(Hits));
+export const RefHits = React.memo(AlgoliaRefHits);
