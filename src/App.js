@@ -1,7 +1,7 @@
 import { createTheme, ThemeProvider } from "@mui/material";
 import algoliasearch from "algoliasearch";
 import React, { useState } from "react";
-import { Configure, Index, InstantSearch } from "react-instantsearch-dom";
+import { Index, InstantSearch } from "react-instantsearch-dom";
 import {
   BrowserRouter as Router,
   Navigate,
