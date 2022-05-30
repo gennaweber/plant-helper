@@ -44,8 +44,8 @@ const Hits = ({ hits, refineNext, searching, hasMore }) => {
     <>
       <Container width="lg" sx={{ paddingRight: 0 }}>
         <Box sx={{ width: "100%", minHeight: 829 }} mb={2}>
+          <Configure hitsPerPage={5} />
           <Masonry columns={getColumns()} spacing={2}>
-            <Configure hitsPerPage={5} />
             {hits.map((hit, i) => (
               <FactCard
                 key={i}
@@ -74,13 +74,6 @@ const Hits = ({ hits, refineNext, searching, hasMore }) => {
             {!hasMore && <p>You've reached the end of the results</p>}
           </Masonry>
         </Box>
-        <button
-          className="ais-InfiniteHits-loadMore"
-          disabled={!hasMore}
-          onClick={refineNext}
-        >
-          Show more
-        </button>
       </Container>
     </>
   );

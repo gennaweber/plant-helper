@@ -58,13 +58,6 @@ const Hits = ({ hits, searching, refineNext, hasMore }) => {
             {!hasMore && <p>You've reached the end of the results</p>}
           </Masonry>
         </Box>
-        <button
-          className="ais-InfiniteHits-loadMore"
-          disabled={!hasMore}
-          onClick={refineNext}
-        >
-          Show more
-        </button>
       </Container>
     </>
   );

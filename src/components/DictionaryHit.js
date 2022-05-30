@@ -10,7 +10,7 @@ import { useIntersectionObserver } from "react-intersection-observer-hook";
 import useWindowDimensions from "../helpers/useWindowDimensions";
 import WordCard from "./WordCard";
 
-const Hits = ({ hits, hasMore, refineNext, error, searching }) => {
+const Hits = ({ hits, hasMore, refineNext, searching }) => {
   const [ref, { entry }] = useIntersectionObserver();
   const isVisible = entry && entry.isIntersecting;
 
