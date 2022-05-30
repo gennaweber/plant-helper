@@ -21,7 +21,7 @@ const Hits = ({ hits, refineNext, searching, hasMore }) => {
     const timeout = () =>
       setTimeout(() => {
         refineNext();
-      }, 500);
+      }, 1000);
 
     if (!searching && isVisible) {
       timeout();
