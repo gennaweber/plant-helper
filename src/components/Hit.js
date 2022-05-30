@@ -1,6 +1,6 @@
 import Masonry from "@mui/lab/Masonry";
 import { Box, Container } from "@mui/material";
-import React, { useEffect, useMemo } from "react";
+import React, { useEffect } from "react";
 import {
   Configure,
   connectInfiniteHits,
@@ -12,25 +12,8 @@ import FactCard from "./FactCard";
 
 const Hits = ({ hits, refineNext, searching, hasMore }) => {
   const [ref, { entry }] = useIntersectionObserver();
-  const isVisible = entry && entry.isIntersecting;
-
-  const memoHits = useMemo(() => hits, [hits]);
-
-  useEffect(() => {
-    console.log(`The component is ${isVisible ? "visible" : "not visible"}.`);
-    const timeout = () =>
-      setTimeout(() => {
-        refineNext();
-      }, 1000);
-
-    if (!searching && isVisible) {
-      timeout();
-    }
-
-    return () => clearTimeout(timeout);
-  }, [isVisible]); // eslint-disable-line
-
   let { width } = useWindowDimensions();
+  const isVisible = entry && entry.isIntersecting;
 
   const getColumns = () => {
     if (width >= 1200) {
@@ -42,37 +25,52 @@ const Hits = ({ hits, refineNext, searching, hasMore }) => {
     }
   };
 
+  useEffect(() => {
+    console.log(`The component is ${isVisible ? "visible" : "not visible"}.`);
+    const timeout = () =>
+      setTimeout(() => {
+        refineNext();
+      }, 500);
+
+    if (!searching && isVisible) {
+      timeout();
+    }
+
+    return () => clearTimeout(timeout);
+  }, [isVisible]); // eslint-disable-line
+
   return (
     <>
       <Container width="lg" sx={{ paddingRight: 0 }}>
         <Box sx={{ width: "100%", minHeight: 829 }} mb={2}>
           <Configure hitsPerPage={5} />
           <Masonry columns={getColumns()} spacing={2}>
-            {memoHits.map((hit, i) => (
-              <FactCard
-                key={i}
-                genus={hit.Genus}
-                species={hit.Species}
-                rarity={hit.Rarity}
-                price={hit.Price_Point}
-                minLight={hit.Light_min}
-                prefLight={hit.Light_prefers}
-                maxLight={hit.Light_max}
-                tolHumid={hit.Humidity_tolerates}
-                prefHumid={hit.Humidity_prefers}
-                water={hit.Water}
-                fuss={hit.Fussiness}
-                fert={hit.Fertilizer}
-                pattern={hit.Growth_Pattern}
-                prop={hit.Propagation}
-                note={hit.Notes}
-                speed={hit.Rate_of_Growth}
-                hashtag={hit.Hashtag}
-                src={hit.Image}
-                alt={`${hit.Genus} ${hit.Species}`}
-              />
-            ))}
-            {!searching && hasMore && <p ref={ref}>Loading...</p>}
+            {hits.length > 0 &&
+              hits.map((hit, i) => (
+                <FactCard
+                  key={i}
+                  genus={hit.Genus}
+                  species={hit.Species}
+                  rarity={hit.Rarity}
+                  price={hit.Price_Point}
+                  minLight={hit.Light_min}
+                  prefLight={hit.Light_prefers}
+                  maxLight={hit.Light_max}
+                  tolHumid={hit.Humidity_tolerates}
+                  prefHumid={hit.Humidity_prefers}
+                  water={hit.Water}
+                  fuss={hit.Fussiness}
+                  fert={hit.Fertilizer}
+                  pattern={hit.Growth_Pattern}
+                  prop={hit.Propagation}
+                  note={hit.Notes}
+                  speed={hit.Rate_of_Growth}
+                  hashtag={hit.Hashtag}
+                  src={hit.Image}
+                  alt={`${hit.Genus} ${hit.Species}`}
+                />
+              ))}
+            {hasMore && <p ref={ref}>Loading...</p>}
             {!hasMore && <p>You've reached the end of the results</p>}
           </Masonry>
         </Box>
@@ -81,5 +79,5 @@ const Hits = ({ hits, refineNext, searching, hasMore }) => {
   );
 };
 
-const CustomHits = connectInfiniteHits(connectStateResults(Hits));
-export default CustomHits;
+const AlgoliaCustomHits = connectInfiniteHits(connectStateResults(Hits));
+export const CustomHits = React.memo(AlgoliaCustomHits);
