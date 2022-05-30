@@ -1,6 +1,6 @@
 import Masonry from "@mui/lab/Masonry";
 import { Box, Container } from "@mui/material";
-import React, { useEffect } from "react";
+import React, { useEffect, useMemo } from "react";
 import {
   Configure,
   connectInfiniteHits,
@@ -13,6 +13,8 @@ import FactCard from "./FactCard";
 const Hits = ({ hits, refineNext, searching, hasMore }) => {
   const [ref, { entry }] = useIntersectionObserver();
   const isVisible = entry && entry.isIntersecting;
+
+  const memoHits = useMemo(() => hits, [hits]);
 
   useEffect(() => {
     console.log(`The component is ${isVisible ? "visible" : "not visible"}.`);
@@ -46,7 +48,7 @@ const Hits = ({ hits, refineNext, searching, hasMore }) => {
         <Box sx={{ width: "100%", minHeight: 829 }} mb={2}>
           <Configure hitsPerPage={5} />
           <Masonry columns={getColumns()} spacing={2}>
-            {hits.map((hit, i) => (
+            {memoHits.map((hit, i) => (
               <FactCard
                 key={i}
                 genus={hit.Genus}
