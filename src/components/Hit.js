@@ -1,14 +1,14 @@
-import Masonry from "@mui/lab/Masonry";
-import { Box, Container } from "@mui/material";
-import React, { useEffect } from "react";
+import Masonry from '@mui/lab/Masonry';
+import { Box, Container } from '@mui/material';
+import React, { useEffect } from 'react';
 import {
   Configure,
   connectInfiniteHits,
   connectStateResults,
-} from "react-instantsearch-dom";
-import { useIntersectionObserver } from "react-intersection-observer-hook";
-import useWindowDimensions from "../helpers/useWindowDimensions";
-import FactCard from "./FactCard";
+} from 'react-instantsearch-dom';
+import { useIntersectionObserver } from 'react-intersection-observer-hook';
+import useWindowDimensions from '../helpers/useWindowDimensions';
+import FactCard from './FactCard';
 
 const Hits = ({ hits, refineNext, searching, hasMore }) => {
   const [ref, { entry }] = useIntersectionObserver();
@@ -26,7 +26,7 @@ const Hits = ({ hits, refineNext, searching, hasMore }) => {
   };
 
   useEffect(() => {
-    console.log(`The component is ${isVisible ? "visible" : "not visible"}.`);
+    console.log(`The component is ${isVisible ? 'visible' : 'not visible'}.`);
     const timeout = () =>
       setTimeout(() => {
         refineNext();
@@ -41,14 +41,15 @@ const Hits = ({ hits, refineNext, searching, hasMore }) => {
 
   return (
     <>
-      <Container width="lg" sx={{ paddingRight: 0 }}>
-        <Box sx={{ width: "100%", minHeight: 829 }} mb={2}>
+      <Container width='lg' sx={{ paddingRight: 0 }}>
+        <Box sx={{ width: '100%', minHeight: 829 }} mb={2}>
           <Configure hitsPerPage={5} />
           <Masonry columns={getColumns()} spacing={2}>
             {hits.length > 0 &&
               hits.map((hit, i) => (
                 <FactCard
                   key={i}
+                  hit={hit}
                   genus={hit.Genus}
                   species={hit.Species}
                   rarity={hit.Rarity}
