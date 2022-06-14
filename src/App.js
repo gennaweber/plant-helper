@@ -1,6 +1,6 @@
 import { createTheme, ThemeProvider } from '@mui/material';
 import algoliasearch from 'algoliasearch';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Index, InstantSearch } from 'react-instantsearch-dom';
 import {
   BrowserRouter as Router,
@@ -154,7 +154,7 @@ function App() {
   };
 
   return (
-    <InstantSearch searchClient={searchClient} indexName='plants'>
+    <InstantSearch searchClient={searchClient} indexName='plants_newest'>
       <ThemeProvider theme={theme}>
         <Router>
           <div className='flexWrapper'>

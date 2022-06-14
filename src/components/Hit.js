@@ -10,7 +10,7 @@ import { useIntersectionObserver } from 'react-intersection-observer-hook';
 import useWindowDimensions from '../helpers/useWindowDimensions';
 import FactCard from './FactCard';
 
-const Hits = ({ hits, refineNext, searching, hasMore }) => {
+const Hits = ({ hits, refineNext, searching, hasMore, maxHits }) => {
   const [ref, { entry }] = useIntersectionObserver();
   let { width } = useWindowDimensions();
   const isVisible = entry && entry.isIntersecting;
@@ -43,12 +43,16 @@ const Hits = ({ hits, refineNext, searching, hasMore }) => {
     <>
       <Container width='lg' sx={{ paddingRight: 0 }}>
         <Box sx={{ width: '100%', minHeight: 829 }} mb={2}>
-          <Configure hitsPerPage={5} />
+          <Configure hitsPerPage={maxHits || 5} />
           <Masonry columns={getColumns()} spacing={2}>
             {hits.length > 0 &&
               hits.map((hit, i) => <FactCard key={i} hit={hit} />)}
-            {hasMore && <p ref={ref}>Loading...</p>}
-            {!hasMore && <p>You've reached the end of the results</p>}
+            {!maxHits && (
+              <>
+                {hasMore && <p ref={ref}>Loading...</p>}
+                {!hasMore && <p>You've reached the end of the results</p>}
+              </>
+            )}
           </Masonry>
         </Box>
       </Container>
