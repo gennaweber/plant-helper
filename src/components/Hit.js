@@ -46,31 +46,7 @@ const Hits = ({ hits, refineNext, searching, hasMore }) => {
           <Configure hitsPerPage={5} />
           <Masonry columns={getColumns()} spacing={2}>
             {hits.length > 0 &&
-              hits.map((hit, i) => (
-                <FactCard
-                  key={i}
-                  hit={hit}
-                  genus={hit.Genus}
-                  species={hit.Species}
-                  rarity={hit.Rarity}
-                  price={hit.Price_Point}
-                  minLight={hit.Light_min}
-                  prefLight={hit.Light_prefers}
-                  maxLight={hit.Light_max}
-                  tolHumid={hit.Humidity_tolerates}
-                  prefHumid={hit.Humidity_prefers}
-                  water={hit.Water}
-                  fuss={hit.Fussiness}
-                  fert={hit.Fertilizer}
-                  pattern={hit.Growth_Pattern}
-                  prop={hit.Propagation}
-                  note={hit.Notes}
-                  speed={hit.Rate_of_Growth}
-                  hashtag={hit.Hashtag}
-                  src={hit.Image}
-                  alt={`${hit.Genus} ${hit.Species}`}
-                />
-              ))}
+              hits.map((hit, i) => <FactCard key={i} hit={hit} />)}
             {hasMore && <p ref={ref}>Loading...</p>}
             {!hasMore && <p>You've reached the end of the results</p>}
           </Masonry>
