@@ -2,6 +2,7 @@ import { Grid, Typography } from '@mui/material';
 import BasicContainer from '../components/BasicContainer';
 import Drawer from '../components/Drawer';
 import { CustomHits } from '../components/Hit';
+import NHits from '../components/NHits';
 import TabsRouter from '../components/TabsRouter';
 
 const Home = (props) => {
@@ -25,8 +26,8 @@ const Home = (props) => {
             </Grid>
             <Grid item mt='2vh' mb='5vh'>
               <Typography variant='h5' align='center'>
-                Ratings for 300+ species of houseplants based on observations
-                and experience from{' '}
+                Ratings for <NHits /> species of houseplants based on
+                observations and experience from{' '}
                 <a href='https://www.instagram.com/gennasplants/'>
                   {' '}
                   @gennasplants

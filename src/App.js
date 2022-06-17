@@ -9,8 +9,8 @@ import {
   Routes,
 } from 'react-router-dom';
 import './App.css';
-import Auth from './components/Auth';
 import Footer from './components/Footer';
+import Auth from './pages/Auth';
 import Dictionary from './pages/Dictionary';
 import Home from './pages/Home';
 import Login from './pages/Login';
@@ -144,9 +144,13 @@ function App() {
   const [auth, setAuth] = useState(
     window.localStorage.getItem('auth') || false
   );
+
   const [password, setPassword] = useState(
     window.localStorage.getItem('pass') || ''
   );
+
+  const [user, setUser] = useState(window.localStorage.getItem('user') || '');
+
   const [state, setState] = useState(false);
 
   const toggleDrawer = (open) => {

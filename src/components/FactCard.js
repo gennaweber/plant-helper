@@ -104,6 +104,7 @@ const FactCard = ({ hit, alt }) => {
     Category: category,
     Meaning: explanation,
     Reference: link,
+    Substrate: substrate,
   } = hit;
 
   return (
@@ -279,6 +280,14 @@ const FactCard = ({ hit, alt }) => {
                         </Typography>
                       </Tooltip>
                     </Grid>
+                    {substrate && (
+                      <Grid item>
+                        <Typography variant='body1'>
+                          <strong>Substrate: </strong>
+                          {substrate}
+                        </Typography>
+                      </Grid>
+                    )}
                   </Grid>
                 </Grid>
                 <Grid item>

@@ -1,9 +1,9 @@
 import { Button, Grid, TextField, Typography } from '@mui/material';
 import { useState } from 'react';
-import { connectStats } from 'react-instantsearch-dom';
 import { useNavigate } from 'react-router-dom';
 import BasicContainer from '../components/BasicContainer';
 import { CustomHits } from '../components/Hit';
+import NHits from '../components/NHits';
 
 const Login = ({ password, setPassword, setAuth }) => {
   const navigate = useNavigate();
@@ -23,9 +23,6 @@ const Login = ({ password, setPassword, setAuth }) => {
     }
   };
 
-  const Stats = ({ nbHits }) => <strong>{nbHits}</strong>;
-  const CustomStats = connectStats(Stats);
-
   return (
     <>
       <BasicContainer width='sm'>
@@ -43,8 +40,8 @@ const Login = ({ password, setPassword, setAuth }) => {
           </Grid>
           <Grid item mt='2vh' mb='5vh'>
             <Typography variant='h5' align='center'>
-              Ratings for <CustomStats /> species of houseplants based on
-              observations and experience from{' '}
+              Ratings for <NHits /> species of houseplants based on observations
+              and experience from{' '}
               <a href='https://www.instagram.com/gennasplants/'>
                 {' '}
                 @gennasplants
