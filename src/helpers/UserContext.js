@@ -1,5 +1,5 @@
 import { createContext, useEffect, useState } from 'react';
-import firebase from './firebase';
+import { app } from './firebase';
 
 // create context
 const UserContext = createContext();
@@ -10,11 +10,9 @@ const UserContextProvider = ({ children }) => {
 
   // Listen to the Firebase Auth state and set the local state.
   useEffect(() => {
-    const unregisterAuthObserver = firebase
-      .auth()
-      .onAuthStateChanged((user) => {
-        setUser(user._delegate);
-      });
+    const unregisterAuthObserver = app.auth().onAuthStateChanged((user) => {
+      setUser(user._delegate);
+    });
     return () => unregisterAuthObserver(); // Make sure we un-register Firebase observers when the component unmounts.
   }, []);
 

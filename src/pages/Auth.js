@@ -1,6 +1,5 @@
-import 'firebase/compat/auth';
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
-import app from '../helpers/firebase';
+import { app } from '../helpers/firebase';
 
 const { firebase } = app;
 

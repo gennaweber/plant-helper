@@ -80,8 +80,9 @@ const rareTip = {
     'Usually passed around amongst private collectors and not sold publically. Your best chance of finding these plants is usually in auctions.',
 };
 
-const FactCard = ({ hit, UserContext }) => {
+const FactCard = ({ hit, filters }) => {
   const {
+    objectID: id,
     Genus: genus,
     Species: species,
     Rarity: rarity,
@@ -396,7 +397,7 @@ const FactCard = ({ hit, UserContext }) => {
               <Divider />
             </Grid>
             <Grid item>
-              <AddToCollection />
+              <AddToCollection id={id} filters={filters} />
             </Grid>
           </Grid>
         </Grid>

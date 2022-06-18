@@ -10,7 +10,7 @@ import { useIntersectionObserver } from 'react-intersection-observer-hook';
 import useWindowDimensions from '../helpers/useWindowDimensions';
 import FactCard from './FactCard';
 
-const Hits = ({ hits, refineNext, searching, hasMore, maxHits }) => {
+const Hits = ({ hits, refineNext, searching, hasMore, maxHits, filters }) => {
   const [ref, { entry }] = useIntersectionObserver();
   let { width } = useWindowDimensions();
   const isVisible = entry && entry.isIntersecting;
@@ -39,14 +39,25 @@ const Hits = ({ hits, refineNext, searching, hasMore, maxHits }) => {
     return () => clearTimeout(timeout);
   }, [isVisible]); // eslint-disable-line
 
+  const ids = filters
+    .map((id, i) => {
+      return i === 0 ? `objectID:${id}` : `OR objectID:${id}`;
+    })
+    .join(' ');
+
   return (
     <>
       <Container width='lg' sx={{ paddingRight: 0 }}>
         <Box sx={{ width: '100%', minHeight: 829 }} mb={2}>
-          <Configure hitsPerPage={maxHits || 5} />
+          <Configure
+            hitsPerPage={maxHits || 5}
+            filters={filters ? ids : undefined}
+          />
           <Masonry columns={getColumns()} spacing={2}>
             {hits.length > 0 &&
-              hits.map((hit, i) => <FactCard key={i} hit={hit} />)}
+              hits.map((hit, i) => (
+                <FactCard key={i} hit={hit} filters={filters} />
+              ))}
             {!maxHits && (
               <>
                 {hasMore && <p ref={ref}>Loading...</p>}
