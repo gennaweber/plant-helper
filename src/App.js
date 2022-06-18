@@ -16,6 +16,9 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import Refs from './pages/Refs';
 
+import 'firebase/compat/auth';
+import { UserContextProvider } from './helpers/UserContext';
+
 const searchClient = algoliasearch(
   'FHN6MLHV4X',
   '656a1e7385fbe0581afb2148b5da5d94'
@@ -149,8 +152,6 @@ function App() {
     window.localStorage.getItem('pass') || ''
   );
 
-  const [user, setUser] = useState(window.localStorage.getItem('user') || '');
-
   const [state, setState] = useState(false);
 
   const toggleDrawer = (open) => {
@@ -160,62 +161,67 @@ function App() {
   return (
     <InstantSearch searchClient={searchClient} indexName='plants_newest'>
       <ThemeProvider theme={theme}>
-        <Router>
-          <div className='flexWrapper'>
-            <div className='flexGrow'>
-              <Routes>
-                <Route path='/auth' element={<Auth />} />
-                <Route
-                  path='/'
-                  element={
-                    auth ? (
-                      <Index indexName='plants'>
-                        <Home state={state} toggleDrawer={toggleDrawer} />
-                      </Index>
-                    ) : (
-                      <Navigate replace to='/login' />
-                    )
-                  }
-                />
-                <Route
-                  path='/dictionary'
-                  element={
-                    auth ? (
-                      <Index indexName='dictionary'>
-                        <Dictionary state={state} toggleDrawer={toggleDrawer} />
-                      </Index>
-                    ) : (
-                      <Navigate replace to='/login' />
-                    )
-                  }
-                />
-                <Route
-                  path='/refs'
-                  element={
-                    auth ? (
-                      <Index indexName='refs'>
-                        <Refs state={state} toggleDrawer={toggleDrawer} />
-                      </Index>
-                    ) : (
-                      <Navigate replace to='/login' />
-                    )
-                  }
-                />
-                <Route
-                  path='/login'
-                  element={
-                    <Login
-                      password={password}
-                      setPassword={setPassword}
-                      setAuth={setAuth}
-                    />
-                  }
-                />
-              </Routes>
+        <UserContextProvider>
+          <Router>
+            <div className='flexWrapper'>
+              <div className='flexGrow'>
+                <Routes>
+                  <Route path='/auth' element={<Auth />} />
+                  <Route
+                    path='/'
+                    element={
+                      auth ? (
+                        <Index indexName='plants'>
+                          <Home state={state} toggleDrawer={toggleDrawer} />
+                        </Index>
+                      ) : (
+                        <Navigate replace to='/login' />
+                      )
+                    }
+                  />
+                  <Route
+                    path='/dictionary'
+                    element={
+                      auth ? (
+                        <Index indexName='dictionary'>
+                          <Dictionary
+                            state={state}
+                            toggleDrawer={toggleDrawer}
+                          />
+                        </Index>
+                      ) : (
+                        <Navigate replace to='/login' />
+                      )
+                    }
+                  />
+                  <Route
+                    path='/refs'
+                    element={
+                      auth ? (
+                        <Index indexName='refs'>
+                          <Refs state={state} toggleDrawer={toggleDrawer} />
+                        </Index>
+                      ) : (
+                        <Navigate replace to='/login' />
+                      )
+                    }
+                  />
+                  <Route
+                    path='/login'
+                    element={
+                      <Login
+                        password={password}
+                        setPassword={setPassword}
+                        setAuth={setAuth}
+                      />
+                    }
+                  />
+                </Routes>
+              </div>
+              <Footer />
             </div>
-            <Footer />
-          </div>
-        </Router>
+          </Router>
+        </UserContextProvider>
       </ThemeProvider>
     </InstantSearch>
   );
