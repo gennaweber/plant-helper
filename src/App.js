@@ -149,8 +149,6 @@ function App() {
     window.localStorage.getItem('pass') || ''
   );
 
-  const [user, setUser] = useState(window.localStorage.getItem('user') || '');
-
   const [state, setState] = useState(false);
 
   const toggleDrawer = (open) => {
