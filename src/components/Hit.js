@@ -15,6 +15,8 @@ const Hits = ({ hits, refineNext, searching, hasMore, maxHits, filters }) => {
   let { width } = useWindowDimensions();
   const isVisible = entry && entry.isIntersecting;
 
+  console.log(filters);
+
   const getColumns = () => {
     if (width >= 1200) {
       return 3;
@@ -39,11 +41,14 @@ const Hits = ({ hits, refineNext, searching, hasMore, maxHits, filters }) => {
     return () => clearTimeout(timeout);
   }, [isVisible]); // eslint-disable-line
 
-  const ids = filters
-    .map((id, i) => {
-      return i === 0 ? `objectID:${id}` : `OR objectID:${id}`;
-    })
-    .join(' ');
+  const getIds = () => {
+    if (!filters) return;
+    return filters
+      .map((id, i) => {
+        return i === 0 ? `objectID:${id}` : `OR objectID:${id}`;
+      })
+      .join(' ');
+  };
 
   return (
     <>
@@ -51,7 +56,7 @@ const Hits = ({ hits, refineNext, searching, hasMore, maxHits, filters }) => {
         <Box sx={{ width: '100%', minHeight: 829 }} mb={2}>
           <Configure
             hitsPerPage={maxHits || 5}
-            filters={filters ? ids : undefined}
+            filters={filters ? getIds() : undefined}
           />
           <Masonry columns={getColumns()} spacing={2}>
             {hits.length > 0 &&

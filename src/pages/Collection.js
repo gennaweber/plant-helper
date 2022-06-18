@@ -1,5 +1,5 @@
 import { Grid, Typography } from '@mui/material';
-import { collection, getDocs, query } from 'firebase/firestore';
+import { collection, onSnapshot, query } from 'firebase/firestore';
 import { useContext, useEffect, useState } from 'react';
 import BasicContainer from '../components/BasicContainer';
 import Drawer from '../components/Drawer';
@@ -14,23 +14,35 @@ const Collection = (props) => {
   const user = useContext(UserContext);
 
   useEffect(() => {
-    const getData = async () => {
-      if (!user) return;
-      const q = query(collection(db, user.uid, 'my-collection', 'plants'));
-      try {
-        const querySnapshot = await getDocs(q);
-        querySnapshot.forEach((doc) => {
-          // doc.data() is never undefined for query doc snapshots
-          console.log(doc.id, ' => ', doc.data());
-          setIds((prev) => [...prev, doc.id]);
-        });
-      } catch (error) {
-        console.error(error);
-      }
-    };
+    if (!user) return;
 
-    getData();
+    const q = query(collection(db, user.uid, 'my-collection', 'plants'));
+
+    const unsubscribe = onSnapshot(q, (snapshot) => {
+      snapshot.docChanges().forEach((change) => {
+        if (change.type === 'added') {
+          // console.log('New: ', change.doc.data());
+          setIds((prev) => [...prev, change.doc.data().plantID]);
+        }
+        if (change.type === 'modified') {
+          console.log('Modified: ', change.doc.data());
+          setIds((prev) => [...prev, change.doc.data().plantID]);
+        }
+        if (change.type === 'removed') {
+          console.log('Removed: ', change.doc.data());
+          setIds((prev) =>
+            prev.filter((id) => id !== change.doc.data().plantID)
+          );
+        }
+      });
+    });
+    return () => {
+      setIds([]);
+      unsubscribe();
+    };
   }, [user]);
+
+  console.log(ids);
 
   return (
     <>

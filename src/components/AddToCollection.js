@@ -48,7 +48,7 @@ const AddToCollection = ({ id, filters }) => {
     <>
       {user ? (
         <>
-          {filters.includes(id) ? (
+          {filters && filters.includes(id) ? (
             <Grid container direction='row' spacing={2} alignItems='center'>
               <Grid item xs={12}>
                 <Button
