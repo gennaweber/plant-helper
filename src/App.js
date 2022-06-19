@@ -9,11 +9,12 @@ import {
   Routes,
 } from 'react-router-dom';
 import './App.css';
+import Auth from './components/Auth';
 import Footer from './components/Footer';
-import Auth from './pages/Auth';
 import Dictionary from './pages/Dictionary';
 import Home from './pages/Home';
 import Login from './pages/Login';
+import Profile from './pages/Profile';
 import Refs from './pages/Refs';
 
 import 'firebase/compat/auth';
@@ -189,6 +190,18 @@ function App() {
                             state={state}
                             toggleDrawer={toggleDrawer}
                           />
+                        </Index>
+                      ) : (
+                        <Navigate replace to='/login' />
+                      )
+                    }
+                  />
+                  <Route
+                    path='/profile'
+                    element={
+                      auth ? (
+                        <Index indexName='plants'>
+                          <Profile state={state} toggleDrawer={toggleDrawer} />
                         </Index>
                       ) : (
                         <Navigate replace to='/login' />

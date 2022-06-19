@@ -1,9 +1,8 @@
-import { AppBar } from "@mui/material";
-import Box from "@mui/material/Box";
-import Tab from "@mui/material/Tab";
-import Tabs from "@mui/material/Tabs";
-import * as React from "react";
-import { Link, matchPath, useLocation } from "react-router-dom";
+import { AppBar } from '@mui/material';
+import Box from '@mui/material/Box';
+import Tab from '@mui/material/Tab';
+import Tabs from '@mui/material/Tabs';
+import { Link, matchPath, useLocation } from 'react-router-dom';
 
 function useRouteMatch(patterns) {
   const { pathname } = useLocation();
@@ -24,32 +23,42 @@ function MyTabs() {
   // This means that if you have nested routes like:
   // users, users/new, users/edit.
   // Then the order should be ['users/add', 'users/edit', 'users'].
-  const routeMatch = useRouteMatch(["/", "/dictionary", "/refs"]);
+  const routeMatch = useRouteMatch([
+    '/',
+    '/dictionary',
+    '/refs',
+    '/collection',
+  ]);
   const currentTab = routeMatch?.pattern?.path;
 
   return (
     <Tabs
       value={currentTab}
-      variant="fullWidth"
-      indicatorColor="secondary"
-      aria-label="Navigation tabs"
-      textColor="inherit"
-    >
-      <Tab label="Care Guide" value="/" to="/" component={Link} />
+      variant='fullWidth'
+      indicatorColor='secondary'
+      aria-label='Navigation tabs'
+      textColor='inherit'>
+      <Tab label='Care Guide' value='/' to='/' component={Link} />
       <Tab
-        label="Dictionary"
-        value="/dictionary"
-        to="/dictionary"
+        label='Dictionary'
+        value='/dictionary'
+        to='/dictionary'
         component={Link}
       />
-      <Tab label="References" value="/refs" to="/refs" component={Link} />
+      <Tab label='References' value='/refs' to='/refs' component={Link} />
+      <Tab
+        label='My Collections'
+        value='/collection'
+        to='/collection'
+        component={Link}
+      />
     </Tabs>
   );
 }
 
 export default function TabsRouter() {
   return (
-    <Box sx={{ width: "100%", bgcolor: "primary", color: "#fff" }}>
+    <Box sx={{ width: '100%', bgcolor: 'primary', color: '#fff' }}>
       <AppBar>
         <MyTabs />
       </AppBar>

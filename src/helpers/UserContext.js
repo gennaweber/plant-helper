@@ -11,7 +11,11 @@ const UserContextProvider = ({ children }) => {
   // Listen to the Firebase Auth state and set the local state.
   useEffect(() => {
     const unregisterAuthObserver = app.auth().onAuthStateChanged((user) => {
-      setUser(user._delegate);
+      if (user) {
+        setUser(user._delegate);
+      } else {
+        setUser(null);
+      }
     });
     return () => unregisterAuthObserver(); // Make sure we un-register Firebase observers when the component unmounts.
   }, []);

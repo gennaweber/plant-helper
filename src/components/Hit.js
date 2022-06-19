@@ -56,6 +56,7 @@ const Hits = ({ hits, refineNext, searching, hasMore, maxHits, filters }) => {
         <Box sx={{ width: '100%', minHeight: 829 }} mb={2}>
           <Configure
             hitsPerPage={maxHits || 5}
+            offset={0}
             filters={filters ? getIds() : undefined}
           />
           <Masonry columns={getColumns()} spacing={2}>
