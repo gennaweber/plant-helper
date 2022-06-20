@@ -15,8 +15,6 @@ const Hits = ({ hits, refineNext, searching, hasMore, maxHits, filters }) => {
   let { width } = useWindowDimensions();
   const isVisible = entry && entry.isIntersecting;
 
-  console.log(filters);
-
   const getColumns = () => {
     if (width >= 1200) {
       return 3;

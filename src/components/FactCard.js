@@ -393,12 +393,21 @@ const FactCard = ({ hit, filters }) => {
                 </Grid>
               </>
             )}
-            <Grid item>
-              <Divider />
-            </Grid>
-            <Grid item>
-              <AddToCollection id={id} filters={filters} />
-            </Grid>
+            {genus && (
+              <>
+                <Grid item>
+                  <Divider />
+                </Grid>
+                <Grid item>
+                  <AddToCollection
+                    id={id}
+                    img={src}
+                    name={`${genus} ${species}`}
+                    filters={filters}
+                  />
+                </Grid>
+              </>
+            )}
           </Grid>
         </Grid>
       </Card>

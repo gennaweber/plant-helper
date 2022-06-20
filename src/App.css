@@ -316,7 +316,7 @@ footer {
 }
 
 .MuiTooltip-tooltip {
-  font-family: "Montserrat alternates";
+  font-family: 'Montserrat alternates';
   font-size: 1rem;
 }
 
@@ -408,7 +408,7 @@ footer {
   clip-path: inset(-100% 0);
 }
 .dots-bars-5:before {
-  content: "";
+  content: '';
   position: absolute;
   width: 8px;
   height: 8px;
@@ -481,4 +481,20 @@ footer {
   color: #888;
   font-size: 14px;
   margin-bottom: 0.5em;
+}
+
+.overlay {
+  position: relative;
+}
+
+.overlay:before {
+  content: '';
+  position: absolute;
+  border-radius: 15px;
+
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
 }
