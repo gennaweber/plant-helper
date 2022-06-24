@@ -1,85 +1,98 @@
 import { Card, Divider, Grid, Tooltip, Typography } from '@mui/material';
 
+const faces = {
+  10: 'stunned',
+  9: 'crying',
+  8: 'suffering',
+  7: 'grin',
+  6: 'neutral',
+  5: 'wink',
+  4: 'happy',
+  3: 'smiling',
+  2: 'in-love',
+  1: 'angel',
+  0: 'angel',
+};
+
+const sun = {
+  'As much as possible': 'sun-1',
+  'Direct sun': 'sun-2',
+  'High, some direct sun': 'sun-3',
+  'Bright indirect': 'sun-4',
+  'Medium, no direct sun': 'sun-6',
+  'Low to medium': 'sun-7',
+  Low: 'sun-8',
+};
+
+const drop = {
+  'Keep wet': 'water-1',
+  'Keep moist': 'water-2',
+  'When partially dry': 'water-4',
+  'When mostly dry': 'water-5',
+  'When dry': 'water-6',
+  'When totally dry': 'water-7',
+};
+
+const sunTip = {
+  'As much as possible':
+    '3000 foot candles or more for the majority of the day',
+  'Direct sun': '1000+ foot candles',
+  'High, some direct sun': '500 - 1000 foot candles',
+  'Bright indirect': '400 - 600 foot candles',
+  'Medium, no direct sun': '300 - 400 foot candles',
+  'Low to medium': '200 - 300 foot candles',
+  Low: '100 - 200 foot candles',
+};
+
+const waterTip = {
+  'Keep wet':
+    'Substrate should be near saturation and never allowed to dry out.',
+  'Keep moist':
+    'Water as soon as substrate becomes dry to the touch on the surface but never allow it to dry out completely.',
+  'When partially dry':
+    'Water when soil is 25% to 50% dry (first couple inches/cm of soil are dry).',
+  'When mostly dry': 'Water when soil is 50% to 75% dry.',
+  'When dry':
+    "Water when the soil is 75% to 95% dry but don't allow it to get bone dry. Most hoyas fall into this category and don't like to stay dry for extended periods.",
+  'When totally dry':
+    'Water when the soil is 100% dry, aka bone dry. Can be left a long time between waterings.',
+};
+
+const priceTip = {
+  $: 'Under $10 CAD',
+  '$ - $$': '$10 - $30 CAD',
+  $$: '$40 - $70 CAD',
+  '$$ - $$$': '$70 - $100 CAD',
+  $$$: '$100 - $500 CAD',
+  '$$$ - $$$$': '$500 - $1000 CAD',
+  $$$$: '$1000+ CAD',
+};
+
+const rareTip = {
+  Common: 'Easy to find at most garden centres.',
+  Uncommon:
+    "Some garden centres may carry it but probably won't have it in stock all the time.",
+  'Very uncommon':
+    'Very unlikely to be found in a garden centre but not impossible to find in specialty shops or from private sellers.',
+  Rare: 'Hard to find even in specialty shops. Generally these plants have to be imported from tropical countries.',
+  'Very rare':
+    'Usually passed around amongst private collectors and not sold publically. Your best chance of finding these plants is usually in auctions.',
+};
+
+const soilTip = {
+  'Well-draining, small- to medium-sized particles.':
+    'Examples include Pon-like substrates with or without a self-watering setup, houseplant soil mixed 50/50 with perlite, or aroid mix.',
+  'Well draining, medium- to large-sized particles':
+    'Examples would be an aroid mix with 40% water retention, 60% drainage. Perlite and orchid bark can be added to improve drainage. Large particles prevent soil compaction and allow more airflow to the roots.',
+  'Well draining, medium- to large-sized particles.':
+    'Examples would be an aroid mix with 40% water retention, 60% drainage. Perlite and orchid bark can be added to improve drainage. Large particles prevent soil compaction and allow more airflow to the roots.',
+  'Water-retaining.':
+    'Holds a lot of water and takes a long time to dry out; achieved using coco coir or peat moss. Most store-bought houseplant soils fall into this category.',
+  'Water-retaining, medium- to large-sized particles.':
+    'A good ratio is 60% water-retaining elements like peat or coco coir and 40% drainage, such as using perlite or orchid bark. Large particles prevent soil compaction and allow more airflow to the roots.',
+};
+
 const FactCard = ({ hit, alt }) => {
-  const faces = {
-    10: 'stunned',
-    9: 'crying',
-    8: 'suffering',
-    7: 'grin',
-    6: 'neutral',
-    5: 'wink',
-    4: 'happy',
-    3: 'smiling',
-    2: 'in-love',
-    1: 'angel',
-    0: 'angel',
-  };
-
-  const sun = {
-    'As much as possible': 'sun-1',
-    'Direct sun': 'sun-2',
-    'High, some direct sun': 'sun-3',
-    'Bright indirect': 'sun-4',
-    'Medium, no direct sun': 'sun-6',
-    'Low to medium': 'sun-7',
-    Low: 'sun-8',
-  };
-
-  const drop = {
-    'Keep wet': 'water-1',
-    'Keep moist': 'water-2',
-    'When partially dry': 'water-4',
-    'When mostly dry': 'water-5',
-    'When dry': 'water-6',
-    'When totally dry': 'water-7',
-  };
-
-  const sunTip = {
-    'As much as possible':
-      '3000 foot candles or more for the majority of the day',
-    'Direct sun': '1000+ foot candles',
-    'High, some direct sun': '500 - 1000 foot candles',
-    'Bright indirect': '400 - 600 foot candles',
-    'Medium, no direct sun': '300 - 400 foot candles',
-    'Low to medium': '200 - 300 foot candles',
-    Low: '100 - 200 foot candles',
-  };
-
-  const waterTip = {
-    'Keep wet':
-      'Substrate should be near saturation and never allowed to dry out.',
-    'Keep moist':
-      'Water as soon as substrate becomes dry to the touch on the surface but never allow it to dry out completely.',
-    'When partially dry':
-      'Water when soil is 25% to 50% dry (first couple inches/cm of soil are dry).',
-    'When mostly dry': 'Water when soil is 50% to 75% dry.',
-    'When dry':
-      "Water when the soil is 75% to 95% dry but don't allow it to get bone dry. Most hoyas fall into this category and don't like to stay dry for extended periods.",
-    'When totally dry':
-      'Water when the soil is 100% dry, aka bone dry. Can be left a long time between waterings.',
-  };
-
-  const priceTip = {
-    $: 'Under $10 CAD',
-    '$ - $$': '$10 - $30 CAD',
-    $$: '$40 - $70 CAD',
-    '$$ - $$$': '$70 - $100 CAD',
-    $$$: '$100 - $500 CAD',
-    '$$$ - $$$$': '$500 - $1000 CAD',
-    $$$$: '$1000+ CAD',
-  };
-
-  const rareTip = {
-    Common: 'Easy to find at most garden centres.',
-    Uncommon:
-      "Some garden centres may carry it but probably won't have it in stock all the time.",
-    'Very uncommon':
-      'Very unlikely to be found in a garden centre but not impossible to find in specialty shops or from private sellers.',
-    Rare: 'Hard to find even in specialty shops. Generally these plants have to be imported from tropical countries.',
-    'Very rare':
-      'Usually passed around amongst private collectors and not sold publically. Your best chance of finding these plants is usually in auctions.',
-  };
-
   const {
     Genus: genus,
     Species: species,
@@ -105,6 +118,7 @@ const FactCard = ({ hit, alt }) => {
     Meaning: explanation,
     Reference: link,
     Substrate: substrate,
+    Temperature: temp,
   } = hit;
 
   return (
@@ -282,13 +296,28 @@ const FactCard = ({ hit, alt }) => {
                     </Grid>
                     {substrate && (
                       <Grid item>
-                        <Typography variant='body1'>
-                          <strong>Substrate: </strong>
-                          {substrate}
-                        </Typography>
+                        <Tooltip title={`${soilTip[substrate]}`}>
+                          <Typography variant='body1'>
+                            <strong>Substrate: </strong>
+                            {substrate}
+                          </Typography>
+                        </Tooltip>
                       </Grid>
                     )}
                   </Grid>
+                </Grid>
+                <Grid item>
+                  <Divider />
+                </Grid>
+              </>
+            )}
+            {temp && (
+              <>
+                <Grid item>
+                  <Typography variant='body1'>
+                    <strong>Temperature range: </strong>
+                    {temp}°F
+                  </Typography>
                 </Grid>
                 <Grid item>
                   <Divider />
