@@ -80,7 +80,20 @@ const rareTip = {
     'Usually passed around amongst private collectors and not sold publically. Your best chance of finding these plants is usually in auctions.',
 };
 
-const FactCard = ({ hit, filters }) => {
+const soilTip = {
+  'Well-draining, small- to medium-sized particles.':
+    'Examples include Pon-like substrates with or without a self-watering setup, houseplant soil mixed 50/50 with perlite, or aroid mix.',
+  'Well draining, medium- to large-sized particles':
+    'Examples would be an aroid mix with 40% water retention, 60% drainage. Perlite and orchid bark can be added to improve drainage. Large particles prevent soil compaction and allow more airflow to the roots.',
+  'Well draining, medium- to large-sized particles.':
+    'Examples would be an aroid mix with 40% water retention, 60% drainage. Perlite and orchid bark can be added to improve drainage. Large particles prevent soil compaction and allow more airflow to the roots.',
+  'Water-retaining.':
+    'Holds a lot of water and takes a long time to dry out; achieved using coco coir or peat moss. Most store-bought houseplant soils fall into this category.',
+  'Water-retaining, medium- to large-sized particles.':
+    'A good ratio is 60% water-retaining elements like peat or coco coir and 40% drainage, such as using perlite or orchid bark. Large particles prevent soil compaction and allow more airflow to the roots.',
+};
+
+const FactCard = ({ hit, alt, filters }) => {
   const {
     objectID: id,
     Genus: genus,
@@ -107,6 +120,7 @@ const FactCard = ({ hit, filters }) => {
     Meaning: explanation,
     Reference: link,
     Substrate: substrate,
+    Temperature: temp,
   } = hit;
 
   return (
@@ -284,13 +298,28 @@ const FactCard = ({ hit, filters }) => {
                     </Grid>
                     {substrate && (
                       <Grid item>
-                        <Typography variant='body1'>
-                          <strong>Substrate: </strong>
-                          {substrate}
-                        </Typography>
+                        <Tooltip title={`${soilTip[substrate]}`}>
+                          <Typography variant='body1'>
+                            <strong>Substrate: </strong>
+                            {substrate}
+                          </Typography>
+                        </Tooltip>
                       </Grid>
                     )}
                   </Grid>
+                </Grid>
+                <Grid item>
+                  <Divider />
+                </Grid>
+              </>
+            )}
+            {temp && (
+              <>
+                <Grid item>
+                  <Typography variant='body1'>
+                    <strong>Temperature range: </strong>
+                    {temp}°F
+                  </Typography>
                 </Grid>
                 <Grid item>
                   <Divider />
