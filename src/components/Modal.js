@@ -7,9 +7,10 @@ const LoginModal = ({ open, handleClose, children }) => {
     left: '50%',
     transform: 'translate(-50%, -50%)',
     maxHeight: '80%',
-    maxWidth: '100%',
+    width: '90%',
     boxShadow: 24,
     overflowY: 'scroll',
+    borderRadius: 0,
     pl: 2,
     pr: 2,
     pb: 6,
@@ -18,7 +19,6 @@ const LoginModal = ({ open, handleClose, children }) => {
   return (
     <div>
       <Modal
-        sx={{ overflow: 'scroll' }}
         open={open}
         onClose={handleClose}
         aria-labelledby='Button'

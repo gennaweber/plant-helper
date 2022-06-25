@@ -123,6 +123,8 @@ const FactCard = ({ hit, alt, filters }) => {
     Temperature: temp,
   } = hit;
 
+  console.log(src);
+
   return (
     <Grid item xs={12} md={6} lg={4}>
       <Card sx={{ minHeight: 100 }}>

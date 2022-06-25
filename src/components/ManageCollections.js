@@ -8,6 +8,7 @@ import {
   query,
   serverTimestamp,
   setDoc,
+  updateDoc,
 } from 'firebase/firestore';
 import _ from 'lodash';
 import { useContext, useEffect, useState } from 'react';
@@ -23,7 +24,7 @@ const style = {
   margin: '10px',
 };
 
-const CreateCollection = ({ img, id, name }) => {
+const CreateCollection = ({ img, id, name, handleClick }) => {
   const user = useContext(UserContext);
 
   const [textBox, setTextBox] = useState(false);
@@ -39,6 +40,34 @@ const CreateCollection = ({ img, id, name }) => {
   };
 
   const toggleTextBox = () => setTextBox(!textBox);
+
+  const addDocument = async (collection = 'New') => {
+    const kebabCase = _.kebabCase(collection);
+
+    const plants = doc(db, user.uid, kebabCase, 'plants', id);
+
+    const docInfo = doc(db, user.uid, kebabCase);
+
+    try {
+      await setDoc(plants, {
+        collection: collection,
+        plantID: id,
+        name: name,
+        img: img,
+        timestamp: serverTimestamp(),
+      });
+
+      await updateDoc(docInfo, {
+        img: img,
+        timestamp: serverTimestamp(),
+      });
+
+      console.log(id);
+    } catch (error) {
+      console.error(error);
+      return error;
+    }
+  };
 
   const handleSubmit = async () => {
     const kebabName = _.kebabCase(title);
@@ -84,22 +113,18 @@ const CreateCollection = ({ img, id, name }) => {
         const data = change.doc.data();
 
         if (change.type === 'added') {
-          console.log('New: ', data);
-
+          // console.log('New: ', data);
           const kebabName = _.kebabCase(data.name);
           setCollections((prev) => [...prev, data.name]);
           setExtra((prev) => ({ ...prev, [kebabName]: data.img }));
         }
         if (change.type === 'modified') {
           console.log('Modified: ', data);
-          setCollections((prev) => {
-            const oldArray = prev;
-            const newArray = oldArray.filter((name) => name !== data.name);
-            return [...newArray, data.name];
-          });
+          const kebabName = _.kebabCase(data.name);
+          setExtra((prev) => ({ ...prev, [kebabName]: img }));
         }
         if (change.type === 'removed') {
-          console.log('Removed: ', data);
+          // console.log('Removed: ', data);
           setCollections((prev) => prev.filter((name) => name !== data.name));
         }
       });
@@ -111,15 +136,13 @@ const CreateCollection = ({ img, id, name }) => {
       setLoading(true);
       setCollections([]);
     };
-  }, [user]);
-
-  console.log(extra);
+  }, [user, img]);
 
   const getStyle = (name) => {
     const kebabName = _.kebabCase(name);
     return {
       border: '5px solid #146356',
-      backgroundColor: 'rgba(20, 99, 86, 0.1)',
+      backgroundColor: 'rgba(20, 99, 86, 1)',
       color: '#146356',
       height: '200px',
       maxHeight: '200px',
@@ -127,16 +150,22 @@ const CreateCollection = ({ img, id, name }) => {
       margin: '10px',
       backgroundPosition: 'center',
       backgroundImage: `url("${extra[kebabName]}")`,
+      backgroundBlendMode: 'multiply',
       '&:hover': {
-        backgroundImage: 'none',
+        backgroundBlendMode: 'multiply',
       },
     };
   };
 
   return (
     <Box pt={6}>
-      <Typography mb={4} variant='h2' align='center'>
+      <Typography mb={1} variant='h2' align='center'>
         Your Collections
+      </Typography>
+      <Typography mb={2} variant='h5' align='center'>
+        <>
+          Choose a collection to add <strong>{name}</strong> to
+        </>
       </Typography>
       <Grid
         container
@@ -149,12 +178,13 @@ const CreateCollection = ({ img, id, name }) => {
               key={i}
               elevation={2}
               variant='contained'
+              onClick={() => addDocument(collection)}
               sx={getStyle(collection)}>
               <Typography
                 variant='h5'
                 xs={12}
-                sx={{ width: '100%', background: '#fff' }}>
-                {collection}
+                sx={{ width: '100%', color: '#fff' }}>
+                <>{collection}</>
               </Typography>
             </Button>
           ))}
@@ -188,7 +218,7 @@ const CreateCollection = ({ img, id, name }) => {
             {error && (
               <Alert severity='error'>
                 <Typography variant='body1'>
-                  Creating the collection failed. {error}
+                  <>Creating the collection failed. {error}</>
                 </Typography>
               </Alert>
             )}
