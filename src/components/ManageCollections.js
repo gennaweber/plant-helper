@@ -2,6 +2,7 @@ import AddCircleIcon from '@mui/icons-material/AddCircle';
 import { Alert, Box, Button, Grid, TextField, Typography } from '@mui/material';
 import {
   collection,
+  deleteDoc,
   doc,
   getDoc,
   onSnapshot,
@@ -11,7 +12,8 @@ import {
   updateDoc,
 } from 'firebase/firestore';
 import _ from 'lodash';
-import { useContext, useEffect, useState } from 'react';
+import { useCallback, useContext, useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { db } from '../helpers/firebase';
 import { UserContext } from '../helpers/UserContext';
 
@@ -24,7 +26,7 @@ const style = {
   margin: '10px',
 };
 
-const CreateCollection = ({ img, id, name, handleClick }) => {
+const CreateCollection = ({ img, id, name, viewCollection, children }) => {
   const user = useContext(UserContext);
 
   const [textBox, setTextBox] = useState(false);
@@ -34,6 +36,7 @@ const CreateCollection = ({ img, id, name, handleClick }) => {
   const [collections, setCollections] = useState([]);
   const [extra, setExtra] = useState({});
   const [loading, setLoading] = useState(true);
+  const [existing, setExisting] = useState({});
 
   const handleChange = (e) => {
     setTitle(e.target.value);
@@ -41,31 +44,54 @@ const CreateCollection = ({ img, id, name, handleClick }) => {
 
   const toggleTextBox = () => setTextBox(!textBox);
 
+  const checkIfExists = useCallback(
+    async (collection) => {
+      const kebabCase = _.kebabCase(collection);
+      const plant = doc(db, user.uid, kebabCase, 'plants', id);
+      const res = await getDoc(plant);
+      if (res.exists()) {
+        setExisting((prev) => ({ ...prev, [kebabCase]: true }));
+        return true;
+      }
+      setExisting((prev) => ({ ...prev, [kebabCase]: false }));
+      return false;
+    },
+    [id, user]
+  );
+
   const addDocument = async (collection = 'New') => {
     const kebabCase = _.kebabCase(collection);
-
     const plants = doc(db, user.uid, kebabCase, 'plants', id);
-
     const docInfo = doc(db, user.uid, kebabCase);
 
-    try {
-      await setDoc(plants, {
-        collection: collection,
-        plantID: id,
-        name: name,
-        img: img,
-        timestamp: serverTimestamp(),
-      });
+    if (await checkIfExists(collection)) {
+      try {
+        await deleteDoc(plants);
+        await checkIfExists(collection);
+      } catch (error) {
+        console.error(error);
+        setError(`Something went wrong! Error message: ${error}`);
+      }
+    } else {
+      try {
+        await setDoc(plants, {
+          collection: collection,
+          plantID: id,
+          name: name,
+          img: img,
+          timestamp: serverTimestamp(),
+        });
 
-      await updateDoc(docInfo, {
-        img: img,
-        timestamp: serverTimestamp(),
-      });
+        await updateDoc(docInfo, {
+          img: img,
+          timestamp: serverTimestamp(),
+        });
 
-      console.log(id);
-    } catch (error) {
-      console.error(error);
-      return error;
+        console.log(id);
+      } catch (error) {
+        console.error(error);
+        return error;
+      }
     }
   };
 
@@ -111,20 +137,22 @@ const CreateCollection = ({ img, id, name, handleClick }) => {
     const unsubscribe = onSnapshot(q, async (snapshot) => {
       snapshot.docChanges().forEach((change) => {
         const data = change.doc.data();
+        const kebabName = _.kebabCase(data.name);
 
         if (change.type === 'added') {
           // console.log('New: ', data);
-          const kebabName = _.kebabCase(data.name);
           setCollections((prev) => [...prev, data.name]);
           setExtra((prev) => ({ ...prev, [kebabName]: data.img }));
+          checkIfExists(kebabName);
         }
         if (change.type === 'modified') {
           console.log('Modified: ', data);
-          const kebabName = _.kebabCase(data.name);
+          checkIfExists(kebabName);
           setExtra((prev) => ({ ...prev, [kebabName]: img }));
         }
         if (change.type === 'removed') {
-          // console.log('Removed: ', data);
+          console.log('Removed: ', data);
+          checkIfExists(kebabName);
           setCollections((prev) => prev.filter((name) => name !== data.name));
         }
       });
@@ -136,37 +164,30 @@ const CreateCollection = ({ img, id, name, handleClick }) => {
       setLoading(true);
       setCollections([]);
     };
-  }, [user, img]);
+  }, [user, img, checkIfExists]);
 
   const getStyle = (name) => {
     const kebabName = _.kebabCase(name);
+
     return {
       border: '5px solid #146356',
-      backgroundColor: 'rgba(20, 99, 86, 1)',
-      color: '#146356',
+      backgroundColor: '#616161',
       height: '200px',
       maxHeight: '200px',
       maxWidth: '200px',
       margin: '10px',
       backgroundPosition: 'center',
-      backgroundImage: `url("${extra[kebabName]}")`,
+      backgroundSize: 'cover',
+      backgroundImage: existing[kebabName]
+        ? `url("/assets/images/check-mark.png")`
+        : `url("${extra[kebabName]}")`,
       backgroundBlendMode: 'multiply',
-      '&:hover': {
-        backgroundBlendMode: 'multiply',
-      },
     };
   };
 
   return (
     <Box pt={6}>
-      <Typography mb={1} variant='h2' align='center'>
-        Your Collections
-      </Typography>
-      <Typography mb={2} variant='h5' align='center'>
-        <>
-          Choose a collection to add <strong>{name}</strong> to
-        </>
-      </Typography>
+      {children}
       <Grid
         container
         direction='row'
@@ -174,19 +195,43 @@ const CreateCollection = ({ img, id, name, handleClick }) => {
         alignItems='center'>
         {!loading &&
           collections.map((collection, i) => (
-            <Button
-              key={i}
-              elevation={2}
-              variant='contained'
-              onClick={() => addDocument(collection)}
-              sx={getStyle(collection)}>
-              <Typography
-                variant='h5'
-                xs={12}
-                sx={{ width: '100%', color: '#fff' }}>
-                <>{collection}</>
-              </Typography>
-            </Button>
+            <>
+              {viewCollection ? (
+                <Link
+                  style={{ textDecoration: 'none' }}
+                  to={`/collection/${_.kebabCase(collection)}`}>
+                  <Button
+                    key={i}
+                    elevation={2}
+                    // variant='contained'
+                    sx={getStyle(collection)}>
+                    <Typography
+                      variant='h5'
+                      xs={12}
+                      sx={{
+                        width: '100%',
+                        color: '#fff',
+                      }}>
+                      <>{collection}</>
+                    </Typography>
+                  </Button>
+                </Link>
+              ) : (
+                <Button
+                  key={i}
+                  elevation={2}
+                  // variant='contained'
+                  onClick={() => addDocument(collection)}
+                  sx={getStyle(collection)}>
+                  <Typography
+                    variant='h5'
+                    xs={12}
+                    sx={{ width: '100%', color: '#fff' }}>
+                    <>{collection}</>
+                  </Typography>
+                </Button>
+              )}
+            </>
           ))}
         <Button sx={style} onClick={toggleTextBox}>
           <AddCircleIcon fontSize='3rem' />

@@ -1,5 +1,5 @@
 import AddIcon from '@mui/icons-material/Add';
-import { Button, Grid } from '@mui/material';
+import { Button, Grid, Typography } from '@mui/material';
 import { deleteDoc, doc, serverTimestamp } from 'firebase/firestore';
 import { useContext, useState } from 'react';
 import { db } from '../helpers/firebase';
@@ -70,7 +70,16 @@ const AddToCollection = ({ id, filters, img, name }) => {
                   Add to collection
                 </Button>
                 <Modal open={open} handleClose={handleClose}>
-                  <ManageCollections img={img} id={id} name={name} />
+                  <ManageCollections img={img} id={id} name={name}>
+                    <Typography mb={1} variant='h2' align='center'>
+                      Your Collections
+                    </Typography>
+                    <Typography mb={2} variant='h5' align='center'>
+                      <>
+                        Choose a collection to add <strong>{name}</strong> to
+                      </>
+                    </Typography>
+                  </ManageCollections>
                 </Modal>
               </Grid>
             </Grid>

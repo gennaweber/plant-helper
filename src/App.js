@@ -19,7 +19,8 @@ import Refs from './pages/Refs';
 
 import 'firebase/compat/auth';
 import { UserContextProvider } from './helpers/UserContext';
-import Collection from './pages/Collection';
+import Collections from './pages/Collections';
+import CollectionView from './pages/CollectionView';
 
 const searchClient = algoliasearch(
   'FHN6MLHV4X',
@@ -186,7 +187,22 @@ function App() {
                     element={
                       auth ? (
                         <Index indexName='plants'>
-                          <Collection
+                          <Collections
+                            state={state}
+                            toggleDrawer={toggleDrawer}
+                          />
+                        </Index>
+                      ) : (
+                        <Navigate replace to='/login' />
+                      )
+                    }
+                  />
+                  <Route
+                    path='/collection/:name'
+                    element={
+                      auth ? (
+                        <Index indexName='plants_newest'>
+                          <CollectionView
                             state={state}
                             toggleDrawer={toggleDrawer}
                           />

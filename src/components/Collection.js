@@ -1,17 +1,18 @@
 import { Button, Grid, Typography } from '@mui/material';
 import { collection, onSnapshot, query } from 'firebase/firestore';
 import { useContext, useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import Auth from '../components/Auth';
 import BasicContainer from '../components/BasicContainer';
-import Drawer from '../components/Drawer';
 import { CustomHits } from '../components/Hit';
-import TabsRouter from '../components/TabsRouter';
 import { app, db } from '../helpers/firebase';
 import { UserContext } from '../helpers/UserContext';
 
 const { firebase } = app;
 
-const Collection = (props) => {
+const Collection = () => {
+  const { name } = useParams();
+
   const [title, setTitle] = useState('Loading...');
   const [ids, setIds] = useState([]);
 
@@ -19,8 +20,9 @@ const Collection = (props) => {
 
   useEffect(() => {
     if (!user) return;
+    if (!name) return;
 
-    const q = query(collection(db, user.uid, 'my-collection', 'plants'));
+    const q = query(collection(db, user.uid, name, 'plants'));
 
     const unsubscribe = onSnapshot(q, async (snapshot) => {
       snapshot.docChanges().forEach((change) => {
@@ -44,13 +46,11 @@ const Collection = (props) => {
     return () => {
       unsubscribe();
     };
-  }, [user]);
+  }, [user, name]);
 
   return (
     <>
       <div>
-        <Drawer state={props.state} toggleDrawer={props.toggleDrawer} />
-        <TabsRouter />
         {user ? (
           <>
             <BasicContainer width='sm'>
