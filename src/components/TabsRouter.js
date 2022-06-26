@@ -27,6 +27,7 @@ function MyTabs() {
     '/',
     '/dictionary',
     '/refs',
+    '/collection/:name',
     '/collection',
   ]);
   const currentTab = routeMatch?.pattern?.path;
@@ -46,6 +47,11 @@ function MyTabs() {
         component={Link}
       />
       <Tab label='References' value='/refs' to='/refs' component={Link} />
+      <Tab
+        value='/collection/:name'
+        to='/collection'
+        style={{ display: 'none' }}
+      />
       <Tab
         label='My Collections'
         value='/collection'

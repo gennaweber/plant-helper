@@ -431,7 +431,7 @@ const FactCard = ({ hit, alt, filters }) => {
                   <AddToCollection
                     id={id}
                     img={src}
-                    name={`${genus} ${species}`}
+                    title={`${genus} ${species}`}
                     filters={filters}
                   />
                 </Grid>

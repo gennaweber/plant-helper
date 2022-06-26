@@ -47,6 +47,7 @@ const CreateCollection = ({ img, id, name, viewCollection, children }) => {
   const checkIfExists = useCallback(
     async (collection) => {
       const kebabCase = _.kebabCase(collection);
+      if (!id) return;
       const plant = doc(db, user.uid, kebabCase, 'plants', id);
       const res = await getDoc(plant);
       if (res.exists()) {
@@ -61,6 +62,7 @@ const CreateCollection = ({ img, id, name, viewCollection, children }) => {
 
   const addDocument = async (collection = 'New') => {
     const kebabCase = _.kebabCase(collection);
+    if (!id) return;
     const plants = doc(db, user.uid, kebabCase, 'plants', id);
     const docInfo = doc(db, user.uid, kebabCase);
 
@@ -195,13 +197,12 @@ const CreateCollection = ({ img, id, name, viewCollection, children }) => {
         alignItems='center'>
         {!loading &&
           collections.map((collection, i) => (
-            <>
+            <div key={`button-${i}`}>
               {viewCollection ? (
                 <Link
                   style={{ textDecoration: 'none' }}
                   to={`/collection/${_.kebabCase(collection)}`}>
                   <Button
-                    key={i}
                     elevation={2}
                     // variant='contained'
                     sx={getStyle(collection)}>
@@ -218,7 +219,6 @@ const CreateCollection = ({ img, id, name, viewCollection, children }) => {
                 </Link>
               ) : (
                 <Button
-                  key={i}
                   elevation={2}
                   // variant='contained'
                   onClick={() => addDocument(collection)}
@@ -231,7 +231,7 @@ const CreateCollection = ({ img, id, name, viewCollection, children }) => {
                   </Typography>
                 </Button>
               )}
-            </>
+            </div>
           ))}
         <Button sx={style} onClick={toggleTextBox}>
           <AddCircleIcon fontSize='3rem' />
