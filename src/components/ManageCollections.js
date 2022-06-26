@@ -16,6 +16,7 @@ import { useCallback, useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { db } from '../helpers/firebase';
 import { UserContext } from '../helpers/UserContext';
+import CollectionButton from './CollectionButton';
 
 const style = {
   border: '5px dashed #F3C892',
@@ -46,6 +47,7 @@ const CreateCollection = ({ img, id, name, viewCollection, children }) => {
 
   const checkIfExists = useCallback(
     async (collection) => {
+      if (!collection) return;
       const kebabCase = _.kebabCase(collection);
       if (!id) return;
       const plant = doc(db, user.uid, kebabCase, 'plants', id);
@@ -175,8 +177,7 @@ const CreateCollection = ({ img, id, name, viewCollection, children }) => {
       border: '5px solid #146356',
       backgroundColor: '#616161',
       height: '200px',
-      maxHeight: '200px',
-      maxWidth: '200px',
+      width: '200px',
       margin: '10px',
       backgroundPosition: 'center',
       backgroundSize: 'cover',
@@ -188,7 +189,7 @@ const CreateCollection = ({ img, id, name, viewCollection, children }) => {
   };
 
   return (
-    <Box pt={6}>
+    <Box>
       {children}
       <Grid
         container
@@ -202,34 +203,16 @@ const CreateCollection = ({ img, id, name, viewCollection, children }) => {
                 <Link
                   style={{ textDecoration: 'none' }}
                   to={`/collection/${_.kebabCase(collection)}`}>
-                  <Button
-                    elevation={2}
-                    // variant='contained'
-                    sx={getStyle(collection)}>
-                    <Typography
-                      variant='h5'
-                      xs={12}
-                      sx={{
-                        width: '100%',
-                        color: '#fff',
-                      }}>
-                      <>{collection}</>
-                    </Typography>
-                  </Button>
+                  <CollectionButton style={getStyle(collection)}>
+                    {collection}
+                  </CollectionButton>
                 </Link>
               ) : (
-                <Button
-                  elevation={2}
-                  // variant='contained'
-                  onClick={() => addDocument(collection)}
-                  sx={getStyle(collection)}>
-                  <Typography
-                    variant='h5'
-                    xs={12}
-                    sx={{ width: '100%', color: '#fff' }}>
-                    <>{collection}</>
-                  </Typography>
-                </Button>
+                <CollectionButton
+                  style={getStyle(collection)}
+                  onClick={() => addDocument(collection)}>
+                  {collection}
+                </CollectionButton>
               )}
             </div>
           ))}

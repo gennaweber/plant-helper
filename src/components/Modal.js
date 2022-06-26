@@ -11,6 +11,7 @@ const LoginModal = ({ open, handleClose, children }) => {
     boxShadow: 24,
     overflowY: 'scroll',
     borderRadius: 0,
+    pt: 6,
     pl: 2,
     pr: 2,
     pb: 6,

@@ -73,6 +73,7 @@ const theme = createTheme({
     h1: {
       fontFamily: 'Montserrat Alternates',
       fontWeight: 800,
+      fontSize: 50,
     },
     h2: {
       fontFamily: 'Montserrat Alternates',
