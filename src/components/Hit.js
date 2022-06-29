@@ -1,5 +1,5 @@
 import Masonry from '@mui/lab/Masonry';
-import { Box, Container } from '@mui/material';
+import { Box, Container, Typography } from '@mui/material';
 import React, { useEffect } from 'react';
 import {
   Configure,
@@ -65,8 +65,10 @@ const Hits = ({ hits, refineNext, searching, hasMore, maxHits, filters }) => {
               ))}
             {!maxHits && (
               <>
-                {hasMore && <p ref={ref}>Loading...</p>}
-                {!hasMore && <p>You've reached the end of the results</p>}
+                {hasMore && <Typography ref={ref}>Loading...</Typography>}
+                {!hasMore && (
+                  <Typography>You've reached the end of the results</Typography>
+                )}
               </>
             )}
           </Masonry>
