@@ -82,7 +82,15 @@ const Collection = () => {
                 <Grid item mt='2vh' mb='5vh'></Grid>
               </Grid>
             </BasicContainer>
-            <CustomHits filters={ids} />
+            {ids.length < 1 ? (
+              <BasicContainer>
+                <Typography>
+                  Add some plants to this collection using the "Care Guide" tab
+                </Typography>
+              </BasicContainer>
+            ) : (
+              <CustomHits filters={ids} />
+            )}
           </>
         ) : (
           <Auth />

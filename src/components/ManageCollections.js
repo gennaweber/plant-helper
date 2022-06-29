@@ -27,7 +27,15 @@ const style = {
   margin: '10px',
 };
 
-const CreateCollection = ({ img, id, name, viewCollection, children }) => {
+const CreateCollection = ({
+  img = null,
+  id,
+  name,
+  viewCollection = false,
+  children,
+}) => {
+  console.log(img);
+
   const user = useContext(UserContext);
 
   const [textBox, setTextBox] = useState(false);
