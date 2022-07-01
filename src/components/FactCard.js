@@ -83,9 +83,9 @@ const rareTip = {
 const soilTip = {
   'Well-draining, small- to medium-sized particles.':
     'Examples include Pon-like substrates with or without a self-watering setup, houseplant soil mixed 50/50 with perlite, or aroid mix.',
-  'Well draining, medium- to large-sized particles':
+  'Well-draining, medium- to large-sized particles':
     'Examples would be an aroid mix with 40% water retention, 60% drainage. Perlite and orchid bark can be added to improve drainage. Large particles prevent soil compaction and allow more airflow to the roots.',
-  'Well draining, medium- to large-sized particles.':
+  'Well-draining, medium- to large-sized particles.':
     'Examples would be an aroid mix with 40% water retention, 60% drainage. Perlite and orchid bark can be added to improve drainage. Large particles prevent soil compaction and allow more airflow to the roots.',
   'Water-retaining.':
     'Holds a lot of water and takes a long time to dry out; achieved using coco coir or peat moss. Most store-bought houseplant soils fall into this category.',
@@ -121,6 +121,7 @@ const FactCard = ({ hit, alt, filters }) => {
     Reference: link,
     Substrate: substrate,
     Temperature: temp,
+    Celsius: celsius,
   } = hit;
 
   return (
@@ -318,7 +319,7 @@ const FactCard = ({ hit, alt, filters }) => {
                 <Grid item>
                   <Typography variant='body1'>
                     <strong>Temperature range: </strong>
-                    {temp}°F
+                    {temp}°F / {celsius}°C
                   </Typography>
                 </Grid>
                 <Grid item>
