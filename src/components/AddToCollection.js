@@ -1,4 +1,5 @@
 import AddIcon from '@mui/icons-material/Add';
+import RemoveIcon from '@mui/icons-material/Remove';
 import { Button, Grid, Typography } from '@mui/material';
 import { deleteDoc, doc } from 'firebase/firestore';
 import { useContext, useState } from 'react';
@@ -42,7 +43,7 @@ const AddToCollection = ({ id, filters, img, title }) => {
                   variant='contained'
                   fullWidth={true}
                   onClick={handleRemove}
-                  startIcon={<AddIcon />}
+                  startIcon={<RemoveIcon />}
                   color='error'>
                   Remove from collection
                 </Button>

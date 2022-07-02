@@ -93,9 +93,9 @@ const soilTip = {
     'A good ratio is 60% water-retaining elements like peat or coco coir and 40% drainage, such as using perlite or orchid bark. Large particles prevent soil compaction and allow more airflow to the roots.',
 };
 
-const FactCard = ({ hit, alt, filters }) => {
+const FactCard = ({ hit, filters }) => {
   const {
-    objectID: id,
+    UID: id,
     Genus: genus,
     Species: species,
     Rarity: rarity,

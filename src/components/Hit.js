@@ -43,7 +43,7 @@ const Hits = ({ hits, refineNext, searching, hasMore, maxHits, filters }) => {
     if (!filters) return;
     return filters
       .map((id, i) => {
-        return i === 0 ? `objectID:${id}` : `OR objectID:${id}`;
+        return i === 0 ? `UID:${id}` : `OR UID:${id}`;
       })
       .join(' ');
   };
