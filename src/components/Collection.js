@@ -7,6 +7,7 @@ import BasicContainer from '../components/BasicContainer';
 import { CustomHits } from '../components/Hit';
 import { app, db } from '../helpers/firebase';
 import { UserContext } from '../helpers/UserContext';
+import Loader from './Loader';
 
 const { firebase } = app;
 
@@ -14,6 +15,7 @@ const Collection = () => {
   const { name } = useParams();
 
   const [title, setTitle] = useState('Loading...');
+  const [loading, setLoading] = useState(true);
   const [ids, setIds] = useState([]);
 
   const user = useContext(UserContext);
@@ -42,9 +44,12 @@ const Collection = () => {
           );
         }
       });
+      setLoading(false);
     });
     return () => {
       unsubscribe();
+      setLoading(true);
+      setIds([]);
     };
   }, [user, name]);
 
@@ -82,14 +87,23 @@ const Collection = () => {
                 <Grid item mt='2vh' mb='5vh'></Grid>
               </Grid>
             </BasicContainer>
-            {ids.length < 1 ? (
+            {loading ? (
               <BasicContainer>
-                <Typography>
-                  Add some plants to this collection using the "Care Guide" tab
-                </Typography>
+                <Loader />
               </BasicContainer>
             ) : (
-              <CustomHits filters={ids} />
+              <>
+                {ids.length < 1 ? (
+                  <BasicContainer>
+                    <Typography>
+                      Add some plants to this collection using the "Care Guide"
+                      tab
+                    </Typography>
+                  </BasicContainer>
+                ) : (
+                  <CustomHits filters={ids} />
+                )}
+              </>
             )}
           </>
         ) : (
