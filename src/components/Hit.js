@@ -9,11 +9,23 @@ import {
 import { useIntersectionObserver } from 'react-intersection-observer-hook';
 import useWindowDimensions from '../helpers/useWindowDimensions';
 import FactCard from './FactCard';
+import Loader from './Loader';
 
-const Hits = ({ hits, refineNext, searching, hasMore, maxHits, filters }) => {
+const Hits = ({
+  hits,
+  refineNext,
+  searching,
+  hasMore,
+  hasPrevious,
+  refinePrevious,
+  maxHits,
+  filters,
+}) => {
   const [ref, { entry }] = useIntersectionObserver();
+  const [ref2 = ref, { entry: entry2 }] = useIntersectionObserver();
   let { width } = useWindowDimensions();
   const isVisible = entry && entry.isIntersecting;
+  const isVisibleTop = entry2 && entry2.isIntersecting;
 
   const getColumns = () => {
     if (width >= 1200) {
@@ -26,7 +38,7 @@ const Hits = ({ hits, refineNext, searching, hasMore, maxHits, filters }) => {
   };
 
   useEffect(() => {
-    console.log(`The component is ${isVisible ? 'visible' : 'not visible'}.`);
+    // console.log(`The component is ${isVisible ? 'visible' : 'not visible'}.`);
     const timeout = () =>
       setTimeout(() => {
         refineNext();
@@ -38,6 +50,25 @@ const Hits = ({ hits, refineNext, searching, hasMore, maxHits, filters }) => {
 
     return () => clearTimeout(timeout);
   }, [isVisible]); // eslint-disable-line
+
+  useEffect(() => {
+    if (!isVisibleTop) return;
+
+    console.log(
+      `The component is ${isVisibleTop ? 'visible' : 'not visible'}.`
+    );
+
+    const timeout = () =>
+      setTimeout(() => {
+        refinePrevious();
+      }, 500);
+
+    if (!searching && isVisibleTop) {
+      timeout();
+    }
+
+    return () => clearTimeout(timeout);
+  }, [isVisibleTop]); // eslint-disable-line
 
   const getIds = () => {
     if (!filters) return;
@@ -58,14 +89,24 @@ const Hits = ({ hits, refineNext, searching, hasMore, maxHits, filters }) => {
             offset={0}
             filters={filters ? getIds() : undefined}
           />
+
           <Masonry columns={getColumns()} spacing={2}>
+            {hasPrevious && (
+              <div ref={ref2}>
+                <Loader />
+              </div>
+            )}
             {hits.length > 0 &&
               hits.map((hit, i) => (
                 <FactCard key={i} hit={hit} filters={filters} />
               ))}
             {!maxHits && (
               <>
-                {hasMore && <Typography ref={ref}>Loading...</Typography>}
+                {hasMore && (
+                  <div ref={ref}>
+                    <Loader />
+                  </div>
+                )}
                 {!hasMore && (
                   <Typography>You've reached the end of the results</Typography>
                 )}
