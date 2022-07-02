@@ -253,8 +253,13 @@ const CreateCollection = ({
         </Button>
       </Grid>
       {textBox && (
-        <Grid container direction='column' spacing={1} mt={1}>
-          <Grid item xs={12}>
+        <Grid
+          container
+          sx={{ margin: 'auto', maxWidth: '400px' }}
+          direction='column'
+          spacing={1}
+          mt={1}>
+          <Grid item>
             <TextField
               fullWidth
               value={title}
@@ -264,7 +269,7 @@ const CreateCollection = ({
               variant='outlined'
             />
           </Grid>
-          <Grid item xs={12}>
+          <Grid item>
             <Button
               fullWidth
               onClick={handleSubmit}

@@ -93,7 +93,7 @@ const soilTip = {
     'A good ratio is 60% water-retaining elements like peat or coco coir and 40% drainage, such as using perlite or orchid bark. Large particles prevent soil compaction and allow more airflow to the roots.',
 };
 
-const FactCard = ({ hit, filters }) => {
+const FactCard = ({ hit, filters, toggleCard }) => {
   const {
     UID: id,
     Genus: genus,
@@ -126,7 +126,7 @@ const FactCard = ({ hit, filters }) => {
 
   return (
     <Grid item xs={12} md={6} lg={4}>
-      <Card sx={{ minHeight: 100 }}>
+      <Card onClick={toggleCard ? toggleCard : null}>
         {(src || photo) && (
           <img
             referrerPolicy='no-referrer'

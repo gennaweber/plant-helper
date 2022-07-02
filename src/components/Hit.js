@@ -9,6 +9,7 @@ import {
 import { useIntersectionObserver } from 'react-intersection-observer-hook';
 import useWindowDimensions from '../helpers/useWindowDimensions';
 import FactCard from './FactCard';
+import ListCard from './ListCard';
 import Loader from './Loader';
 
 const Hits = ({
@@ -20,6 +21,7 @@ const Hits = ({
   refinePrevious,
   maxHits,
   filters,
+  list,
 }) => {
   const [ref, { entry }] = useIntersectionObserver();
   const [ref2 = ref, { entry: entry2 }] = useIntersectionObserver();
@@ -98,7 +100,13 @@ const Hits = ({
             )}
             {hits.length > 0 &&
               hits.map((hit, i) => (
-                <FactCard key={i} hit={hit} filters={filters} />
+                <>
+                  {list ? (
+                    <ListCard key={i} hit={hit} filters={filters} />
+                  ) : (
+                    <FactCard key={i} hit={hit} filters={filters} />
+                  )}
+                </>
               ))}
             {!maxHits && (
               <>

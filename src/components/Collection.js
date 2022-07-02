@@ -1,4 +1,10 @@
-import { Button, Grid, Typography } from '@mui/material';
+import {
+  Button,
+  Grid,
+  ToggleButton,
+  ToggleButtonGroup,
+  Typography,
+} from '@mui/material';
 import { collection, onSnapshot, query } from 'firebase/firestore';
 import { useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
@@ -17,8 +23,13 @@ const Collection = () => {
   const [title, setTitle] = useState('Loading...');
   const [loading, setLoading] = useState(true);
   const [ids, setIds] = useState([]);
+  const [list, setList] = useState(false);
 
   const user = useContext(UserContext);
+
+  const handleToggle = (event, value) => {
+    setList(value);
+  };
 
   useEffect(() => {
     if (!user) return;
@@ -53,6 +64,8 @@ const Collection = () => {
     };
   }, [user, name]);
 
+  console.log(list);
+
   return (
     <>
       <div>
@@ -84,7 +97,6 @@ const Collection = () => {
                     </Button>
                   </Grid>
                 </Grid>
-                <Grid item mt='2vh' mb='5vh'></Grid>
               </Grid>
             </BasicContainer>
             {loading ? (
@@ -101,13 +113,31 @@ const Collection = () => {
                     </Typography>
                   </BasicContainer>
                 ) : (
-                  <CustomHits filters={ids} />
+                  <>
+                    <BasicContainer>
+                      <ToggleButtonGroup
+                        value={list}
+                        exclusive
+                        onChange={handleToggle}
+                        aria-label='text alignment'>
+                        <ToggleButton value={false} aria-label='card view'>
+                          <Typography variant='h5'>Card View</Typography>
+                        </ToggleButton>
+                        <ToggleButton value={true} aria-label='list view'>
+                          <Typography variant='h5'>List View</Typography>
+                        </ToggleButton>
+                      </ToggleButtonGroup>
+                    </BasicContainer>
+                    <CustomHits filters={ids} list={list} />
+                  </>
                 )}
               </>
             )}
           </>
         ) : (
-          <Auth />
+          <Grid container mt={8}>
+            <Auth />
+          </Grid>
         )}
       </div>
     </>

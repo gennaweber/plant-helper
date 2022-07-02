@@ -48,7 +48,9 @@ const Collections = () => {
           </ManageCollections>
         </BasicContainer>
       ) : (
-        <Auth />
+        <Grid container mt={8}>
+          <Auth />
+        </Grid>
       )}
     </div>
   );

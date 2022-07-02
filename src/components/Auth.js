@@ -27,12 +27,12 @@ function SignInScreen() {
   return (
     <Grid
       container
+      item
       direction='column'
       justifyContent='center'
       alignItems='center'
       spacing={2}
-      p={2}
-      mt={6}>
+      p={2}>
       <Grid item>
         <Typography variant='h3'>Please sign-in:</Typography>
       </Grid>

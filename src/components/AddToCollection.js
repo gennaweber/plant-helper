@@ -1,6 +1,7 @@
 import AddIcon from '@mui/icons-material/Add';
+import DeleteIcon from '@mui/icons-material/Delete';
 import RemoveIcon from '@mui/icons-material/Remove';
-import { Button, Grid, Typography } from '@mui/material';
+import { Button, Grid, IconButton, Typography } from '@mui/material';
 import { deleteDoc, doc } from 'firebase/firestore';
 import { useContext, useState } from 'react';
 import { useParams } from 'react-router-dom';
@@ -10,7 +11,7 @@ import Auth from './Auth';
 import ManageCollections from './ManageCollections';
 import Modal from './Modal';
 
-const AddToCollection = ({ id, filters, img, title }) => {
+const AddToCollection = ({ id, filters, img, title, list }) => {
   const user = useContext(UserContext);
   const { name } = useParams();
 
@@ -38,29 +39,54 @@ const AddToCollection = ({ id, filters, img, title }) => {
           {filters && filters.includes(id) ? (
             <Grid container direction='row' spacing={2} alignItems='center'>
               <Grid item xs={12}>
-                <Button
-                  size='large'
-                  variant='contained'
-                  fullWidth={true}
-                  onClick={handleRemove}
-                  startIcon={<RemoveIcon />}
-                  color='error'>
-                  Remove from collection
-                </Button>
+                {list ? (
+                  <IconButton
+                    color='error'
+                    aria-label='remove item'
+                    id='remove-button'
+                    aria-haspopup='false'
+                    size='large'
+                    onClick={handleRemove}>
+                    <DeleteIcon fontSize='large' />
+                  </IconButton>
+                ) : (
+                  <Button
+                    size='large'
+                    variant='contained'
+                    fullWidth={true}
+                    onClick={handleRemove}
+                    startIcon={<RemoveIcon />}
+                    color='error'>
+                    Remove from collection
+                  </Button>
+                )}
               </Grid>
             </Grid>
           ) : (
             <Grid container direction='row' spacing={2} alignItems='center'>
               <Grid item xs={12}>
-                <Button
-                  size='large'
-                  variant='contained'
-                  fullWidth={true}
-                  onClick={handleOpen}
-                  startIcon={<AddIcon />}
-                  color='secondary'>
-                  Add to collection
-                </Button>
+                {list ? (
+                  <IconButton
+                    aria-label='add item'
+                    id='add-button'
+                    aria-haspopup='true'
+                    aria-controls={open ? 'add-button' : undefined}
+                    aria-expanded={open ? 'true' : undefined}
+                    size='large'
+                    onClick={handleOpen}>
+                    <AddIcon fontSize='large' />
+                  </IconButton>
+                ) : (
+                  <Button
+                    size='large'
+                    variant='contained'
+                    fullWidth={true}
+                    onClick={handleOpen}
+                    startIcon={<AddIcon />}
+                    color='secondary'>
+                    Add to collection
+                  </Button>
+                )}
                 <Modal open={open} handleClose={handleClose}>
                   <ManageCollections img={img} id={id} name={title}>
                     <Typography mb={1} variant='h2' align='center'>
