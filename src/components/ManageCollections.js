@@ -17,6 +17,7 @@ import { Link } from 'react-router-dom';
 import { db } from '../helpers/firebase';
 import { UserContext } from '../helpers/UserContext';
 import CollectionButton from './CollectionButton';
+import MoreMenu from './MoreMenu';
 
 const style = {
   border: '5px dashed #F3C892',
@@ -34,8 +35,6 @@ const CreateCollection = ({
   viewCollection = false,
   children,
 }) => {
-  console.log(img);
-
   const user = useContext(UserContext);
 
   const [textBox, setTextBox] = useState(false);
@@ -98,8 +97,6 @@ const CreateCollection = ({
           img: img,
           timestamp: serverTimestamp(),
         });
-
-        console.log(id);
       } catch (error) {
         console.error(error);
         return error;
@@ -130,6 +127,21 @@ const CreateCollection = ({
         console.error(err);
         setError(err);
       }
+    }
+  };
+
+  const handleDeleteCollection = async (name) => {
+    const kebabName = _.kebabCase(name);
+    const collection = doc(db, user.uid, kebabName);
+
+    console.log('handle delete activated');
+    try {
+      await deleteDoc(collection);
+      console.log('attempt to delete');
+    } catch (err) {
+      console.error(err);
+      console.log('attempt to delete failed');
+      setError(err);
     }
   };
 
@@ -208,19 +220,31 @@ const CreateCollection = ({
           collections.map((collection, i) => (
             <div key={`button-${i}`}>
               {viewCollection ? (
-                <Link
-                  style={{ textDecoration: 'none' }}
-                  to={`/collection/${_.kebabCase(collection)}`}>
-                  <CollectionButton style={getStyle(collection)}>
+                <div style={{ position: 'relative' }}>
+                  <MoreMenu
+                    handleDeleteCollection={handleDeleteCollection}
+                    collection={collection}
+                  />
+                  <Link
+                    style={{ textDecoration: 'none' }}
+                    to={`/collection/${_.kebabCase(collection)}`}>
+                    <CollectionButton style={getStyle(collection)}>
+                      {collection}
+                    </CollectionButton>
+                  </Link>
+                </div>
+              ) : (
+                <div style={{ position: 'relative' }}>
+                  <MoreMenu
+                    handleDeleteCollection={handleDeleteCollection}
+                    collection={collection}
+                  />
+                  <CollectionButton
+                    style={getStyle(collection)}
+                    onClick={() => addDocument(collection)}>
                     {collection}
                   </CollectionButton>
-                </Link>
-              ) : (
-                <CollectionButton
-                  style={getStyle(collection)}
-                  onClick={() => addDocument(collection)}>
-                  {collection}
-                </CollectionButton>
+                </div>
               )}
             </div>
           ))}

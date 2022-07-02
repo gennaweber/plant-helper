@@ -2,21 +2,27 @@ import { Button, Typography } from '@mui/material';
 
 const CollectionButton = ({ style, onClick, children }) => {
   return (
-    <Button
-      className='collectionButton'
-      elevation={2}
-      // variant='contained'
-      sx={style}
-      onClick={onClick ? onClick : null}>
-      <Typography
-        variant='h5'
-        sx={{
-          width: '100%',
-          color: '#fff',
-        }}>
-        <strong>{children}</strong>
-      </Typography>
-    </Button>
+    <>
+      {children && (
+        <>
+          <Button
+            className='collectionButton'
+            elevation={2}
+            // variant='contained'
+            sx={style}
+            onClick={onClick ? onClick : null}>
+            <Typography
+              variant='h5'
+              sx={{
+                width: '100%',
+                color: '#fff',
+              }}>
+              <strong>{children}</strong>
+            </Typography>
+          </Button>
+        </>
+      )}
+    </>
   );
 };
 
