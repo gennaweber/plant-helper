@@ -297,6 +297,9 @@ const FactCard = ({ hit, filters, toggleCard }) => {
                         </Typography>
                       </Tooltip>
                     </Grid>
+                    <Grid item>
+                      <Divider />
+                    </Grid>
                     {substrate && (
                       <Grid item>
                         <Tooltip title={`${soilTip[substrate]}`}>

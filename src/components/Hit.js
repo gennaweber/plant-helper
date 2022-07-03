@@ -54,8 +54,7 @@ const Hits = ({
   }, [isVisible]); // eslint-disable-line
 
   useEffect(() => {
-    if (!isVisibleTop) return;
-
+    if (!hasMore) return;
     console.log(
       `The component is ${isVisibleTop ? 'visible' : 'not visible'}.`
     );
@@ -70,7 +69,7 @@ const Hits = ({
     }
 
     return () => clearTimeout(timeout);
-  }, [isVisibleTop]); // eslint-disable-line
+  }, [isVisibleTop, hasMore]); // eslint-disable-line
 
   const getIds = () => {
     if (!filters) return;
