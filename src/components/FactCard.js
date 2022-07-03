@@ -35,10 +35,9 @@ const drop = {
 };
 
 const sunTip = {
-  'As much as possible':
-    '3000 foot candles or more for the majority of the day',
+  'As much as possible': '3000 foot candles or more for at least 12 hours',
   'Direct sun': '1000+ foot candles',
-  'High, some direct sun': '500 - 1000 foot candles',
+  'High, some direct sun': '600 - 1000 foot candles',
   'Bright indirect': '400 - 600 foot candles',
   'Medium, no direct sun': '300 - 400 foot candles',
   'Low to medium': '200 - 300 foot candles',
@@ -297,19 +296,6 @@ const FactCard = ({ hit, filters, toggleCard }) => {
                         </Typography>
                       </Tooltip>
                     </Grid>
-                    <Grid item>
-                      <Divider />
-                    </Grid>
-                    {substrate && (
-                      <Grid item>
-                        <Tooltip title={`${soilTip[substrate]}`}>
-                          <Typography variant='body1'>
-                            <strong>Substrate: </strong>
-                            {substrate}
-                          </Typography>
-                        </Tooltip>
-                      </Grid>
-                    )}
                   </Grid>
                 </Grid>
                 <Grid item>
@@ -317,6 +303,23 @@ const FactCard = ({ hit, filters, toggleCard }) => {
                 </Grid>
               </>
             )}
+
+            {substrate && (
+              <>
+                <Grid item>
+                  <Tooltip title={`${soilTip[substrate]}`}>
+                    <Typography variant='body1'>
+                      <strong>Substrate: </strong>
+                      {substrate}
+                    </Typography>
+                  </Tooltip>
+                </Grid>
+                <Grid item>
+                  <Divider />
+                </Grid>
+              </>
+            )}
+
             {temp && (
               <>
                 <Grid item>
