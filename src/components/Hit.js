@@ -6,7 +6,7 @@ import {
   connectInfiniteHits,
   connectStateResults,
 } from 'react-instantsearch-dom';
-import { useIntersectionObserver } from 'react-intersection-observer-hook';
+import { useInView } from 'react-intersection-observer';
 import useWindowDimensions from '../helpers/useWindowDimensions';
 import FactCard from './FactCard';
 import ListCard from './ListCard';
@@ -23,11 +23,9 @@ const Hits = ({
   filters,
   list,
 }) => {
-  const [ref, { entry }] = useIntersectionObserver();
-  const [ref2 = ref, { entry: entry2 }] = useIntersectionObserver();
+  const [ref, inView] = useInView();
+  const [topRef, topInView] = useInView();
   let { width } = useWindowDimensions();
-  const isVisible = entry && entry.isIntersecting;
-  const isVisibleTop = entry2 && entry2.isIntersecting;
 
   const getColumns = () => {
     if (width >= 1200) {
@@ -43,33 +41,33 @@ const Hits = ({
     // console.log(`The component is ${isVisible ? 'visible' : 'not visible'}.`);
     const timeout = () =>
       setTimeout(() => {
+        console.log('refining');
         refineNext();
       }, 500);
 
-    if (!searching && isVisible) {
+    if (!searching && inView) {
       timeout();
     }
 
     return () => clearTimeout(timeout);
-  }, [isVisible]); // eslint-disable-line
+  }, [inView]); // eslint-disable-line
 
   useEffect(() => {
-    if (!hasMore) return;
-    console.log(
-      `The component is ${isVisibleTop ? 'visible' : 'not visible'}.`
-    );
+    console.log(hasPrevious);
+    if (!hasPrevious) return;
+    console.log(`The component is ${topInView ? 'visible' : 'not visible'}.`);
 
     const timeout = () =>
       setTimeout(() => {
         refinePrevious();
       }, 500);
 
-    if (!searching && isVisibleTop) {
+    if (!searching && topInView) {
       timeout();
     }
 
     return () => clearTimeout(timeout);
-  }, [isVisibleTop, hasMore]); // eslint-disable-line
+  }, [topInView, hasMore, searching]); // eslint-disable-line
 
   const getIds = () => {
     if (!filters) return;
@@ -93,7 +91,7 @@ const Hits = ({
 
           <Masonry columns={getColumns()} spacing={2}>
             {hasPrevious && (
-              <div ref={ref2}>
+              <div ref={topRef}>
                 <Loader />
               </div>
             )}

@@ -3,7 +3,7 @@ import {
   Grid,
   ToggleButton,
   ToggleButtonGroup,
-  Typography,
+  Typography
 } from '@mui/material';
 import { collection, onSnapshot, query } from 'firebase/firestore';
 import { useContext, useEffect, useState } from 'react';
@@ -63,8 +63,6 @@ const Collection = () => {
       setIds([]);
     };
   }, [user, name]);
-
-  console.log(list);
 
   return (
     <>
