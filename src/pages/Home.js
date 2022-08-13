@@ -1,4 +1,5 @@
 import { Grid, Typography } from '@mui/material';
+import React from 'react';
 import BasicContainer from '../components/BasicContainer';
 import Drawer from '../components/Drawer';
 import { CustomHits } from '../components/Hit';
