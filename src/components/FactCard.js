@@ -194,7 +194,7 @@ const FactCard = ({ hit, filters, toggleCard }) => {
             )}
             <Grid item>
               <Typography variant="body2">
-                Last updated {updated.getMonth()}-{updated.getDate()}-
+                Last updated {updated.getMonth() + 1}-{updated.getDate() + 1}-
                 {updated.getFullYear()}
               </Typography>
             </Grid>
