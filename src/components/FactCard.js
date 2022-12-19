@@ -121,7 +121,10 @@ const FactCard = ({ hit, filters, toggleCard }) => {
     Substrate: substrate,
     Temperature: temp,
     Celsius: celsius,
+    Last_Updated: date,
   } = hit;
+
+  const updated = new Date(date);
 
   return (
     <Grid item xs={12} md={6} lg={4}>
@@ -185,17 +188,21 @@ const FactCard = ({ hit, filters, toggleCard }) => {
               </Grid>
             )}
             {note && (
+              <Grid item>
+                <Typography variant="body1">{note}</Typography>
+              </Grid>
+            )}
+            <Grid item>
+              <Typography variant="body2">
+                Last updated {updated.getMonth()}-{updated.getDate()}-
+                {updated.getFullYear()}
+              </Typography>
+            </Grid>
+            {fuss && (
               <>
-                <Grid item>
-                  <Typography variant="body1">{note}</Typography>
-                </Grid>
                 <Grid item>
                   <Divider />
                 </Grid>
-              </>
-            )}
-            {fuss && (
-              <>
                 <Grid item>
                   <Grid
                     container
