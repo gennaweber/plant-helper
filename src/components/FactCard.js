@@ -80,6 +80,8 @@ const rareTip = {
 };
 
 const soilTip = {
+  "Extremely well-draining, small particles.":
+    "At least 50% perlite or equivalent.",
   "Well-draining, small- to medium-sized particles.":
     "Examples include Pon-like substrates with or without a self-watering setup, houseplant soil mixed 50/50 with perlite, or aroid mix.",
   "Well-draining, medium- to large-sized particles":
@@ -122,6 +124,8 @@ const FactCard = ({ hit, filters, toggleCard }) => {
     Temperature: temp,
     Celsius: celsius,
     Last_Updated: date,
+    Humidity_Current: hcurrent,
+    Substrate_Current: scurrent,
   } = hit;
 
   const updated = new Date(date);
@@ -317,15 +321,29 @@ const FactCard = ({ hit, filters, toggleCard }) => {
               </>
             )}
 
-            {substrate && (
+            {(substrate || scurrent) && (
               <>
                 <Grid item>
-                  <Tooltip title={`${soilTip[substrate]}`}>
+                  {substrate && (
+                    <Tooltip title={`${soilTip[substrate]}`}>
+                      <Typography variant="body1">
+                        <strong>Substrate: </strong>
+                        {substrate}
+                      </Typography>
+                    </Tooltip>
+                  )}
+                  {scurrent && (
                     <Typography variant="body1">
-                      <strong>Substrate: </strong>
-                      {substrate}
+                      <strong>Currently growing in: </strong>
+                      {scurrent === "Aroid mix" ? (
+                        <a href="https://drive.google.com/file/d/1dr0koW5_ZonR36Nu_lSxnMJ-TaAQFvQD/view?usp=share_link">
+                          {scurrent}
+                        </a>
+                      ) : (
+                        scurrent
+                      )}
                     </Typography>
-                  </Tooltip>
+                  )}
                 </Grid>
                 <Grid item>
                   <Divider />
@@ -357,6 +375,12 @@ const FactCard = ({ hit, filters, toggleCard }) => {
                     <strong>Preferred humidity: </strong>
                     {prefHumid}
                   </Typography>
+                  {hcurrent && (
+                    <Typography variant="body1">
+                      <strong>Currently growing in: </strong>
+                      {hcurrent}
+                    </Typography>
+                  )}
                 </Grid>
                 <Grid item>
                   <Divider />
