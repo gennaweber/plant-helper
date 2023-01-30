@@ -47,12 +47,11 @@ const Login = ({ password, setPassword, setAuth }) => {
                 {" "}
                 @gennasplants
               </a>
-              , plus easy-to-understand definitions of words commonly used in
-              the plant community and links to helpful references.
+              .
               <br />
               <br />
               This app is available for all my supporters on Patreon. If you
-              would like access, purchase any tier using
+              would like access, purchase any tier using{" "}
               <a
                 target="_blank"
                 rel="noreferrer"
