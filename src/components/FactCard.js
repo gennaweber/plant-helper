@@ -202,11 +202,11 @@ const FactCard = ({ hit, filters, toggleCard }) => {
                 {updated.getFullYear()}
               </Typography>
             </Grid>
+            <Grid item>
+              <Divider />
+            </Grid>
             {fuss && (
               <>
-                <Grid item>
-                  <Divider />
-                </Grid>
                 <Grid item>
                   <Grid
                     container
@@ -320,7 +320,6 @@ const FactCard = ({ hit, filters, toggleCard }) => {
                 </Grid>
               </>
             )}
-
             {(substrate || scurrent) && (
               <>
                 <Grid item>
@@ -350,7 +349,6 @@ const FactCard = ({ hit, filters, toggleCard }) => {
                 </Grid>
               </>
             )}
-
             {temp && (
               <>
                 <Grid item>
@@ -387,38 +385,46 @@ const FactCard = ({ hit, filters, toggleCard }) => {
                 </Grid>
               </>
             )}
-            {pattern && (
+            {(pattern || speed) && (
               <>
                 <Grid item>
-                  <Typography variant="body1">
-                    <strong>Growth pattern: </strong>
-                    {pattern}
-                  </Typography>
-                  <Typography variant="body1">
-                    <strong>Speed of growth: </strong>
-                    {speed}
-                  </Typography>
+                  {pattern && (
+                    <Typography variant="body1">
+                      <strong>Growth pattern: </strong>
+                      {pattern}
+                    </Typography>
+                  )}
+                  {speed && (
+                    <Typography variant="body1">
+                      <strong>Speed of growth: </strong>
+                      {speed}
+                    </Typography>
+                  )}
                 </Grid>
                 <Grid item>
                   <Divider />
                 </Grid>
               </>
             )}
-            {rarity && (
+            {(rarity || price) && (
               <>
                 <Grid item>
-                  <Tooltip title={`${rarity} = ${rareTip[rarity]}`}>
-                    <Typography variant="body1">
-                      <strong>Rarity: </strong>
-                      {rarity}
-                    </Typography>
-                  </Tooltip>
-                  <Tooltip title={priceTip[price]}>
-                    <Typography variant="body1">
-                      <strong>Price: </strong>
-                      {price}
-                    </Typography>
-                  </Tooltip>
+                  {rarity && (
+                    <Tooltip title={`${rarity} = ${rareTip[rarity]}`}>
+                      <Typography variant="body1">
+                        <strong>Rarity: </strong>
+                        {rarity}
+                      </Typography>
+                    </Tooltip>
+                  )}
+                  {price && (
+                    <Tooltip title={priceTip[price]}>
+                      <Typography variant="body1">
+                        <strong>Price: </strong>
+                        {price}
+                      </Typography>
+                    </Tooltip>
+                  )}
                 </Grid>
                 <Grid item>
                   <Divider />
@@ -439,18 +445,21 @@ const FactCard = ({ hit, filters, toggleCard }) => {
               </>
             )}
             {prop && (
-              <Grid item>
-                <Typography variant="body1">
-                  <strong>Propagation: </strong>
-                  {prop}
-                </Typography>
-              </Grid>
-            )}
-            {hashtag && (
               <>
+                <Grid item>
+                  <Typography variant="body1">
+                    <strong>Propagation: </strong>
+                    {prop}
+                  </Typography>
+                </Grid>
+
                 <Grid item>
                   <Divider />
                 </Grid>
+              </>
+            )}
+            {hashtag && (
+              <>
                 <Grid item>
                   <Typography variant="body1">
                     <strong>Hashtag: </strong>
@@ -465,22 +474,21 @@ const FactCard = ({ hit, filters, toggleCard }) => {
                     </a>
                   </Typography>
                 </Grid>
-              </>
-            )}
-            {genus && (
-              <>
+
                 <Grid item>
                   <Divider />
                 </Grid>
-                <Grid item>
-                  <AddToCollection
-                    id={id}
-                    img={src}
-                    title={`${genus} ${species}`}
-                    filters={filters}
-                  />
-                </Grid>
               </>
+            )}
+            {genus && (
+              <Grid item>
+                <AddToCollection
+                  id={id}
+                  img={src}
+                  title={`${genus} ${species}`}
+                  filters={filters}
+                />
+              </Grid>
             )}
           </Grid>
         </Grid>
