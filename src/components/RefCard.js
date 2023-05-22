@@ -1,4 +1,4 @@
-import { Card, Grid, Typography } from "@mui/material";
+import { Card, Grid, Link, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 
@@ -23,10 +23,11 @@ const RefCard = ({ description, link, category }) => {
     }
   }, [inView]);
 
+  console.log(data);
+
   return (
     <Grid item xs={12} md={6} lg={4}>
       <Card sx={{ minHeight: 100 }} ref={ref}>
-        {data ? data.title : link}
         <Grid
           container
           sx={{ minHeight: 100 }}
@@ -34,9 +35,20 @@ const RefCard = ({ description, link, category }) => {
           alignItems="center"
         >
           <Grid container direction="column" item p={3} spacing={1}>
+            {data && data.img && <img width="100%" src={data.img} alt="" />}
+            <Grid item>
+              <Link
+                href={link}
+                variant="h5"
+                underline="none"
+                sx={{ wordBreak: "break-word" }}
+              >
+                {data && data.title ? data.title : link}
+              </Link>
+            </Grid>
             {category && (
               <Grid item>
-                <Typography variant="h5">{category}</Typography>
+                <Typography variant="body2">{category}</Typography>
               </Grid>
             )}
             {description && (

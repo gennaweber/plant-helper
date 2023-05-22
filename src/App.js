@@ -11,7 +11,6 @@ import {
 import "./App.css";
 import Auth from "./components/Auth";
 import Footer from "./components/Footer";
-import Dictionary from "./pages/Dictionary";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Profile from "./pages/Profile";
@@ -88,7 +87,7 @@ const theme = createTheme({
     },
     h5: {
       fontFamily: "Montserrat Alternates",
-      fontWeight: 400,
+      fontWeight: 600,
     },
     body1: {
       fontFamily: "Montserrat Alternates",

@@ -1,4 +1,14 @@
-import { Card, Divider, Grid, Tooltip, Typography } from "@mui/material";
+import ExpandLessIcon from "@mui/icons-material/ExpandLess";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import {
+  Button,
+  Card,
+  Collapse,
+  Divider,
+  Grid,
+  Typography
+} from "@mui/material";
+import { useState } from "react";
 import AddToCollection from "./AddToCollection";
 
 const faces = {
@@ -45,17 +55,12 @@ const sunTip = {
 };
 
 const waterTip = {
-  "Keep wet":
-    "Substrate should be near saturation and never allowed to dry out.",
-  "Keep moist":
-    "Water as soon as substrate becomes dry to the touch on the surface but never allow it to dry out completely.",
-  "When partially dry":
-    "Water when soil is 25% to 50% dry (first couple inches/cm of soil are dry).",
-  "When mostly dry": "Water when soil is 50% to 75% dry.",
-  "When dry":
-    "Water when the soil is 75% to 95% dry but don't allow it to get bone dry. Most hoyas fall into this category and don't like to stay dry for extended periods.",
-  "When totally dry":
-    "Water when the soil is 100% dry, aka bone dry. Can be left a long time between waterings.",
+  "Keep wet": "Substrate should never allowed to dry out.",
+  "Keep moist": "Water as soon as substrate becomes dry to the touch.",
+  "When partially dry": "25% to 50%",
+  "When mostly dry": "50% to 75%",
+  "When dry": "75% to 95%",
+  "When totally dry": "100%",
 };
 
 const priceTip = {
@@ -68,33 +73,13 @@ const priceTip = {
   $$$$: "$1000+ CAD",
 };
 
-const rareTip = {
-  Common: "Easy to find at most garden centres.",
-  Uncommon:
-    "Some garden centres may carry it but probably won't have it in stock all the time.",
-  "Very uncommon":
-    "Very unlikely to be found in a garden centre but not impossible to find in specialty shops or from private sellers.",
-  Rare: "Hard to find even in specialty shops. Generally these plants have to be imported from tropical countries.",
-  "Very rare":
-    "Usually passed around amongst private collectors and not sold publically. Your best chance of finding these plants is usually in auctions.",
-};
-
-const soilTip = {
-  "Extremely well-draining, small particles.":
-    "At least 50% perlite or equivalent.",
-  "Well-draining, small- to medium-sized particles.":
-    "Examples include Pon-like substrates with or without a self-watering setup, houseplant soil mixed 50/50 with perlite, or aroid mix.",
-  "Well-draining, medium- to large-sized particles":
-    "Examples would be an aroid mix with 40% water retention, 60% drainage. Perlite and orchid bark can be added to improve drainage. Large particles prevent soil compaction and allow more airflow to the roots.",
-  "Well-draining, medium- to large-sized particles.":
-    "Examples would be an aroid mix with 40% water retention, 60% drainage. Perlite and orchid bark can be added to improve drainage. Large particles prevent soil compaction and allow more airflow to the roots.",
-  "Water-retaining.":
-    "Holds a lot of water and takes a long time to dry out; achieved using coco coir or peat moss. Most store-bought houseplant soils fall into this category.",
-  "Water-retaining, medium- to large-sized particles.":
-    "A good ratio is 60% water-retaining elements like peat or coco coir and 40% drainage, such as using perlite or orchid bark. Large particles prevent soil compaction and allow more airflow to the roots.",
-};
-
 const FactCard = ({ hit, filters, toggleCard }) => {
+  const [expanded, setExpanded] = useState(false);
+
+  const handleExpandClick = () => {
+    setExpanded(!expanded);
+  };
+
   const {
     UID: id,
     Genus: genus,
@@ -150,18 +135,9 @@ const FactCard = ({ hit, filters, toggleCard }) => {
           <Grid container direction="column" item p={3} spacing={2}>
             {genus && (
               <Grid item>
-                <Tooltip
-                  title={[
-                    "Cultivar/trade names should be in single quotes 'like so'.",
-                    <br />,
-                    <br />,
-                    "Common names should be in brackets (like so). May be a name it was formerly known by before being reclassified.",
-                  ]}
-                >
-                  <Typography variant="h3" align="center">
-                    {genus} {species}
-                  </Typography>
-                </Tooltip>
+                <Typography variant="h3" align="center">
+                  {genus} {species}
+                </Typography>
               </Grid>
             )}
             {word && (
@@ -205,281 +181,290 @@ const FactCard = ({ hit, filters, toggleCard }) => {
             <Grid item>
               <Divider />
             </Grid>
-            {fuss && (
-              <>
-                <Grid item>
-                  <Grid
-                    container
-                    direction="row"
-                    spacing={2}
-                    alignItems="center"
-                  >
-                    <Grid item>
-                      <img
-                        src={`/assets/images/${faces[fuss]}.png`}
-                        alt={`${faces[fuss]} icon`}
-                        width="50px"
-                        height="50px"
-                      />
-                    </Grid>
-                    <Grid item>
-                      <Tooltip
-                        title={[
-                          "(out of 10, lower is better)",
-                          <br />,
-                          <br />,
-                          "Fussiness is completely subjective but usually indicates how far you can deviate from the ideal conditions and still be okay. A large factor is how much 'neglect' it can tolerate, i.e. how long the plant can go without water.",
-                        ]}
-                      >
+            <Grid item>
+              <Button
+                sx={{ minWidth: 0 }}
+                onClick={handleExpandClick}
+                startIcon={expanded ? <ExpandLessIcon /> : <ExpandMoreIcon />}
+              >
+                <Typography variant="h5">
+                  {expanded ? "Less Info" : "More Info"}
+                </Typography>
+              </Button>
+            </Grid>
+            <Grid item>
+              <Divider />
+            </Grid>
+          </Grid>
+          <Collapse
+            in={expanded}
+            timeout="auto"
+            sx={{ width: "100%" }}
+            unmountOnExit
+          >
+            <Grid container direction="column" item px={3} pb={3} spacing={2}>
+              {fuss && (
+                <>
+                  <Grid item>
+                    <Grid
+                      container
+                      direction="row"
+                      spacing={2}
+                      alignItems="center"
+                    >
+                      <Grid item>
+                        <img
+                          src={`/assets/images/${faces[fuss]}.png`}
+                          alt={`${faces[fuss]} icon`}
+                          width="50px"
+                          height="50px"
+                        />
+                      </Grid>
+                      <Grid item>
                         <Typography variant="body1">
                           <strong>Fussiness: </strong>
                           {fuss}
                         </Typography>
-                      </Tooltip>
+                      </Grid>
                     </Grid>
                   </Grid>
-                </Grid>
-                <Grid item>
-                  <Divider />
-                </Grid>
-              </>
-            )}
-            {minLight && (
-              <>
-                <Grid item>
-                  <Grid
-                    container
-                    direction="row"
-                    spacing={2}
-                    alignItems="center"
-                  >
-                    <Grid item>
-                      <img
-                        src={`/assets/images/${sun[prefLight]}.png`}
-                        alt={`sun icon for ${prefLight}`}
-                        width="50px"
-                        height="50px"
-                      />
-                    </Grid>
-                    <Grid item>
-                      <Tooltip title={`${minLight} = ${sunTip[minLight]}`}>
-                        <Typography variant="body1">
+                  <Grid item>
+                    <Divider />
+                  </Grid>
+                </>
+              )}
+              {minLight && (
+                <>
+                  <Grid item>
+                    <Grid
+                      container
+                      direction="row"
+                      spacing={2}
+                      flexWrap="nowrap"
+                      alignItems="center"
+                    >
+                      <Grid item>
+                        <img
+                          src={`/assets/images/${sun[prefLight]}.png`}
+                          alt={`sun icon for ${prefLight}`}
+                          width="50px"
+                          height="50px"
+                        />
+                      </Grid>
+                      <Grid item>
+                        <Typography variant="body1" mb={1}>
                           <strong>Minimum light: </strong>
-                          {`${minLight}`}
+                          <br />
+                          {`${minLight} (${sunTip[minLight]})`}
                         </Typography>
-                      </Tooltip>
-                      <Tooltip title={`${prefLight} = ${sunTip[prefLight]}`}>
-                        <Typography variant="body1">
+                        <Typography variant="body1" mb={1}>
                           <strong>Preferred light: </strong>
-                          {`${prefLight}`}
+                          <br />
+                          {`${prefLight} (${sunTip[prefLight]})`}
                         </Typography>
-                      </Tooltip>
-                      <Tooltip title={`${maxLight} = ${sunTip[maxLight]}`}>
                         <Typography variant="body1">
                           <strong>Maximum light: </strong>
-                          {`${maxLight}`}
+                          <br />
+                          {`${maxLight} (${sunTip[maxLight]})`}
                         </Typography>
-                      </Tooltip>
+                      </Grid>
                     </Grid>
                   </Grid>
-                </Grid>
-                <Grid item>
-                  <Divider />
-                </Grid>
-              </>
-            )}
-            {water && (
-              <>
-                <Grid item>
-                  <Grid
-                    container
-                    direction="row"
-                    spacing={2}
-                    alignItems="center"
-                  >
-                    <Grid item>
-                      <img
-                        src={`/assets/images/${drop[water]}.png`}
-                        alt={`water drop icon for ${water}`}
-                        width="50px"
-                        height="50px"
-                      />
-                    </Grid>
-                    <Grid item>
-                      <Tooltip title={waterTip[water]}>
+                  <Grid item>
+                    <Divider />
+                  </Grid>
+                </>
+              )}
+              {water && (
+                <>
+                  <Grid item>
+                    <Grid
+                      container
+                      direction="row"
+                      flexWrap="nowrap"
+                      spacing={2}
+                      alignItems="center"
+                    >
+                      <Grid item>
+                        <img
+                          src={`/assets/images/${drop[water]}.png`}
+                          alt={`water drop icon for ${water}`}
+                          width="50px"
+                          height="50px"
+                        />
+                      </Grid>
+                      <Grid item>
                         <Typography variant="body1">
                           <strong>Water: </strong>
-                          {`${water}`}
+                          <br />
+                          {`${water} (${waterTip[water]})`}
                         </Typography>
-                      </Tooltip>
+                      </Grid>
                     </Grid>
                   </Grid>
-                </Grid>
-                <Grid item>
-                  <Divider />
-                </Grid>
-              </>
-            )}
-            {(substrate || scurrent) && (
-              <>
-                <Grid item>
-                  {substrate && (
-                    <Tooltip title={`${soilTip[substrate]}`}>
+                  <Grid item>
+                    <Divider />
+                  </Grid>
+                </>
+              )}
+              {(substrate || scurrent) && (
+                <>
+                  <Grid item>
+                    {substrate && (
                       <Typography variant="body1">
                         <strong>Substrate: </strong>
+                        <br />
                         {substrate}
                       </Typography>
-                    </Tooltip>
-                  )}
-                  {scurrent && (
+                    )}
+                    {scurrent && (
+                      <Typography variant="body1" mt={1}>
+                        <strong>Currently growing in: </strong>
+                        <br />
+                        {scurrent === "Aroid mix" ? (
+                          <a href="https://drive.google.com/file/d/1dr0koW5_ZonR36Nu_lSxnMJ-TaAQFvQD/view?usp=share_link">
+                            {scurrent}
+                          </a>
+                        ) : (
+                          scurrent
+                        )}
+                      </Typography>
+                    )}
+                  </Grid>
+                  <Grid item>
+                    <Divider />
+                  </Grid>
+                </>
+              )}
+              {temp && (
+                <>
+                  <Grid item>
                     <Typography variant="body1">
-                      <strong>Currently growing in: </strong>
-                      {scurrent === "Aroid mix" ? (
-                        <a href="https://drive.google.com/file/d/1dr0koW5_ZonR36Nu_lSxnMJ-TaAQFvQD/view?usp=share_link">
-                          {scurrent}
-                        </a>
-                      ) : (
-                        scurrent
-                      )}
+                      <strong>Temperature range: </strong>
+                      {temp}°F / {celsius}°C
                     </Typography>
-                  )}
-                </Grid>
-                <Grid item>
-                  <Divider />
-                </Grid>
-              </>
-            )}
-            {temp && (
-              <>
-                <Grid item>
-                  <Typography variant="body1">
-                    <strong>Temperature range: </strong>
-                    {temp}°F / {celsius}°C
-                  </Typography>
-                </Grid>
-                <Grid item>
-                  <Divider />
-                </Grid>
-              </>
-            )}
-            {tolHumid && (
-              <>
-                <Grid item>
-                  <Typography variant="body1">
-                    <strong>Minimum humidity: </strong>
-                    {tolHumid}
-                  </Typography>
-                  <Typography variant="body1">
-                    <strong>Preferred humidity: </strong>
-                    {prefHumid}
-                  </Typography>
-                  {hcurrent && (
+                  </Grid>
+                  <Grid item>
+                    <Divider />
+                  </Grid>
+                </>
+              )}
+              {tolHumid && (
+                <>
+                  <Grid item>
                     <Typography variant="body1">
-                      <strong>Currently growing in: </strong>
-                      {hcurrent}
+                      <strong>Minimum humidity: </strong>
+                      {tolHumid}
                     </Typography>
-                  )}
-                </Grid>
-                <Grid item>
-                  <Divider />
-                </Grid>
-              </>
-            )}
-            {(pattern || speed) && (
-              <>
-                <Grid item>
-                  {pattern && (
                     <Typography variant="body1">
-                      <strong>Growth pattern: </strong>
-                      {pattern}
+                      <strong>Preferred humidity: </strong>
+                      {prefHumid}
                     </Typography>
-                  )}
-                  {speed && (
-                    <Typography variant="body1">
-                      <strong>Speed of growth: </strong>
-                      {speed}
-                    </Typography>
-                  )}
-                </Grid>
-                <Grid item>
-                  <Divider />
-                </Grid>
-              </>
-            )}
-            {(rarity || price) && (
-              <>
-                <Grid item>
-                  {rarity && (
-                    <Tooltip title={`${rarity} = ${rareTip[rarity]}`}>
+                    {hcurrent && (
+                      <Typography variant="body1">
+                        <strong>Currently growing in: </strong>
+                        {hcurrent}
+                      </Typography>
+                    )}
+                  </Grid>
+                  <Grid item>
+                    <Divider />
+                  </Grid>
+                </>
+              )}
+              {(pattern || speed) && (
+                <>
+                  <Grid item>
+                    {pattern && (
+                      <Typography variant="body1">
+                        <strong>Growth pattern: </strong>
+                        {pattern}
+                      </Typography>
+                    )}
+                    {speed && (
+                      <Typography variant="body1">
+                        <strong>Speed of growth: </strong>
+                        {speed}
+                      </Typography>
+                    )}
+                  </Grid>
+                  <Grid item>
+                    <Divider />
+                  </Grid>
+                </>
+              )}
+              {(rarity || price) && (
+                <>
+                  <Grid item>
+                    {rarity && (
                       <Typography variant="body1">
                         <strong>Rarity: </strong>
                         {rarity}
                       </Typography>
-                    </Tooltip>
-                  )}
-                  {price && (
-                    <Tooltip title={priceTip[price]}>
+                    )}
+                    {price && (
                       <Typography variant="body1">
                         <strong>Price: </strong>
-                        {price}
+                        {priceTip[price]}
                       </Typography>
-                    </Tooltip>
-                  )}
-                </Grid>
-                <Grid item>
-                  <Divider />
-                </Grid>
-              </>
-            )}
-            {fert && (
-              <>
-                <Grid item>
-                  <Typography variant="body1">
-                    <strong>Fertilizer: </strong>
-                    {fert}
-                  </Typography>
-                </Grid>
-                <Grid item>
-                  <Divider />
-                </Grid>
-              </>
-            )}
-            {prop && (
-              <>
-                <Grid item>
-                  <Typography variant="body1">
-                    <strong>Propagation: </strong>
-                    {prop}
-                  </Typography>
-                </Grid>
+                    )}
+                  </Grid>
+                  <Grid item>
+                    <Divider />
+                  </Grid>
+                </>
+              )}
+              {fert && (
+                <>
+                  <Grid item>
+                    <Typography variant="body1">
+                      <strong>Fertilizer: </strong>
+                      {fert}
+                    </Typography>
+                  </Grid>
+                  <Grid item>
+                    <Divider />
+                  </Grid>
+                </>
+              )}
+              {prop && (
+                <>
+                  <Grid item>
+                    <Typography variant="body1">
+                      <strong>Propagation: </strong>
+                      {prop}
+                    </Typography>
+                  </Grid>
 
-                <Grid item>
-                  <Divider />
-                </Grid>
-              </>
-            )}
-            {hashtag && (
-              <>
-                <Grid item>
-                  <Typography variant="body1">
-                    <strong>Hashtag: </strong>
-                    <a
-                      target="_blank"
-                      rel="noreferrer"
-                      href={`https://www.instagram.com/explore/tags/${hashtag.substring(
-                        1
-                      )}`}
-                    >
-                      {hashtag}
-                    </a>
-                  </Typography>
-                </Grid>
-
-                <Grid item>
-                  <Divider />
-                </Grid>
-              </>
-            )}
+                  <Grid item>
+                    <Divider />
+                  </Grid>
+                </>
+              )}
+              {hashtag && (
+                <>
+                  <Grid item>
+                    <Typography variant="body1">
+                      <strong>Hashtag: </strong>
+                      <a
+                        target="_blank"
+                        rel="noreferrer"
+                        href={`https://www.instagram.com/explore/tags/${hashtag.substring(
+                          1
+                        )}`}
+                      >
+                        {hashtag}
+                      </a>
+                    </Typography>
+                  </Grid>
+                  <Grid item>
+                    <Divider />
+                  </Grid>
+                </>
+              )}
+            </Grid>
+          </Collapse>
+          <Grid container direction="column" item px={3} pb={3} spacing={2}>
             {genus && (
               <Grid item>
                 <AddToCollection
