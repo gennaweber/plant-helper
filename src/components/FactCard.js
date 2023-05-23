@@ -135,7 +135,7 @@ const FactCard = ({ hit, filters, toggleCard }) => {
           <Grid container direction="column" item p={3} spacing={2}>
             {genus && (
               <Grid item>
-                <Typography variant="h3" align="center">
+                <Typography variant="h3" align="left">
                   {genus} {species}
                 </Typography>
               </Grid>
@@ -187,7 +187,7 @@ const FactCard = ({ hit, filters, toggleCard }) => {
                 onClick={handleExpandClick}
                 startIcon={expanded ? <ExpandLessIcon /> : <ExpandMoreIcon />}
               >
-                <Typography variant="h5">
+                <Typography variant="h6">
                   {expanded ? "Less Info" : "More Info"}
                 </Typography>
               </Button>

@@ -1,15 +1,15 @@
-import AddIcon from '@mui/icons-material/Add';
-import DeleteIcon from '@mui/icons-material/Delete';
-import RemoveIcon from '@mui/icons-material/Remove';
-import { Button, Grid, IconButton, Typography } from '@mui/material';
-import { deleteDoc, doc } from 'firebase/firestore';
-import { useContext, useState } from 'react';
-import { useParams } from 'react-router-dom';
-import { db } from '../helpers/firebase';
-import { UserContext } from '../helpers/UserContext';
-import Auth from './Auth';
-import ManageCollections from './ManageCollections';
-import Modal from './Modal';
+import AddIcon from "@mui/icons-material/Add";
+import DeleteIcon from "@mui/icons-material/Delete";
+import RemoveIcon from "@mui/icons-material/Remove";
+import { Button, Grid, IconButton, Typography } from "@mui/material";
+import { deleteDoc, doc } from "firebase/firestore";
+import { useContext, useState } from "react";
+import { useParams } from "react-router-dom";
+import { db } from "../helpers/firebase";
+import { UserContext } from "../helpers/UserContext";
+import Auth from "./Auth";
+import ManageCollections from "./ManageCollections";
+import Modal from "./Modal";
 
 const AddToCollection = ({ id, filters, img, title, list }) => {
   const user = useContext(UserContext);
@@ -24,9 +24,8 @@ const AddToCollection = ({ id, filters, img, title, list }) => {
     if (!id) return;
 
     try {
-      const plants = doc(db, user.uid, name, 'plants', id);
+      const plants = doc(db, user.uid, name, "plants", id);
       await deleteDoc(plants);
-      console.log(id);
     } catch (error) {
       console.error(error);
     }
@@ -37,62 +36,66 @@ const AddToCollection = ({ id, filters, img, title, list }) => {
       {user ? (
         <>
           {filters && filters.includes(id) ? (
-            <Grid container direction='row' spacing={2} alignItems='center'>
+            <Grid container direction="row" spacing={2} alignItems="center">
               <Grid item xs={12}>
                 {list ? (
                   <IconButton
-                    color='error'
-                    aria-label='remove item'
-                    id='remove-button'
-                    aria-haspopup='false'
-                    size='large'
-                    onClick={handleRemove}>
-                    <DeleteIcon fontSize='large' />
+                    color="disabled"
+                    aria-label="remove item"
+                    id="remove-button"
+                    aria-haspopup="false"
+                    size="large"
+                    onClick={handleRemove}
+                  >
+                    <DeleteIcon fontSize="large" />
                   </IconButton>
                 ) : (
                   <Button
-                    size='large'
-                    variant='contained'
-                    fullWidth={true}
+                    size="large"
+                    variant="contained"
+                    fullWidth
                     onClick={handleRemove}
                     startIcon={<RemoveIcon />}
-                    color='error'>
+                    color="warning"
+                  >
                     Remove from collection
                   </Button>
                 )}
               </Grid>
             </Grid>
           ) : (
-            <Grid container direction='row' spacing={2} alignItems='center'>
+            <Grid container direction="row" spacing={2} alignItems="center">
               <Grid item xs={12}>
                 {list ? (
                   <IconButton
-                    aria-label='add item'
-                    id='add-button'
-                    aria-haspopup='true'
-                    aria-controls={open ? 'add-button' : undefined}
-                    aria-expanded={open ? 'true' : undefined}
-                    size='large'
-                    onClick={handleOpen}>
-                    <AddIcon fontSize='large' />
+                    aria-label="add item"
+                    id="add-button"
+                    aria-haspopup="true"
+                    aria-controls={open ? "add-button" : undefined}
+                    aria-expanded={open ? "true" : undefined}
+                    size="large"
+                    onClick={handleOpen}
+                  >
+                    <AddIcon fontSize="large" />
                   </IconButton>
                 ) : (
                   <Button
-                    size='large'
-                    variant='contained'
-                    fullWidth={true}
+                    size="large"
+                    variant="contained"
+                    fullWidth
                     onClick={handleOpen}
                     startIcon={<AddIcon />}
-                    color='secondary'>
+                    color="secondary"
+                  >
                     Add to collection
                   </Button>
                 )}
                 <Modal open={open} handleClose={handleClose}>
                   <ManageCollections img={img} id={id} name={title}>
-                    <Typography mb={1} variant='h2' align='center'>
+                    <Typography mb={1} variant="h2" align="center">
                       Your Collections
                     </Typography>
-                    <Typography mb={2} variant='h5' align='center'>
+                    <Typography mb={2} variant="h5" align="center">
                       <>
                         Choose a collection to add <strong>{title}</strong> to
                       </>
@@ -104,15 +107,16 @@ const AddToCollection = ({ id, filters, img, title, list }) => {
           )}
         </>
       ) : (
-        <Grid container direction='row' spacing={2} alignItems='center'>
+        <Grid container direction="row" spacing={2} alignItems="center">
           <Grid item xs={12}>
             <Button
-              size='large'
-              variant='contained'
-              fullWidth={true}
+              size="large"
+              variant="contained"
+              fullWidth
               startIcon={<AddIcon />}
-              color='secondary'
-              onClick={handleOpen}>
+              color="secondary"
+              onClick={handleOpen}
+            >
               Log in to add to collection
             </Button>
           </Grid>

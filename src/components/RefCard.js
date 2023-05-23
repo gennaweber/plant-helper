@@ -1,4 +1,5 @@
 import { Card, Grid, Link, Typography } from "@mui/material";
+import _ from "lodash";
 import React, { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 
@@ -23,11 +24,10 @@ const RefCard = ({ description, link, category }) => {
     }
   }, [inView]);
 
-  console.log(data);
-
   return (
     <Grid item xs={12} md={6} lg={4}>
       <Card sx={{ minHeight: 100 }} ref={ref}>
+        {data && data.image && <img width="100%" src={data.image} alt="" />}
         <Grid
           container
           sx={{ minHeight: 100 }}
@@ -35,7 +35,6 @@ const RefCard = ({ description, link, category }) => {
           alignItems="center"
         >
           <Grid container direction="column" item p={3} spacing={1}>
-            {data && data.img && <img width="100%" src={data.img} alt="" />}
             <Grid item>
               <Link
                 href={link}
@@ -43,7 +42,13 @@ const RefCard = ({ description, link, category }) => {
                 underline="none"
                 sx={{ wordBreak: "break-word" }}
               >
-                {data && data.title ? data.title : link}
+                {data && data.title
+                  ? _.truncate(data.title, {
+                      length: 75,
+                      separator: /,? +/,
+                      omission: " [...]",
+                    })
+                  : _.truncate(link)}
               </Link>
             </Grid>
             {category && (

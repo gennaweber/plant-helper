@@ -1,69 +1,120 @@
 import Masonry from "@mui/lab/Masonry";
-import { Box, Container } from "@mui/material";
-import React, { useEffect, useMemo } from "react";
+import { Box, Container, Typography } from "@mui/material";
+import React, { useEffect } from "react";
 import {
   Configure,
   connectInfiniteHits,
-  connectStateResults,
+  connectStateResults
 } from "react-instantsearch-dom";
-import { useIntersectionObserver } from "react-intersection-observer-hook";
-import RefCard from "../components/RefCard";
+import { useInView } from "react-intersection-observer";
 import useWindowDimensions from "../helpers/useWindowDimensions";
+import Loader from "./Loader";
+import RefCard from "./RefCard";
 
-const Hits = ({ hits, searching, refineNext, hasMore }) => {
-  const [ref, { entry }] = useIntersectionObserver();
-  const isVisible = entry && entry.isIntersecting;
+const Hits = ({
+  hits,
+  refineNext,
+  searching,
+  hasMore,
+  hasPrevious,
+  refinePrevious,
+  maxHits,
+  filters,
+}) => {
+  const [ref, inView] = useInView();
+  const [topRef, topInView] = useInView();
+  const { width } = useWindowDimensions();
 
-  const memoHits = useMemo(() => hits, [hits]);
+  const getColumns = () => {
+    if (width >= 1200) {
+      return 3;
+    }
+    if (width >= 800) {
+      return 2;
+    }
+    return 1;
+  };
 
   useEffect(() => {
-    console.log(`The component is ${isVisible ? "visible" : "not visible"}.`);
+    // console.log(`The component is ${isVisible ? 'visible' : 'not visible'}.`);
     const timeout = () =>
       setTimeout(() => {
         refineNext();
       }, 500);
 
-    if (!searching && isVisible) {
+    if (!searching && inView) {
       timeout();
     }
 
     return () => clearTimeout(timeout);
-  }, [isVisible]); // eslint-disable-line
+  }, [inView]); // eslint-disable-line
 
-  let { width } = useWindowDimensions();
+  useEffect(() => {
+    // console.log(hasPrevious);
+    if (!hasPrevious) return;
+    // console.log(`The component is ${topInView ? "visible" : "not visible"}.`);
 
-  const getColumns = () => {
-    if (width >= 1200) {
-      return 3;
-    } else if (width >= 800) {
-      return 2;
-    } else {
-      return 1;
+    const timeout = () =>
+      setTimeout(() => {
+        refinePrevious();
+      }, 500);
+
+    if (!searching && topInView) {
+      timeout();
     }
+
+    return () => clearTimeout(timeout);
+  }, [topInView, hasMore, searching]); // eslint-disable-line
+
+  const getIds = () => {
+    if (!filters) return;
+    return filters
+      .map((id, i) => (i === 0 ? `UID:${id}` : `OR UID:${id}`))
+      .join(" ");
   };
 
   return (
-    <>
-      <Container width="lg" sx={{ paddingRight: 0 }}>
-        <Configure hitsPerPage={10} />
-        <Box sx={{ width: "100%", minHeight: 829 }} mb={2}>
-          <Masonry columns={getColumns()} spacing={2}>
-            {memoHits.map((hit, i) => (
+    <Container width="lg" sx={{ paddingRight: 0 }}>
+      <Box sx={{ width: "100%", minHeight: 829 }} mb={2}>
+        <Configure
+          hitsPerPage={maxHits || 10}
+          page={0}
+          offset={0}
+          filters={filters ? getIds() : undefined}
+        />
+
+        <Masonry columns={getColumns()} spacing={2}>
+          {hasPrevious && (
+            <div ref={topRef}>
+              <Loader />
+            </div>
+          )}
+          {hits.length > 0 &&
+            hits.map((hit) => (
               <RefCard
-                key={i}
+                key={hit.Link}
                 link={hit.Link}
-                category={hit.Category}
                 description={hit.Description}
+                category={hit.Category}
               />
             ))}
-            {!searching && hasMore && <p ref={ref}>Loading...</p>}
-            {!hasMore && <p>You've reached the end of the results</p>}
-          </Masonry>
-        </Box>
-      </Container>
-    </>
+          {!maxHits && (
+            <>
+              {hasMore && (
+                <div ref={ref}>
+                  <Loader />
+                </div>
+              )}
+              {!hasMore && (
+                <Typography>You've reached the end of the results</Typography>
+              )}
+            </>
+          )}
+        </Masonry>
+      </Box>
+    </Container>
   );
 };
 
-const AlgoliaRefHits = connectInfiniteHits(connectStateResults(Hits));
-export const RefHits = React.memo(AlgoliaRefHits);
+const AlgoliaCustomHits = connectInfiniteHits(connectStateResults(Hits));
+export const RefHits = React.memo(AlgoliaCustomHits);

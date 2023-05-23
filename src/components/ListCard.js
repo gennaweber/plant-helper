@@ -34,7 +34,7 @@ const ListCard = ({ hit, filters }) => {
               {(src || photo) && (
                 <CardMedia
                   component="img"
-                  sx={{ maxWidth: "70px", height: "100%" }}
+                  sx={{ maxWidth: "60px", aspectRatio: "1", height: "100%" }}
                   image={src || photo}
                   alt={`${genus} ${species}`}
                 />
