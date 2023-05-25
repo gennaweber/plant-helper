@@ -44,8 +44,9 @@ const CreateCollection = ({
   const [collections, setCollections] = useState([]);
   const [extra, setExtra] = useState({});
   const [loading, setLoading] = useState(true);
-  const [loadingCard, setLoadingCard] = useState(true);
   const [existing, setExisting] = useState({});
+
+  console.log(extra, loading, existing);
 
   const handleChange = (e) => {
     setTitle(e.target.value);
@@ -71,7 +72,6 @@ const CreateCollection = ({
   );
 
   const addDocument = async (collection = "New") => {
-    setLoadingCard(true);
     const kebabCase = _.kebabCase(collection);
     if (!id) return;
     const plants = doc(db, user.uid, kebabCase, "plants", id);
@@ -104,7 +104,6 @@ const CreateCollection = ({
         return error;
       }
     }
-    setLoadingCard(false);
   };
 
   const handleSubmit = async () => {
@@ -136,13 +135,13 @@ const CreateCollection = ({
     const kebabName = _.kebabCase(name);
     const collection = doc(db, user.uid, kebabName);
 
-    console.log("handle delete activated");
+    // console.log("handle delete activated");
     try {
       await deleteDoc(collection);
-      console.log("attempt to delete");
+      // console.log("attempt to delete");
     } catch (err) {
       console.error(err);
-      console.log("attempt to delete failed");
+      // console.log("attempt to delete failed");
       setError(err);
     }
   };
@@ -161,6 +160,7 @@ const CreateCollection = ({
     const q = query(collection(db, user.uid));
 
     const unsubscribe = onSnapshot(q, async (snapshot) => {
+      setLoading(true);
       snapshot.docChanges().forEach((change) => {
         const data = change.doc.data();
         const kebabName = _.kebabCase(data.name);
@@ -174,7 +174,7 @@ const CreateCollection = ({
         if (change.type === "modified") {
           // console.log('Modified: ', data);
           checkIfExists(kebabName);
-          setExtra((prev) => ({ ...prev, [kebabName]: img }));
+          // setExtra((prev) => ({ ...prev, [kebabName]: img }));
         }
         if (change.type === "removed") {
           // console.log('Removed: ', data);
@@ -195,7 +195,7 @@ const CreateCollection = ({
   const getStyle = (name) => {
     const kebabName = _.kebabCase(name);
 
-    return {
+    const defaultStyle = {
       border: "5px solid #146356",
       backgroundColor: "#616161",
       height: "200px",
@@ -207,7 +207,12 @@ const CreateCollection = ({
         ? `url("/assets/images/check-mark.png")`
         : `url("${extra[kebabName]}")`,
       backgroundBlendMode: "multiply",
+      "&:hover": {
+        backgroundColor: "#616161",
+      },
     };
+
+    return defaultStyle;
   };
 
   return (
