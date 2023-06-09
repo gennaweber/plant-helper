@@ -121,8 +121,8 @@ const FactCard = ({ hit, filters, toggleCard }) => {
       <Card onClick={toggleCard || null}>
         {(src || photo) && (
           <img
-            referrerPolicy='no-referrer'
-            width='100%'
+            referrerPolicy="no-referrer"
+            width="100%"
             src={src || photo}
             alt={`${genus} ${species}` || word}
           />
@@ -130,38 +130,39 @@ const FactCard = ({ hit, filters, toggleCard }) => {
         <Grid
           container
           sx={{ minHeight: 100 }}
-          justifyContent='center'
-          alignItems='center'>
-          <Grid container direction='column' item p={3} spacing={2}>
+          justifyContent="center"
+          alignItems="center"
+        >
+          <Grid container direction="column" item p={3} spacing={2}>
             {genus && (
               <Grid item>
-                <Typography variant='h3' align='left'>
+                <Typography variant="h3" align="left">
                   {genus} {species}
                 </Typography>
               </Grid>
             )}
             {word && (
               <Grid item>
-                <Typography variant='h3' align='left'>
+                <Typography variant="h3" align="left">
                   {word}
                 </Typography>
               </Grid>
             )}
             {category && (
               <Grid item>
-                <Typography color='primary' variant='body2'>
+                <Typography color="primary" variant="body2">
                   <em>{category}</em>
                 </Typography>
               </Grid>
             )}
             {explanation && (
               <Grid item>
-                <Typography variant='body1'>{explanation}</Typography>
+                <Typography variant="body1">{explanation}</Typography>
               </Grid>
             )}
             {link && (
               <Grid item>
-                <Typography variant='body2'>
+                <Typography variant="body2">
                   <strong>Reference: </strong>
                   <a href={link}>{link}</a>
                 </Typography>
@@ -169,11 +170,11 @@ const FactCard = ({ hit, filters, toggleCard }) => {
             )}
             {note && (
               <Grid item>
-                <Typography variant='body1'>{note}</Typography>
+                <Typography variant="body1">{note}</Typography>
               </Grid>
             )}
             <Grid item>
-              <Typography variant='body2'>
+              <Typography variant="body2">
                 Last updated {updated.getMonth() + 1}-{updated.getDate() + 1}-
                 {updated.getFullYear()}
               </Typography>
@@ -185,9 +186,10 @@ const FactCard = ({ hit, filters, toggleCard }) => {
               <Button
                 sx={{ minWidth: 0 }}
                 onClick={handleExpandClick}
-                startIcon={expanded ? <ExpandLessIcon /> : <ExpandMoreIcon />}>
-                <Typography variant='h6'>
-                  {expanded ? 'Less Info' : 'More Info'}
+                startIcon={expanded ? <ExpandLessIcon /> : <ExpandMoreIcon />}
+              >
+                <Typography variant="h6">
+                  {expanded ? "Less Info" : "More Info"}
                 </Typography>
               </Button>
             </Grid>
@@ -197,28 +199,30 @@ const FactCard = ({ hit, filters, toggleCard }) => {
           </Grid>
           <Collapse
             in={expanded}
-            timeout='auto'
-            sx={{ width: '100%' }}
-            unmountOnExit>
-            <Grid container direction='column' item px={3} pb={3} spacing={2}>
+            timeout="auto"
+            sx={{ width: "100%" }}
+            unmountOnExit
+          >
+            <Grid container direction="column" item px={3} pb={3} spacing={2}>
               {fuss && (
                 <>
                   <Grid item>
                     <Grid
                       container
-                      direction='row'
+                      direction="row"
                       spacing={2}
-                      alignItems='center'>
+                      alignItems="center"
+                    >
                       <Grid item>
                         <img
                           src={`/assets/images/${faces[fuss]}.png`}
                           alt={`${faces[fuss]} icon`}
-                          width='50px'
-                          height='50px'
+                          width="50px"
+                          height="50px"
                         />
                       </Grid>
                       <Grid item>
-                        <Typography variant='body1'>
+                        <Typography variant="body1">
                           <strong>Fussiness: </strong>
                           {fuss}
                         </Typography>
@@ -235,30 +239,31 @@ const FactCard = ({ hit, filters, toggleCard }) => {
                   <Grid item>
                     <Grid
                       container
-                      direction='row'
+                      direction="row"
                       spacing={2}
-                      flexWrap='nowrap'
-                      alignItems='center'>
+                      flexWrap="nowrap"
+                      alignItems="center"
+                    >
                       <Grid item>
                         <img
                           src={`/assets/images/${sun[prefLight]}.png`}
                           alt={`sun icon for ${prefLight}`}
-                          width='50px'
-                          height='50px'
+                          width="50px"
+                          height="50px"
                         />
                       </Grid>
                       <Grid item>
-                        <Typography variant='body1' mb={1}>
+                        <Typography variant="body1" mb={1}>
                           <strong>Minimum light: </strong>
                           <br />
                           {`${minLight} (${sunTip[minLight]})`}
                         </Typography>
-                        <Typography variant='body1' mb={1}>
+                        <Typography variant="body1" mb={1}>
                           <strong>Preferred light: </strong>
                           <br />
                           {`${prefLight} (${sunTip[prefLight]})`}
                         </Typography>
-                        <Typography variant='body1'>
+                        <Typography variant="body1">
                           <strong>Maximum light: </strong>
                           <br />
                           {`${maxLight} (${sunTip[maxLight]})`}
@@ -276,20 +281,21 @@ const FactCard = ({ hit, filters, toggleCard }) => {
                   <Grid item>
                     <Grid
                       container
-                      direction='row'
-                      flexWrap='nowrap'
+                      direction="row"
+                      flexWrap="nowrap"
                       spacing={2}
-                      alignItems='center'>
+                      alignItems="center"
+                    >
                       <Grid item>
                         <img
                           src={`/assets/images/${drop[water]}.png`}
                           alt={`water drop icon for ${water}`}
-                          width='50px'
-                          height='50px'
+                          width="50px"
+                          height="50px"
                         />
                       </Grid>
                       <Grid item>
-                        <Typography variant='body1'>
+                        <Typography variant="body1">
                           <strong>Water: </strong>
                           <br />
                           {`${water} (${waterTip[water]})`}
@@ -306,18 +312,18 @@ const FactCard = ({ hit, filters, toggleCard }) => {
                 <>
                   <Grid item>
                     {substrate && (
-                      <Typography variant='body1'>
+                      <Typography variant="body1">
                         <strong>Substrate: </strong>
                         <br />
                         {substrate}
                       </Typography>
                     )}
                     {scurrent && (
-                      <Typography variant='body1' mt={1}>
+                      <Typography variant="body1" mt={1}>
                         <strong>Currently growing in: </strong>
                         <br />
-                        {scurrent === 'Aroid mix' ? (
-                          <a href='https://drive.google.com/file/d/1dr0koW5_ZonR36Nu_lSxnMJ-TaAQFvQD/view?usp=share_link'>
+                        {scurrent === "Aroid mix" ? (
+                          <a href="https://drive.google.com/file/d/1dr0koW5_ZonR36Nu_lSxnMJ-TaAQFvQD/view?usp=share_link">
                             {scurrent}
                           </a>
                         ) : (
@@ -334,7 +340,7 @@ const FactCard = ({ hit, filters, toggleCard }) => {
               {temp && (
                 <>
                   <Grid item>
-                    <Typography variant='body1'>
+                    <Typography variant="body1">
                       <strong>Temperature range: </strong>
                       {temp}°F / {celsius}°C
                     </Typography>
@@ -347,16 +353,16 @@ const FactCard = ({ hit, filters, toggleCard }) => {
               {tolHumid && (
                 <>
                   <Grid item>
-                    <Typography variant='body1'>
+                    <Typography variant="body1">
                       <strong>Minimum humidity: </strong>
                       {tolHumid}
                     </Typography>
-                    <Typography variant='body1'>
+                    <Typography variant="body1">
                       <strong>Preferred humidity: </strong>
                       {prefHumid}
                     </Typography>
                     {hcurrent && (
-                      <Typography variant='body1'>
+                      <Typography variant="body1">
                         <strong>Currently growing in: </strong>
                         {hcurrent}
                       </Typography>
@@ -371,13 +377,13 @@ const FactCard = ({ hit, filters, toggleCard }) => {
                 <>
                   <Grid item>
                     {pattern && (
-                      <Typography variant='body1'>
+                      <Typography variant="body1">
                         <strong>Growth pattern: </strong>
                         {pattern}
                       </Typography>
                     )}
                     {speed && (
-                      <Typography variant='body1'>
+                      <Typography variant="body1">
                         <strong>Speed of growth: </strong>
                         {speed}
                       </Typography>
@@ -392,13 +398,13 @@ const FactCard = ({ hit, filters, toggleCard }) => {
                 <>
                   <Grid item>
                     {rarity && (
-                      <Typography variant='body1'>
+                      <Typography variant="body1">
                         <strong>Rarity: </strong>
                         {rarity}
                       </Typography>
                     )}
                     {price && (
-                      <Typography variant='body1'>
+                      <Typography variant="body1">
                         <strong>Price: </strong>
                         {priceTip[price]}
                       </Typography>
@@ -412,19 +418,18 @@ const FactCard = ({ hit, filters, toggleCard }) => {
               {fert && (
                 <>
                   <Grid item>
-                    <Typography variant='body1'>
+                    <Typography variant="body1">
                       <strong>Fertilizer: </strong>
                       {fert}
                     </Typography>
-                  </Grid>
-                  { ph &&
-                    <Grid item>
-                      <Typography variant='body1'>
+
+                    {ph && (
+                      <Typography variant="body1">
                         <strong>pH: </strong>
                         {ph}
                       </Typography>
-                    </Grid>
-                  }
+                    )}
+                  </Grid>
                   <Grid item>
                     <Divider />
                   </Grid>
@@ -433,7 +438,7 @@ const FactCard = ({ hit, filters, toggleCard }) => {
               {prop && (
                 <>
                   <Grid item>
-                    <Typography variant='body1'>
+                    <Typography variant="body1">
                       <strong>Propagation: </strong>
                       {prop}
                     </Typography>
@@ -447,14 +452,15 @@ const FactCard = ({ hit, filters, toggleCard }) => {
               {hashtag && (
                 <>
                   <Grid item>
-                    <Typography variant='body1'>
+                    <Typography variant="body1">
                       <strong>Hashtag: </strong>
                       <a
-                        target='_blank'
-                        rel='noreferrer'
+                        target="_blank"
+                        rel="noreferrer"
                         href={`https://www.instagram.com/explore/tags/${hashtag.substring(
                           1
-                        )}`}>
+                        )}`}
+                      >
                         {hashtag}
                       </a>
                     </Typography>
@@ -466,7 +472,7 @@ const FactCard = ({ hit, filters, toggleCard }) => {
               )}
             </Grid>
           </Collapse>
-          <Grid container direction='column' item px={3} pb={3} spacing={2}>
+          <Grid container direction="column" item px={3} pb={3} spacing={2}>
             {genus && (
               <Grid item>
                 <AddToCollection
