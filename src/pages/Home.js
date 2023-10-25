@@ -35,8 +35,8 @@ const Home = ({ state, toggleDrawer }) => {
           </Grid>
           <Grid item mt={2}>
             <Typography variant="body1">
-              Cultivar/trade will be in single quotes. Common or alternative
-              names will be in brackets.
+              Cultivar/trade will be in single quotes. Common/alternative names
+              or descriptors will be in brackets.
             </Typography>
           </Grid>
           <Grid item mt={2} mb={2}>
