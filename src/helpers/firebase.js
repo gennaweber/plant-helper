@@ -8,7 +8,7 @@ import 'firebase/compat/firestore';
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: 'AIzaSyCmxvkJcpEF5ZL9einGHEhPZXYsQIy9xtc',
+  apiKey: process.env.REACT_APP_FIREBASE_APIKEY,
   authDomain: 'gennas-plant-helper.firebaseapp.com',
   databaseURL: 'https://gennas-plant-helper-default-rtdb.firebaseio.com',
   projectId: 'gennas-plant-helper',
