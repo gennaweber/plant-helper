@@ -96,7 +96,7 @@ const FactCard = ({ hit, filters, toggleCard }) => {
     Fertilizer: fert,
     Growth_Pattern: pattern,
     Propagation: prop,
-    Propagation_difficulty: propDiff,
+    Propagation_diff: propDiff,
     Notes: note,
     Rate_of_Growth: speed,
     Hashtag: hashtag,
@@ -440,8 +440,6 @@ const FactCard = ({ hit, filters, toggleCard }) => {
                       <strong>Propagation: </strong>
                       {prop}
                     </Typography>
-                  </Grid>
-                  <Grid item>
                     <Typography variant='body1'>
                       <strong>Propagation difficulty: </strong>
                       {propDiff}
